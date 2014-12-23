@@ -2,8 +2,10 @@
 
 
 all:
-	pdflatex YourName-Dissertation.tex
-	pdflatex YourName-Dissertation.tex
+	pdflatex YourName-Dissertation
+	bibtex   YourName-Dissertation
+	pdflatex YourName-Dissertation
+	pdflatex YourName-Dissertation
 
 clean:
 	rm YourName-Dissertation.pdf
