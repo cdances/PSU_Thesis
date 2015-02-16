@@ -3,4 +3,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces The finite volume structure for COBRA-TF}}{3}{figure..1.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The finite volume structure for COBRA-TF}}{3}{figure..2.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Strucutre of the jacobian matrix for single phase liquid}}{7}{figure..3.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Enthalpy Near the Inlet and the Analytical Solution}}{9}{figure..4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Density Near the Inlet and the Analytical Solution}}{10}{figure..4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Code Convergence Criteria for the Original Version of CTF}}{10}{figure..4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Summation of the Residuals for the Residual Version of CTF}}{11}{figure..4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Difference Between Successive Temporal Refinements for Density}}{13}{figure..4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Difference Between Successive Spatial Refinements for Density}}{13}{figure..4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Temporal Order of Accuracy}}{14}{figure..4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Spatial Order of Accuracy}}{15}{figure..4.8}
