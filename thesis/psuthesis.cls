@@ -501,8 +501,7 @@ Approved: \= \rule{2.75in}{0.5pt} \quad Date: \= \rule{1.5in}{0.5pt} \\[-3pt]
     \psu@degreedate
 \end{center}
 \newpage
-\ifthenelse{\boolean{psu@ms} \or \boolean{psu@meng} \or \boolean{psu@ma}}{}{}
-}
+\ifthenelse{\boolean{psu@ms} \or \boolean{psu@meng} \or \boolean{psu@ma}}{\psupermissionpage}{} }
 %%%
 }
 
