@@ -320,7 +320,7 @@
 % input in the main file using the \numberofreaders command.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\psu@readers}{4}
+\newcommand{\psu@readers}{3}
 \providecommand{\numberofreaders}[1]{\renewcommand{\psu@readers}{#1}}
 
 
@@ -360,31 +360,6 @@
 {\renewcommand{\psu@readerthreeoption}{#1}%
 \renewcommand{\psu@readerthree}{#2}%
 \renewcommand{\psu@readerthreetitle}{#3}}
-
-\newcommand{\psu@readerfour}{John Doe}
-\newcommand{\psu@readerfourtitle}{John Doe}
-\newcommand{\psu@readerfouroption}{}%
-\providecommand{\readerfour}[3][]%
-{\renewcommand{\psu@readerfouroption}{#1}%
-\renewcommand{\psu@readerfour}{#2}%
-\renewcommand{\psu@readerfourtitle}{#3}}
-
-\newcommand{\psu@readerfive}{John Doe}
-\newcommand{\psu@readerfivetitle}{John Doe}
-\newcommand{\psu@readerfiveoption}{}%
-\providecommand{\readerfive}[3][]%
-{\renewcommand{\psu@readerfiveoption}{#1}%
-\renewcommand{\psu@readerfive}{#2}%
-\renewcommand{\psu@readerfivetitle}{#3}}
-
-\newcommand{\psu@readersix}{John Doe}
-\newcommand{\psu@readersixtitle}{John Doe}
-\newcommand{\psu@readersixoption}{}%
-\providecommand{\readersix}[3][]%
-{\renewcommand{\psu@readersixoption}{#1}%
-\renewcommand{\psu@readersix}{#2}%
-\renewcommand{\psu@readersixtitle}{#3}}
-
 
 \newsavebox{\tempbox}
 \renewcommand{\@makecaption}[2]{%

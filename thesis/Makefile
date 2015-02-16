@@ -8,4 +8,4 @@ all:
 	pdflatex CADances-thesis 
 
 clean:
-	rm CADances-thesis.pdf
+	rm CADances-thesis.pdf *.aux *.log
