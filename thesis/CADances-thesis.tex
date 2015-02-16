@@ -359,7 +359,7 @@
 % Makes use of LaTeX's include facility. Add as many chapters
 % and appendices as you like.
 \includeonly{%
-Chapter-1/Chapter-1 %
+Chapter-1/Chapter-1,Chapter-2/Chapter-2,Chapter-3/Chapter-3 %
 }
 
 \usepackage{listings}
@@ -442,7 +442,9 @@ Chapter-1/Chapter-1 %
 % THE ACTUAL CONTENT %
 %%%%%%%%%%%%%%%%%%%%%%
 % Chapters
-\include{Chapter-1/Chapter-1}
+\input{Chapter-1/Chapter-1}
+\input{Chapter-2/Chapter-2}
+\input{Chapter-3/Chapter-3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Appendices
 %
