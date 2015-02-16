@@ -1,8 +1,11 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{CTF_Theory}
+\textsc{Salko, R.~K.} (2014) \emph{{CTF Theory Manual}}, \emph{Tech. rep.}, The
+  Pennsylvania State University.
 
 \end{thebibliography}
