@@ -1,0 +1,337 @@
+%SourceDoc ../YourName-Dissertation.tex
+\vspace*{-80mm}
+\chapter{Isokinetic Sine Wave Advection} \label{chapter4:verification_1}
+	    
+Code verification is the set of procedures set in place to ensure that the code
+was written properly. From least to most rigorous, the procedures are expert
+judgement, error quantification, consistency / convergence, and order of
+accuracy \cite{VV_Book}. For this work, the Richardson Extrapolation will be
+used to check for convergence and order of accuracy of the error in space and
+time. The error should converge to zero, and the order of accuracy should
+converge to the values obtained through the modified equation analysis at the
+end of this section.
+ 
+\section{Problem Setup}
+
+%Round off error, iterative convergence error.
+%Discretization error?? (Check with)
+
+The verification problem is defined as a single horizontal channel with
+base parameters listed in table \ref{table:parameters}. Channel area and
+perimeter are constant across the entire length of the channel. No grid spacers
+are present, and frictional losses are set to zero. Velocity and pressure
+are assumed to be constant, but small fluctuations may occur due to numerical
+roundoff. The channel geometry and operating conditions approximate a standard
+PWR. The inlet of the channel has a constant velocity with a fluctuating
+enthalpy that corresponds to a standard PWR rod bundle coolant channel..  The
+length of the transient was defined to be quadruple the time needed for the liquid at the
+inlet to advect to the outlet.The frequency of the sine wave was defined to
+generate a full period of a spatial wave across the length of the channel.
+
+\begin{table}[h]
+\center
+\caption{Problem Parameters}
+\label{table:parameters}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Parameter	&	Symbol	&	Value	&	Unit	\\ \hline
+Axial Length	&	$L$	&	3.6586	&	$m$	\\ \hline
+Channel Area	&	$A_{ch}$	&	4.94E-005	&	$m^{2}$	\\ \hline
+Wetted Perimeter	&	$P_{w}$	&	1.49E-002	&	$m$	\\ \hline
+Velocity	&	$V_{o}$	&	7.35	&	$\frac{m}{s}$	\\ \hline
+Pressure	&	$P_{o}$	&	155.00	&	bar	\\ \hline
+Temperature 1	&	$T_{1}$	&	289.500	&	$^{\circ}$C	\\ \hline
+Temperature 2	&	$T_{2}$	&	327.00	&	$^{\circ}$C	\\ \hline
+Enthalpy 1	&	$h_{1}$	&	1281.55	&	$\frac{kJ}{kg}$	\\ \hline
+Enthalpy 2	&	$h_{2}$	&	1497.21	&	$\frac{kJ}{kg}$	\\ \hline
+Mass Flow Rate 1	&	$\dot{m}_{1}$	&	0.2713	&	$\frac{kg}{s}$	\\ \hline
+Mass Flow Rate 2	&	$\dot{m}_{2}$	&	0.2399	&	$\frac{kg}{s}$	\\ \hline
+Final Time	&	$t_{f}$	&	2.00	&	sec	\\ \hline
+Wave Frequency	&	$\omega$	&	1.00	&	Hz	\\ \hline
+\end{tabular}
+\end{table}
+
+The lookup table to vary the inlet enthalpy $h$ and inlet mass
+flow rate, $\dot{m}$, are genererated from equations \ref{eq:Sine_Wave:h} and
+\ref{eq:Sine_Wave:m_dot} respectively. The trignometric functions assume
+constant axial spacing, $\Delta x$, and time step size, $\Delta t$, where $i$
+and $j$ are the spatial and temporal indices. These equations should also
+behave as the known solutions throughout the entire domain of the problem. The
+enthalpy and mass flow rate vary proportionally to the density such that an
+isokinetic boundary condition is created at the inlet. However, this is
+dependent on the steam tables used in generating the input and calculating the
+EOS. A python script was used to generate the data tables according to
+trignometric equations using lookup tables that mimic the IAPWS-97 steam tables
+used by the code \cite{IAPWS}.
+
+\begin{equation}
+	\label{eq:Sine_Wave:h}
+	h(i,j) = \frac{1}{2} \left( 
+			(h_{1}+h_{2}) + (h_{1}-h_{2}) cos\left(
+				\omega \left( j \Delta t + \frac{i \Delta x}{V_{o}} \right)
+				\right)
+			\right)
+\end{equation}
+
+\begin{equation}
+	\label{eq:Sine_Wave:m_dot}
+	\dot{m}(i,j) = \frac{1}{2} \left( 
+			(\dot{m}_{1}+\dot{m}_{2}) + (\dot{m}_{1}-\dot{m}_{2}) cos\left(
+				\omega \left( j \Delta t + \frac{i \Delta x}{V_{o}} \right)
+				\right)
+			\right)
+\end{equation}
+
+
+The comparison between the data table and the output in CTF are shown for
+enthalpy and mass flow rate in figures \ref{fig:Inlet_h} and
+\ref{fig:Inlet_m_dot}, respectively. The CTF output was read from hdf5 data
+files at each point in time, which omitted the actual ghost cell where these values
+were applied. The CTF values are located at the nearest node to the inlet, and
+will be slightly out of phase to the exact values. For large mesh sizes this
+small discrepancy is not noticeable.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\textwidth]{images/Code_Verification/run_00_00/residual/results/Inlet_h.png}
+	\caption{Enthalpy Near the Inlet and the Analytical Solution}
+	\label{fig:Inlet_h}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\textwidth]{images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png}
+	\caption{Density Near the Inlet and the Analytical Solution}
+	\label{fig:Inlet_m_dot}
+\end{figure}
+
+% For the original version of CTF, there is a small discrepancy in the way the
+% density is calculated at the inlet that causes the velocity to be non-constant.
+%as shown in figure \ref{fig:Inlet_vel}.
+ The pressure and the velocity fluctuate by about $0.5\%$ during the simulation.
+ This is considered small for this problem and should
+ not greatly affect the order of accuracy.  The
+ hdf5 output files allow for a high level of precision, reducing
+ round off error in the output during the post processing.
+
+\section{Code Convergence}
+
+The current version of CTF uses global code convergence criteria that are
+used to estimate the rate of change of global mass and energy conservation. The
+transient values of these criteria are shown in figure \ref{fig:Code_Convergence:Original} for the original version of
+CTF simulating the verification problem. Mass balance and storage are in units
+of $\frac{kg}{s}$. The energy balance, fluid energy, and solid energy are in units of $kW$.
+The solid energy storage is zero since there are not any heat structures present. The fluctuating values
+represent differences between the energy and mass entering and leaving the
+system. The flat profile for the mass storage term means that the sine wave has
+fully developed spatially through the channel. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.50\textwidth]{images/Code_Verification/run_00_00/original/results/Convergence_Plot.png}
+	\caption{Code Convergence Criteria for the Original Version of CTF}
+	\label{fig:Code_Convergence:Original}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.50\textwidth]{images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png}
+	\caption{Summation of the Residuals for the Residual Version of CTF}
+	\label{fig:Residuals_Plot}
+\end{figure}
+
+The residual formulation prints out the summation of the equation residuals
+across the domain to an output file at the end of each time step and can be seen
+in figure \ref{fig:Residuals_Plot}. The mass equation residual is in units of
+$\frac{kg}{m^{3}s}$. The energy equation residual is in units of
+$\frac{kW}{m^{3}}$. The momentum residual is in units of
+$\frac{kg}{m^{2}s^{2}}$. The flat profile of the mass and energy residuals shows
+that the sine wave has fully developed spatially through the channel.
+
+\section{Modified Equation Analysis}
+    
+    
+    The order of accuracy in time and space can be analytically determined for
+    this problem through a modified equation analysis. Because the velocity is
+    constant, it can be pulled out of the spatial derivative as shown in
+    equation \ref{eq:isokinetic_start}. Using upwinding, the finite difference
+    can be written to look like equation \ref{eq:mass_isok_fd}.  A second order
+    Taylor series approximation can  be used for $\rho_{i}^{n+1}$  and
+    $\rho_{i-1}^{n}$ as shown in equations \ref{eq:rho_taylor_series_time} and
+    \ref{eq:rho_taylor_series_space} respectively. The higher order terms
+    ($O(\Delta x^{2},\Delta t^{2} )$) are not taken into account for this
+    approximation. The Taylor series approximations can then be substituted into
+    \ref{eq:mass_isok_fd} to yield \ref{eq:MEA_start}. This is the beginning of
+    the modified equation analysis. The goal will be to isolate the original PDE
+    and define the truncation error.
+    
+    \begin{equation}
+    	\label{eq:isokinetic_start}
+    	\frac{\partial \rho}{\partial t} + U_{0} \frac{\partial \rho}{\partial x} = 0
+    \end{equation}
+    
+    \begin{equation}
+    	\label{eq:mass_isok_fd}
+    	\frac{ \rho_{i}^{n+1} - \rho_{i}^{n} }{\Delta t} 
+    	+ U_{0} \frac{\rho_{i}^{n} - \rho_{i-1}^{n}}{\Delta x} = 0
+    \end{equation}
+    
+    \begin{equation}
+    	\label{eq:rho_taylor_series_time}
+    	\rho_{i}^{n+1} =  \rho_{i}^{n} + 
+    	\frac{\partial \rho}{\partial t} \Delta t +
+    	\frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t^2 + O(\Delta t^{3})
+    \end{equation}
+    
+    \begin{equation}
+    	\label{eq:rho_taylor_series_space}
+    	\rho_{i-1}^{n} =  \rho_{i}^{n} - 
+    	\frac{\partial \rho}{\partial x} \Delta x +
+    	\frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x^2 + O(\Delta x^{3})
+    \end{equation}
+    
+    The lengthy equation \ref{eq:MEA_start} can be reduced to equation
+    \ref{eq:MEA_p0} since the $\rho_{i}^{n}$ terms subtract out and the $\Delta
+    t$ and $\Delta x$ terms in the denominator cancel out. This reduced equation
+    can be re-written into equation \ref{eq:MEA_p1}, with the original PDE
+    followed by the truncation terms. 
+    
+    \begin{equation}
+    	\label{eq:MEA_start}
+    	\frac{ \left( \rho_{i}^{n} + \frac{\partial \rho}{\partial t} \Delta t +
+    	\frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t^2 \right)-\rho_{i}^{n} }{\Delta t} 
+    	+ U_{0} \frac{\rho_{i}^{n} - \left( \rho_{i}^{n} -  \frac{\partial \rho}{\partial x} \Delta x + 
+    	\frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x^2 \right)}{\Delta x} 
+    	+ O(\Delta x^{2},\Delta t^{2}) 
+    	= 0
+    \end{equation}
+    
+    \begin{equation}
+    	\label{eq:MEA_p0}
+    	 \frac{\partial \rho}{\partial t}  + \frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t +
+    	 U_{0} \left(   \frac{\partial \rho}{\partial x}  - \frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x \right) 
+    	 + O(\Delta x^{2},\Delta t^{2}) 
+    	 = 0
+    \end{equation}
+    
+    The terms to the right of the original PDE are the first order accurate
+    truncation terms. Notice how the truncation error is  dependent on both the
+    on the second derivatives of density with respect to space and time, and on
+    the numerical spacing $\Delta t$ and $\Delta x$. Since the truncation
+    error is linearly dependent on $\Delta t$ and $\Delta x$, the order of
+    accuracy is 1 with respect to time and space. 
+    
+    \begin{equation}
+    	\label{eq:MEA_p1}
+    	 \frac{\partial \rho}{\partial t}  +  U_{0} \frac{\partial \rho}{\partial x} + 
+    	 \frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t -
+    	   U_{0}  \frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x  
+    	   + O(\Delta x^{2},\Delta t^{2}) = 0 
+    \end{equation} 
+    
+    When the energy equation undergoes a similar modified eqution analysis, the
+    order of accuracy is also 1 for time and space. The momentum conservation
+    equation does not apply for this problem since the velocity is
+    constant.
+    
+
+\section{Richardson Extrapolation}
+
+The Richardson extrapolation was performed by refining the spatial and temporal
+step sizes by a factor of 2 for a set number of times. The spatial and temporal
+studies are refined separately in their own study in order to isolate the
+spatial and temporal affects on the solution. The generation of the inputs,
+running of the codes, and analysis of the output were automated with a python
+script in order to reduce user input errors and increase repeatability.  For
+this analysis, a significant amount of information was added to the hdf5 output
+files, increasing memory usage and run time. The computational resources for the
+spatial study was much higher than the temporal study due to the need to keep
+the courant number below 0.500. To keep the computational resources needed
+to perform this analysis reasonable, fewer spatial refinements were performed
+compared to the temporal analysis.
+
+\section{Convergence of Error}
+
+The difference between iterations was computed at each time step and spatial
+location for each quanitity of interest. This difference is considered as the
+error between each iteration. For the spatial refinement, the lower iterate
+values were numerically integrated to match the shape of the initial domain. The
+errors were then summed over the entire domain to yield a total error for each
+variable. The total error for density is plotted in figures
+\ref{fig:Temporal:Diff_rho} and \ref{fig:Spatial:Diff_rho} as a function of
+temporal and spatial step size.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\textwidth]{images/Temporal_Study/Difference_rho}
+	\caption{Difference Between Successive Temporal Refinements for Density}
+	\label{fig:Temporal:Diff_rho}
+\end{figure} 
+
+The data points were chosen to be inside of the asymptotic range as shown by
+the good power fit with an exponent near 1. The power fit shows that as the
+temporal and spatial step sizes are reduced, the numerical error approaches
+zero. The discretization error between the original version of CTF is
+relatively small and is most likely due to the small fluctuations in the
+velocity present in the original version of the code. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\textwidth]{images/Spatial_Study/Difference_rho}
+	\caption{Difference Between Successive Spatial Refinements for Density}
+	\label{fig:Spatial:Diff_rho}
+\end{figure} 
+
+\section{Order of Accuracy}
+
+The order of accuracy for this verification problem is first order as shown by
+the modified equation analysis. This can be considered to be the exponent on
+the power fits as seen in figures \ref{fig:Temporal:Diff_rho}. However the order
+of accuracy $p$ can be calculated by using equation \ref{eq:OOA} where $f_{1}$,
+$f_{2}$, $f_{3}$ are consecutive levels within the same Richardson extrapolation
+study. The refinement factor, $R$, has the constant value of 2 for both the
+spatial and temporal studies.
+
+\begin{equation}
+	\label{eq:OOA}
+	p= \frac{
+	      	ln \left(
+	      	\frac{f_{3}-f_{2}}{f_{2}-f_{1}}
+	      	\right)
+	    }{ln(R)}
+\end{equation}
+
+The order of accuracy for all of the variables are presented for the temporal
+analysis and spatial analysis in figures \ref{fig:Temporal:OOA} and
+\ref{fig:Spatial:OOA} respectively. The temporal order of accuracy is well
+within the asymptotic range for the whole analysis, and moves closer to 1.0 with
+decreasing time step size. The spatial order of accuracy is a slightly outside
+the asymptotic range, but approaches an order of accuracy of 1.0 with
+decreasing mesh size. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\textwidth]{images/Temporal_Study/Order_Of_Accuracy_Summary}
+	\caption{Temporal Order of Accuracy}
+	\label{fig:Temporal:OOA}
+\end{figure}
+
+The slight differences between the original version of CTF and the residual
+formulation might be due to the different solution methods and back substitution
+of variables. Despite the small differences, both versions of the code exhibit
+order of accuracies very close the values obtained through the modified
+equation analysis.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\textwidth]{images/Spatial_Study/Order_Of_Accuracy_Summary}
+	\caption{Spatial Order of Accuracy}
+	\label{fig:Spatial:OOA}
+\end{figure}
+
+
+
+
+
+
+
