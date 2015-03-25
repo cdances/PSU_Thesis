@@ -1,22 +1,7 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
-
-\bibitem{CTF_Theory}
-\textsc{Salko, R.~K.} (2014) \emph{{CTF Theory Manual}}, \emph{Tech. rep.}, The
-  Pennsylvania State University.
-
-\bibitem{VV_Book}
-\textsc{Roy, C.~J.} (2005) \enquote{Review of Code and Solution Verification
-  Procedures for Computational Simulation,} \emph{J. Comput. Phys.},
-  \textbf{205}(1), pp. 131--156.
-\newline\urlprefix\url{http://dx.doi.org/10.1016/j.jcp.2004.10.036}
-
-\bibitem{IAPWS}
-\textsc{IAPWS} (2007) \emph{Revised Release on the IAPWS Industrial Formulation
-  1997 for the Thermodynamic Properties of Water and Steam}, \emph{Tech. rep.},
-  The International Association for the Properties of Water and Steam (IAPWS).
 
 \end{thebibliography}
