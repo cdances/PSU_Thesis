@@ -2,31 +2,46 @@
 \vspace*{-80mm}
 \chapter{Isokinetic Sine Wave Advection} \label{chapter4:verification_1}
 	    
-Code verification is the set of procedures set in place to ensure that the code
-was written properly. From least to most rigorous, the procedures are expert
-judgement, error quantification, consistency / convergence, and order of
-accuracy \cite{VV_Book}. For this work, the Richardson Extrapolation will be
-used to check for convergence and order of accuracy of the error in space and
-time. The error should converge to zero, and the order of accuracy should
-converge to the values obtained through the modified equation analysis at the
-end of this section.
+The procedures that can be used for code verification, from least to most
+rigorous, include: expert judgment, error quantification,
+consistency/convergence, and order of accuracy \cite{Oberkampf2008}. For this
+work, the Richardson extrapolation will be used to check for convergence and
+order of accuracy of the error in space and time. The error should converge to
+zero, and the order of accuracy should converge to the values obtained through
+the modified equation analysis \cite{Villatoro1999} at the end of this section.
  
 \section{Problem Setup}
 
 %Round off error, iterative convergence error.
 %Discretization error?? (Check with)
 
-The verification problem is defined as a single horizontal channel with
-base parameters listed in table \ref{table:parameters}. Channel area and
-perimeter are constant across the entire length of the channel. No grid spacers
-are present, and frictional losses are set to zero. Velocity and pressure
-are assumed to be constant, but small fluctuations may occur due to numerical
-roundoff. The channel geometry and operating conditions approximate a standard
-PWR. The inlet of the channel has a constant velocity with a fluctuating
-enthalpy that corresponds to a standard PWR rod bundle coolant channel..  The
-length of the transient was defined to be quadruple the time needed for the liquid at the
-inlet to advect to the outlet.The frequency of the sine wave was defined to
-generate a full period of a spatial wave across the length of the channel.
+To obtain an analytical solution for a subchannel code, typically the method
+of manufactured solutions \cite{Knupp2000} is needed. To readily obtain an
+analytical solution and isolate only the mass and energy conservation equations,
+several simplifications to the verification problem are made. Only one channel
+is considered to make the problem 1-D. In order to make the problem perfectly
+isobaric and isokinetic, grid spacer losses, frictional losses, and gravity head
+losses are set to zero representing a smooth horizontal pipe. Small fluctuations
+in pressure and velocity may still occur due to the assumption that the EOS is
+linear. The channel geometry and operating conditions approximate a standard PWR
+as shown in table \ref{table:parameters}. The inlet of the channel has a
+constant velocity with a fluctuating enthalpy that corresponds to be near the
+standard PWR rod bundle coolant channel inlet conditions. The problem will aslo
+have constant axial spacing and time step size. The length of the
+transient was defined to be quadruple the time needed for the liquid at the
+inlet to advect to the outlet. The frequency of the sine wave was defined to
+generate a full period of a spatial wave across the length of the channel. With
+these simplifications, the method of manufacturing solutions is unnecessary
+since the known solutions are simply the advection of the transinet inlet
+conditions. The functions for the etnhalpy $h$ and mass flow rate, $\dot{m}$,
+are given in equations \ref{eq:Sine_Wave:h} and \ref{eq:Sine_Wave:m_dot} where
+$x$ is the length from the inlet and $t$ is the simulated time. The functions
+smoothly transition to the initial condition of a straight line across the
+domain. The enthalpy and mass flow rate vary proportionally to the density such
+that an isokinetic boundary condition is created at the inlet. While these
+simplifications do not model a realistic problem, they appropriately isolate the
+1-D single phase mass and energy conservation equations for the purpose of
+verification. 
 
 \begin{table}[h]
 \center
@@ -51,19 +66,6 @@ Wave Frequency	&	$\omega$	&	1.00	&	Hz	\\ \hline
 \end{tabular}
 \end{table}
 
-The lookup table to vary the inlet enthalpy $h$ and inlet mass
-flow rate, $\dot{m}$, are genererated from equations \ref{eq:Sine_Wave:h} and
-\ref{eq:Sine_Wave:m_dot} respectively. The trignometric functions assume
-constant axial spacing, $\Delta x$, and time step size, $\Delta t$, where $i$
-and $j$ are the spatial and temporal indices. These equations should also
-behave as the known solutions throughout the entire domain of the problem. The
-enthalpy and mass flow rate vary proportionally to the density such that an
-isokinetic boundary condition is created at the inlet. However, this is
-dependent on the steam tables used in generating the input and calculating the
-EOS. A python script was used to generate the data tables according to
-trignometric equations using lookup tables that mimic the IAPWS-97 steam tables
-used by the code \cite{IAPWS}.
-
 \begin{equation}
 	\label{eq:Sine_Wave:h}
 	h(i,j) = \frac{1}{2} \left( 
@@ -82,14 +84,15 @@ used by the code \cite{IAPWS}.
 			\right)
 \end{equation}
 
-
 The comparison between the data table and the output in CTF are shown for
 enthalpy and mass flow rate in figures \ref{fig:Inlet_h} and
-\ref{fig:Inlet_m_dot}, respectively. The CTF output was read from hdf5 data
-files at each point in time, which omitted the actual ghost cell where these values
-were applied. The CTF values are located at the nearest node to the inlet, and
-will be slightly out of phase to the exact values. For large mesh sizes this
-small discrepancy is not noticeable.
+\ref{fig:Inlet_m_dot}, respectively. The CTF output was read from the high
+precision VTK data files at each point in time, which omitted the actual ghost
+cell where these values were applied. The CTF values are located at the nearest
+node to the inlet, and will experience small amounts of numerical diffusion. For
+large mesh sizes, this discrepancy is negligible as can be seen by the
+overlapping profiles in figures \ref{fig:Inlet_h} and \ref{fig:Inlet_m_dot}.
+
 
 \begin{figure}[!h]
 	\centering
@@ -108,10 +111,10 @@ small discrepancy is not noticeable.
 % For the original version of CTF, there is a small discrepancy in the way the
 % density is calculated at the inlet that causes the velocity to be non-constant.
 %as shown in figure \ref{fig:Inlet_vel}.
- The pressure and the velocity fluctuate by about $0.5\%$ during the simulation.
- This is considered small for this problem and should
- not greatly affect the order of accuracy.  The
- hdf5 output files allow for a high level of precision, reducing
+ The pressure and the velocity fluctuate by less than $0.25\%$ during the
+ simulation due to approximating the EOS as a linear function. This is considered small for
+ this problem and should not greatly affect the order of accuracy of the error. 
+ The VTK output files allow for a high level of precision, reducing
  round off error in the output during the post processing.
 
 \section{Code Convergence}

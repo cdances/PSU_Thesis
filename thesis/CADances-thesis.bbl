@@ -1,7 +1,48 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Salko2014}
+\textsc{Salko, R.~K.} (2014) \enquote{{CTF Theory Manual},} (814).
+
+\bibitem{Lloyd2014}
+\textsc{Lloyd, L.~J.} (2014) \enquote{{Development of a Spatially-Selective,
+  Nonlinear Refinement Algorithm for Thermal-Hydraulic Safety Analysis},} .
+
+\bibitem{Aumiller2013}
+\textsc{Aumiller, D.~L.}, \textsc{G.~W. Swartele}, \textsc{F.~X. Lane, J.
+  W.~Buschman}, and \textsc{M.~Meholic} (2013) \enquote{Development of
+  Verification Testing Capabilities for Safety Codes,} \emph{NURETH-15}.
+
+\bibitem{Roy2005}
+\textsc{Roy, C.~J.} (2005) \enquote{{Review of code and solution verification
+  procedures for computational simulation},} \emph{Journal of Computational
+  Physics}, \textbf{205}, pp. 131--156.
+
+\bibitem{Merroun2009}
+\textsc{Merroun, O.}, \textsc{A.~Almers}, \textsc{T.~E. Bardouni},
+  \textsc{B.~E. Bakkari}, and \textsc{E.~Chakir} (2009) \enquote{{Analytical
+  benchmarks for verification of thermal-hydraulic codes based on sub-channel
+  approach},} \emph{Nuclear Engineering and Design}, \textbf{239}, pp.
+  735--748.
+
+\bibitem{Mahadevan2009}
+\textsc{Mahadevan, V.}, \textsc{V.~Mousseau}, and \textsc{J.~C. Ragusa} (2009)
+  \enquote{{Verification of multiphysics software: Space and time convergence
+  studies for nonlinearly coupled applications},} \emph{International
+  Conference on Mathematics, Computational Methods \& Reactor Physics}.
+\newline\urlprefix\url{http://mathematicsandcomputation.cowhosting.net/MC09/pdfs/201961.pdf}
+
+\bibitem{Oberkampf2008}
+\textsc{Oberkampf, W.~L.} and \textsc{T.~G. Trucano} (2008)
+  \enquote{{Verification and validation benchmarks},} \emph{Nuclear Engineering
+  and Design}, \textbf{238}, pp. 716--743.
+
+\bibitem{Villatoro1999}
+\textsc{Villatoro, F.} and \textsc{J.~Ramos} (1999), \enquote{{On the method of
+  modified equations. I: Asymptotic analysis of the Euler forward difference
+  method},} .
 
 \end{thebibliography}

@@ -2,22 +2,32 @@
 \vspace*{-80mm}
 \chapter{Introduction} \label{chapter1:introduction}
 
-For the past several decades, the primary focus in nuclear engineering
-within the United States has been focused on light water reactors (LWR).
-Commercially, all nuclear reactors are either boiling water reactors (BWR)
-or pressurized water reactors (PWR). Correct computation of the
-thermal hydraulics within the reactor core leads to efficient design and
-accuracy in the safety analysis. A popular subchannel code for modelling the
-hydrodynamics with in the reactor core is COBRA-TF.
-This FORTRAN based code solves 8 conservation equations for liquid,
-entrained droplet, and vapor phases in 3-D dimmensions \cite{CTF_Theory}.
-The conservation equations analytically reduce into a pressure matrix in a
-semi-implicit  method with rod temperatures solved for explicitly. Because
-the physics are integrated into the numerical solution, the equations must
-be linear and the solution method semi-implicit. With a residual
-formulation, greater flexibility and control over the numerical solution
-is possible. COBRA-TF was originally written in FORTRAN 77, but over
-the years has been partially updated to newer versions of Fortran.
+For the past several decades, the primary focus in nuclear engineering within
+the United States has been on light water reactors (LWR). Commercially,
+all nuclear reactors are either boiling water reactors (BWR) or pressurized
+water reactors (PWR). Correct computation of the thermal hydraulics within the
+reactor core leads to efficient design and accuracy in the safety analysis. A
+popular subchannel code for modeling the hydrodynamics within the reactor core
+is CTF, which is a subchannel thermal-hydraulics code developed from
+COBRA-TF \cite{Salko2014}. This FORTRAN based code solves 8 conservation
+equations for liquid, entrained droplet, and vapor phases phases, plus one
+conservation equation for non-condensable gases. A 1-D residual formulation of
+the code has been created. While other residual formulations have been
+formed for other versions of COBRA-TF \cite{Lloyd2014}, none have been
+integrated into the CASL version of CTF. The current version of CTF has standard
+verification practices that focus on software quality engineering similar to
+those in other versions of COBRA-TF \cite{Aumiller2013}, but lacks an in
+depth verification document that focuses on numerical algorithm verification.
+This paper focues on this second type of verification and outlines the initial
+verification of the original version of the code as well as the residual version
+of the code. The verification problem is a single phase 1-D channel with
+transient inlet density and mass flow rate. The problem will undergo a
+Richardson's extrapolation in the temporal and spatial domains to verify the
+convergence and order of accuracy of the error. The study of the order of
+accuracy is considered one of the more rigorous verification criteria \cite{Roy2005}.
+This work will be expanded to perform verificaiton on the single
+phase equations in both axial and transverse dimensions \cite{Merroun2009}, and
+coupled fluid heat conduction \cite{Mahadevan2009}.
 
 
 
