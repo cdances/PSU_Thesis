@@ -1,6 +1,9 @@
 %SourceDoc ../YourName-Dissertation.tex
 \vspace*{-80mm}
-\chapter{The Euler Equations} \label{chapter2:euler_equations}
+\chapter{Conservation Equations} \label{chapter2:conservation_equations}
+	
+	
+\section{Single Phase Liquid Euler Equations} \label{sec:euler_equations}
 	
 	The finite volume structure in COBRA-TF in figure \ref{fig:CTF-Cells} is for
 	a one-dimmensional channel in the axial direction with $n$ number of cells.
@@ -17,7 +20,6 @@
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.30\textwidth]{images/CTF-Cells}
-		
 		\caption{The finite volume structure for COBRA-TF}
 		\label{fig:CTF-Cells}
 	\end{figure}
@@ -43,7 +45,8 @@
     \eqref{eq:pde_energy} corresond to the unknown variables density $\rho$,
     velocity $u$, pressure $P$, and enthalpy $h$. The first terms in each of the
     equations are temporal terms. The rest of the terms are steady state spatial
-    terms. 
+    terms. The last term in the energy equation represents the net heat transfer
+    from the adjacent rods to the current fluid subchannel.
     
     \begin{equation}
     	\label{eq:pde_mass}
@@ -61,6 +64,7 @@
     	\frac{ \partial \rho h}{\partial t} -
     	\frac{ \partial  P}{\partial t} + 
     	\bigtriangledown ( \rho  u h )%  -
+    	+ \frac{q_{rod}}{\forall_{fluid}}
     	%u \frac{ \partial  P}{\partial x}
     	= 0
     \end{equation}
@@ -72,7 +76,11 @@
     equation contains a term that has a product of the left hand side of the 1-D
     mass equation. This terms can therefore be dropped since it is equivalent
     to zero, and the entire equation can be divided by density to give a simpler
-    form of the momentum equation \eqref{eq:1-D_momentum}.
+    form of the momentum equation \eqref{eq:1-D_momentum}. The last term in the
+    energy equation represents the net heat transfer from the adjacent rods to
+    the current fluid subchannel. This is equated as the surface area of
+    the rod liquid interface times the heat transfer coefficient and temperature
+    difference between the wall and bulk fluid temperatures. 
     
     \begin{equation}
     	\label{eq:1-D_mass}
@@ -105,6 +113,7 @@
     	h    \frac{ \partial  \rho}{\partial t} +
     	\rho u \frac{ \partial h }{ \partial x} +
     	h    \frac{ \partial \rho u }{ \partial x} 
+    	+ \frac{2\pi r_{rod}}{A_{i}}h_{l}\left(T_{wall}-T_{fluid}\right)
     	= 0
     \end{equation}
     
@@ -140,17 +149,18 @@
     	= 0
     \end{equation}
     
-    \begin{equation}
+    \begin{multline}
     	\label{eq:FD_energy}
-    	\rho_{i}^{n} \frac{ h_{i}^{n+1} - h_{i}^{n}}{\Delta t} + 
-    	h_{i}^{n} \frac{ \rho_{i}^{n+1} - \rho_{i}^{n}}{\Delta t} -
-    	\frac{P_{i}^{n+1}-P_{i}^{n}}{\Delta t}+
-    	\left( \rho u \right)_{i}^{n} 
-    		\frac{   h _{i}^{n}  - h _{i-1}^{n} }{\Delta x} +
-    	h _{i}^{n} \frac{ \dot{\rho}_{i+\frac{1}{2}}^{n} u_{i+\frac{1}{2}}^{n+1}  -
-    	\dot{\rho}_{i-\frac{1}{2}}^{n}  u_{i-\frac{1}{2}}^{n+1} }{\Delta x}
+    	\rho_{i}^{n} \frac{ h_{i}^{n+1} - h_{i}^{n}}{\Delta t} 
+    	+ h_{i}^{n} \frac{ \rho_{i}^{n+1} - \rho_{i}^{n}}{\Delta t} 
+    	- \frac{P_{i}^{n+1}-P_{i}^{n}}{\Delta t}
+    	+ \left( \rho u \right)_{i}^{n} 
+    		\frac{   h _{i}^{n}  - h _{i-1}^{n} }{\Delta x}  \\
+    	+ h _{i}^{n} \frac{ \dot{\rho}_{i+\frac{1}{2}}^{n} u_{i+\frac{1}{2}}^{n+1} 
+    	- \dot{\rho}_{i-\frac{1}{2}}^{n}  u_{i-\frac{1}{2}}^{n+1} }{\Delta x}
+    	+ \frac{2\pi r_{rod}}{A_{i}}h_{l}\left(T_{wall}-T_{fluid}\right)
     	= 0
-    \end{equation}
+    \end{multline}
     
     \begin{equation}
     	\label{eq:EOS}
@@ -162,9 +172,94 @@
     	\left( h_{i}^{n+1} - h_{i}^{n} \right)
     \end{equation}
 
+\section{1-D Radial Solid Conduction Equation} \label{sec:rad_conduction}
 
+The conduction equation for a cylindrical system is given in equation \ref{eq:full_conduction}.
+The first  term represents the amount of energy stored within the solid area within
+a unit  time. The second term is the conduction in the radial direction. The
+second  and third terms are the conduction in the azimuthal and axial
+directions,  respectively. The last term represents the heat generation within
+the solid.
 
+\begin{equation}
+	\label{eq:full_conduction}
+	  \rho_{i}c_{p,i}\frac{\partial T}{\partial t}
+	- \frac{1}{r}\frac{\partial}{\partial r}\left( 
+		kr\frac{\partial T}{\partial r}\right)
+	- \frac{1}{r^{2}}\frac{\partial}{\partial \theta}\left(
+		k\frac{\partial T}{\partial \theta}\right)
+	- \frac{\partial}{\partial z}\left(k\frac{\partial T}{\partial z}\right) 
+	- q'''
+	= 0
+\end{equation}
 
+This work focuses on the 1D radial equations setting the derivatives with
+respect to the angular and axial directions to zero. Equation \ref{eq:full_conduction} now reduces
+to equation \ref{eq:rad_conduction}.
 
+\begin{equation}
+	\label{eq:rad_conduction}
+	  \rho_{i}c_{p,i}\frac{\partial T}{\partial t}
+	- \frac{1}{r}\frac{\partial}{\partial r}\left( 
+		kr\frac{\partial T}{\partial r}\right)
+	- q'''
+	= 0
+\end{equation}
 
+When the radius is zero, the fuel temperature is considered to be a maximum
+giving the boundary condition in equation \ref{eq:bc_centerline}
 
+\begin{equation}
+	\label{eq:bc_centerline}
+	\left(\frac{\partial T}{\partial r}\right)_{r=0}=0
+\end{equation}
+
+The nuclear rod geometry types in CTF are meshed at each axial level according
+to figure \ref{fig:radial_diagram} where the red region is fuel and the grey
+region is cladding. The black dots represent the nodes within the fuel. Each
+node covers a region within the rod as bounded by the dashed lines. The nodes
+within the fuel are located at the center of the region. Each region is assumed
+to have uniform properties with values evaluated at the node. The last node
+within  the fuel is located at the surface of the fuel at the interface with the
+gap.  There are two additional nodes that represent the outer clad surface and
+the inner  clad surface respectively. The gap between the outer surface of the
+fuel and the  inner surface of the cladding has a specified heat transfer
+coefficient or  is calculated using the dynamic gap conductance model.
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.40\textwidth]{images/radial_diagram.png}
+		\caption{Radial Rod Meshing}
+		\label{fig:radial_diagram}
+	\end{figure}
+	
+The outer surface of the cladding is assumed to be in contact with the fluid in
+the  adjacent channel on that axial level. The rods have the same number of
+axial  levels as the fluid, but do not have ghost cells at the top and bottom.
+Instead  the first and last fluid axial levels are connected to two rod axial
+levels as  shown by Figure \ref{fig:fluid-solid-meshing}, where the rod axial
+levels are on the left, and the fluid  axial levels are on the right. The light
+blue cells are the fluid ghost cells.
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.20\textwidth]{images/fluid-solid-meshing.png}
+		\caption{Radial Rod Meshing}
+		\label{fig:fluid-solid-meshing}
+	\end{figure}
+
+The conduction equation can be approximated using the finite difference method,
+or the control volume difference method [5]. The control volume method will be
+used  since it is the same method utilized in the original version of CTF. The
+implicit  finite difference equation now looks like equation \ref{eq:}
+
+\begin{equation}
+	\label{eq:rod:fuel:conduction}
+	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
+	- \frac{2\pi}{A_{i}}\\\left( 
+		\left(kr\frac{\partial T}{\partial r}\right)_{i+\frac{1{2}}
+		\left(kr\frac{\partial T}{\partial r}\right)_i-\frac{1{2}}
+		\right)
+	- q'''
+	= 0
+\end{equation}
