@@ -27,7 +27,7 @@
 	The thermal hydraulics of a LWR core is an important part of nuclear
 	reactor desigin. COBRA-TF solves 8 conservation equations for liquid,
 	entrained droplet, and vapor phases of water boiling within the rod structure
-	of a LWR reactor core \cite{CTF_Theory}. Currently, the conservation
+	of a LWR reactor core \cite{Salko2014}. Currently, the conservation
 	equations analytically reduce into a pressure matrix in a semi-implicit
 	method with rod temperatures solved for explicitly. This work involves
 	representing the 1-D single phase liquid conservation equations and calculated 
@@ -249,17 +249,86 @@ blue cells are the fluid ghost cells.
 	\end{figure}
 
 The conduction equation can be approximated using the finite difference method,
-or the control volume difference method [5]. The control volume method will be
-used  since it is the same method utilized in the original version of CTF. The
-implicit  finite difference equation now looks like equation \ref{eq:}
+or the control volume difference method \cite{Botte2000}. The control volume
+method will be used  since it is the same method utilized in the original
+version of CTF. The implicit  finite difference equation now looks like equation
+\ref{eq:rod:fuel:conduction}.
 
 \begin{equation}
+	\small
 	\label{eq:rod:fuel:conduction}
 	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
-	- \frac{2\pi}{A_{i}}\\\left( 
-		\left(kr\frac{\partial T}{\partial r}\right)_{i+\frac{1{2}}
-		\left(kr\frac{\partial T}{\partial r}\right)_i-\frac{1{2}}
-		\right)
-	- q'''
+	- \frac{2\pi}{A_{i}}\left( 
+		\left(k_{i+\frac{1}{2}}r_{i+\frac{1}{2}}
+		\frac{T^{n+1}_{i+1}-T^{n+1}_{i}}{\Delta r_{i+\frac{1}{2}}}\right)
+ 	  - \left(k_{i-\frac{1}{2}}r_{i-\frac{1}{2}}
+		\frac{T^{n+1}_{i}-T^{n+1}_{i-1}}{\Delta r_{i-\frac{1}{2}}}\right)
+	  \right)
+	- q_{i}'''
 	= 0
 \end{equation}
+
+The density on the temporal term is defined as the cold mass of the node divided
+by the current volume of the node, so that mass is not lost in the presence of
+expansion. The temporal derivative is approximated with first order accurate
+forward differencing. The spatial derivatives are evaluated at the right
+boundary, $i+\frac{1}{2}$, and at the left boundary,$i-\frac{1}{2}$ using first
+order forward differencing. When $i=1$ at the inner most node, the radius at the
+left boundary and the derivative of the temperature is zero. At the boundary
+between the surface of the fuel and the inside surface of the cladding, a
+different set of finite difference equations are needed as given by equation
+\ref{eq:rod:fuel_surface:conduction}
+
+\begin{equation}
+	\label{eq:rod:fuel_surface:conduction}
+	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
+	+ \frac{2\pi}{A_{i}}
+ 	    \left(k_{i-\frac{1}{2}}r_{i-\frac{1}{2}}
+		\frac{T^{n+1}_{i}-T^{n+1}_{i-1}}{\Delta r_{i-\frac{1}{2}}}\right)
+	- \frac{2\pi r_{i}h_{gap}}{A_{i}}\left(T^{n+1}_{i+1}-T^{n+1}_{i}\right)
+	- q_{i}'''
+	= 0
+\end{equation}
+
+The finite difference equation between the inner and outer cladding surfaces
+given by equation \ref{eq:rod:clad_inner:conduction} has no heat generation or
+conduction from the fuel. Instead the  volumetric heat rate is calculated using
+the term for the volumetric heat rate  across the gap and a similar term but for
+the volumetric heat rate across the cladding. Since the cladding does not have
+any heat generation, this  term is represented as the temperature difference
+across the cladding times the thermal resistance across the cladding  times the
+perimeter of the cladding divided by the area of the inner cladding region.
+
+\begin{equation}
+	\label{eq:rod:clad_inner:conduction}
+	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
+	+ \frac{2\pi r_{i}h_{gap}}{A_{i}}\left(T^{n+1}_{i}-T^{n+1}_{i-1}\right)
+	- \frac{2\pi}{A_{i}}
+ 	    \left(k_{i+\frac{1}{2}}r_{i+\frac{1}{2}}
+		\frac{T^{n+1}_{i+1}-T^{n+1}_{i}}{\Delta r_{i+\frac{1}{2}}}\right)
+	= 0
+\end{equation}
+
+The finite difference equation between the inner and outer cladding surfaces
+given by equation \ref{eq:rod:clad_outer:conduction} relates the wall
+temperature to the bulk fluid temperature at the same axial level. The
+volumetric heat rate lost to the fluid is represented as the temperature
+difference between the wall and the fluid times the thermal resistance of the
+fluid and divided by the outer cladding region.
+
+\begin{equation}
+	\label{eq:rod:clad_outer:conduction}
+	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
+	+ \frac{2\pi}{A_{i}}
+ 	    \left(k_{i-\frac{1}{2}}r_{i-\frac{1}{2}}
+		\frac{T^{n+1}_{i}-T^{n+1}_{i-1}}{\Delta r_{i-\frac{1}{2}}}\right)
+    - \frac{2\pi r_{i}h_{fluid}}{A_{i}}\left(T^{n+1}_{i}-T^{k}_{fluid}\right)
+	= 0
+\end{equation}
+
+The numerator in the last term is also in the fluid energy conservation
+equation. The heat transfer coefficient is currently calculated using the
+Dittus-Boelter correlation. The fluid properties are evaluated at the bulk fluid
+temperature. When the fluid finite equations are solved for implicitly, they
+will impact the solid conduction equations through the calculation of the heat
+transfer coefficient and the fluid temperature.

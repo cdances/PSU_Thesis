@@ -1,0 +1,22 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The finite volume structure for COBRA-TF}}{3}{figure..2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Radial Rod Meshing}}{6}{figure..2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Radial Rod Meshing}}{7}{figure..2.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Strucutre of the jacobian matrix for single phase liquid}}{10}{figure..3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Strucutre of jacobian matrix for single phase liquid explicitly coupled to solid conduction}}{11}{figure..3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Strucutre of the jacobian matrix for single phase liquid implicitly coupled to solid conduction}}{11}{figure..3.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Enthalpy Near the Inlet and the Analytical Solution}}{13}{figure..4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Density Near the Inlet and the Analytical Solution}}{14}{figure..4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Code Convergence Criteria for the Original Version of CTF}}{15}{figure..4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Summation of the Residuals for the Residual Version of CTF}}{15}{figure..4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Difference Between Successive Temporal Refinements for Density}}{17}{figure..4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Difference Between Successive Spatial Refinements for Density}}{17}{figure..4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Temporal Order of Accuracy}}{18}{figure..4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Spatial Order of Accuracy}}{19}{figure..4.8}

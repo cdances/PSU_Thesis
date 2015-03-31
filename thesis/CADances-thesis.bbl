@@ -35,9 +35,15 @@
   Conference on Mathematics, Computational Methods \& Reactor Physics}.
 \newline\urlprefix\url{http://mathematicsandcomputation.cowhosting.net/MC09/pdfs/201961.pdf}
 
+\bibitem{Botte2000}
+\textsc{Botte, G.}, \textsc{J.~Ritter}, and \textsc{R.~White} (2000)
+  \enquote{Comparison of finite difference and control volume methods for
+  solving differential equations,} \emph{Computers and Chemical Engineering},
+  \textbf{24}, pp. 2633--2654.
+
 \bibitem{Oberkampf2008}
 \textsc{Oberkampf, W.~L.} and \textsc{T.~G. Trucano} (2008)
-  \enquote{{Verification and validation benchmarks},} \emph{Nuclear Engineering
+  \enquote{{Verification and Validation Benchmarks},} \emph{Nuclear Engineering
   and Design}, \textbf{238}, pp. 716--743.
 
 \bibitem{Villatoro1999}

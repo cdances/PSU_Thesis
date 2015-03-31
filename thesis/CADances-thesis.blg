@@ -3,50 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CADances-thesis.aux
 The style file: GLG-bibstyle.bst
 Database file #1: CADances-thesis.bib
-Warning--I didn't find a database entry for "CTF_Theory"
 Warning--I didn't find a database entry for "Knupp2000"
 Warning--empty journal in Salko2014
 Warning--there's a number but no volume in Salko2014
 Warning--empty journal in Lloyd2014
-You've used 8 entries,
+You've used 9 entries,
             2552 wiz_defined-function locations,
-            610 strings with 5889 characters,
-and the built_in function-call counts, 2873 in all, are:
-= -- 182
-> -- 89
-< -- 3
-+ -- 27
-- -- 19
-* -- 203
-:= -- 311
-add.period$ -- 16
-call.type$ -- 8
+            616 strings with 6073 characters,
+and the built_in function-call counts, 3415 in all, are:
+= -- 224
+> -- 103
+< -- 4
++ -- 31
+- -- 22
+* -- 242
+:= -- 364
+add.period$ -- 18
+call.type$ -- 9
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 330
-empty$ -- 300
-format.name$ -- 24
-if$ -- 640
+cite$ -- 12
+duplicate$ -- 386
+empty$ -- 352
+format.name$ -- 28
+if$ -- 769
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 63
-newline$ -- 32
-num.names$ -- 8
-pop$ -- 110
+int.to.str$ -- 9
+missing$ -- 73
+newline$ -- 35
+num.names$ -- 9
+pop$ -- 123
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 87
+skip$ -- 109
 stack$ -- 0
-substring$ -- 100
-swap$ -- 198
-text.length$ -- 3
+substring$ -- 137
+swap$ -- 238
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 16
-width$ -- 9
-write$ -- 72
-(There were 5 warnings)
+while$ -- 19
+width$ -- 10
+write$ -- 81
+(There were 4 warnings)

@@ -76,6 +76,51 @@
     \end{figure}
 
 
+	The explicitly coupled solid liquid Jacobian matrix can be seen in figure
+	\ref{fig:Explicit-Diagram}, where blue values represent negative entries and
+	red values positive entries. The black lines were drawn on top of the image to
+	represent artificial boundaries between the liquid Jacobian matrix in the top
+	left corner and the solid Jacobian matrix in the top right corner.
+	
+	\begin{figure}[!h]
+    	\centering
+    	\includegraphics[width=0.50\textwidth]{images/Explicit-Diagram.jpg}
+    	\caption{Strucutre of jacobian matrix for single phase liquid
+    	explicitly coupled to solid conduction}
+    	\label{fig:Explicit-Diagram}
+    \end{figure}
+    
+    \begin{figure}[!h]
+    	\centering
+    	\includegraphics[width=0.50\textwidth]{images/Implicit-Diagram.jpg}
+    	\caption{Strucutre of the jacobian matrix for single phase liquid
+    	implicitly coupled to solid conduction}
+    	\label{fig:Implicit-Diagram}
+    \end{figure}
+    
+    The fluid Jacobian matrix contains 3 conservation equations for every axial
+    level. The liquid function residuals are appended in the order of mass
+    conservation, energy conservation, and momentum conservation for each axial
+    level. These correspond the pressure, enthalpy, and velocity at each axial
+    level. The liquid Jacobian matrix can be evaluated as either semi-implicit
+    or fully implicit. The solid Jacobian matrix contains 1 energy conservation
+    equation for each node in the rod. Since axial and azimuthal conduction are
+    not computed, each radial level is computed separately from the rest. This
+    can be seen by the lack of cross terms in the Jacobian matrix at each axial
+    level. The Jacobian matrix on the right is an implicit coupling between the
+    implicit liquid Jacobian matrix and the implicit solid matrix. The cross
+    terms in the top right corner represent the effect of the wall temperature
+    on the energy equation in the liquid Jacobian matrix. The terms on the
+    bottom left represent the effects of pressure, enthalpy, and velocity on the
+    energy equation in the solid Jacobian matrix. The implicit matrix is
+    unconditionally stable, allowing for time steps greater than the material
+    Courant limits. Once the coupled Jacobian matrix is constructed, it is
+    solved using the linear Krylov solver from PETSC. The residuals for each of
+    the conservation equations are then L2 normalized over the domain to
+    determine the convergence of the system.
+    
+    
+
 
 
 
