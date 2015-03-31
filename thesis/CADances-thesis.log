@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  30 MAR 2015 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  31 MAR 2015 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -751,7 +751,7 @@ Chapter 1.
 
 ]
 Chapter 2.
-<images/CTF-Cells.jpg, id=211, 551.05875pt x 1023.825pt>
+<images/CTF-Cells.jpg, id=238, 551.05875pt x 1023.825pt>
 File: images/CTF-Cells.jpg Graphic file (type jpg)
 
 <use images/CTF-Cells.jpg>
@@ -760,14 +760,14 @@ Package pdftex.def Info: images/CTF-Cells.jpg used on input line 22.
  [3
 
  <./images/CTF-Cells.jpg>] [4] [5]
-<images/radial_diagram.png, id=263, 418.56375pt x 433.62pt>
+<images/radial_diagram.png, id=290, 418.56375pt x 433.62pt>
 File: images/radial_diagram.png Graphic file (type png)
 
 <use images/radial_diagram.png>
 Package pdftex.def Info: images/radial_diagram.png used on input line 231.
 (pdftex.def)             Requested size: 167.66393pt x 173.68973pt.
 
-<images/fluid-solid-meshing.png, id=265, 266.9975pt x 591.20876pt>
+<images/fluid-solid-meshing.png, id=292, 266.9975pt x 591.20876pt>
 File: images/fluid-solid-meshing.png Graphic file (type png)
 
 <use images/fluid-solid-meshing.png>
@@ -797,14 +797,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Chapter 3.
 [9
 
-] <images/Jacobian_Setup.jpg, id=315, 421.575pt x 399.4925pt>
+] <images/Jacobian_Setup.jpg, id=342, 421.575pt x 399.4925pt>
 File: images/Jacobian_Setup.jpg Graphic file (type jpg)
 
 <use images/Jacobian_Setup.jpg>
 Package pdftex.def Info: images/Jacobian_Setup.jpg used on input line 73.
 (pdftex.def)             Requested size: 188.6235pt x 178.74586pt.
 
-<images/Explicit-Diagram.jpg, id=317, 645.41125pt x 795.97375pt>
+<images/Explicit-Diagram.jpg, id=344, 645.41125pt x 795.97375pt>
 File: images/Explicit-Diagram.jpg Graphic file (type jpg)
 
 <use images/Explicit-Diagram.jpg>
@@ -814,7 +814,7 @@ Package pdftex.def Info: images/Explicit-Diagram.jpg used on input line 87.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/Implicit-Diagram.jpg, id=318, 647.41875pt x 791.95876pt>
+<images/Implicit-Diagram.jpg, id=345, 647.41875pt x 791.95876pt>
 File: images/Implicit-Diagram.jpg Graphic file (type jpg)
 
 <use images/Implicit-Diagram.jpg>
@@ -838,7 +838,7 @@ LaTeX Warning: Citation `Knupp2000' on page 12 undefined on input line 19.
 [12
 
 ]
-<images/Code_Verification/run_00_00/residual/results/Inlet_h.png, id=345, 578.1
+<images/Code_Verification/run_00_00/residual/results/Inlet_h.png, id=372, 578.1
 6pt x 433.62pt>
 File: images/Code_Verification/run_00_00/residual/results/Inlet_h.png Graphic f
 ile (type png)
@@ -848,7 +848,7 @@ Package pdftex.def Info: images/Code_Verification/run_00_00/residual/results/In
 let_h.png used on input line 99.
 (pdftex.def)             Requested size: 230.5427pt x 172.90237pt.
 
-<images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png, id=347, 5
+<images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png, id=374, 5
 78.16pt x 433.62pt>
 File: images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png Graph
 ic file (type png)
@@ -863,7 +863,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13 <./images/Code_Verification/run_00_00/residual/results/Inlet_h.png>]
 <images/Code_Verification/run_00_00/original/results/Convergence_Plot.png, id=3
-54, 578.16pt x 433.62pt>
+81, 578.16pt x 433.62pt>
 File: images/Code_Verification/run_00_00/original/results/Convergence_Plot.png 
 Graphic file (type png)
 
@@ -876,7 +876,7 @@ nvergence_Plot.png used on input line 134.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png, id=355
+<images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png, id=382
 , 578.16pt x 433.62pt>
 File: images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png Gr
 aphic file (type png)
@@ -892,7 +892,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [14 <./images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png>]
 [15 <./images/Code_Verification/run_00_00/original/results/Convergence_Plot.png
 > <./images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png>]
-<images/Temporal_Study/Difference_rho.jpg, id=385, 803.0pt x 602.25pt>
+<images/Temporal_Study/Difference_rho.jpg, id=412, 803.0pt x 602.25pt>
 File: images/Temporal_Study/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Temporal_Study/Difference_rho.jpg>
@@ -900,7 +900,7 @@ Package pdftex.def Info: images/Temporal_Study/Difference_rho.jpg used on input
  line 269.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
  [16]
-<images/Spatial_Study/Difference_rho.jpg, id=392, 803.0pt x 602.25pt>
+<images/Spatial_Study/Difference_rho.jpg, id=419, 803.0pt x 602.25pt>
 File: images/Spatial_Study/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Spatial_Study/Difference_rho.jpg>
@@ -909,7 +909,7 @@ line 283.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
  [17 <./images/Temporal_Study/Difference_rho.jpg> <./images/Spatial_Study/Diffe
 rence_rho.jpg>]
-<images/Temporal_Study/Order_Of_Accuracy_Summary.jpg, id=401, 803.0pt x 602.25p
+<images/Temporal_Study/Order_Of_Accuracy_Summary.jpg, id=429, 803.0pt x 602.25p
 t>
 File: images/Temporal_Study/Order_Of_Accuracy_Summary.jpg Graphic file (type jp
 g)
@@ -918,7 +918,7 @@ Package pdftex.def Info: images/Temporal_Study/Order_Of_Accuracy_Summary.jpg us
 ed on input line 317.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
 
-<images/Spatial_Study/Order_Of_Accuracy_Summary.jpg, id=402, 803.0pt x 602.25pt
+<images/Spatial_Study/Order_Of_Accuracy_Summary.jpg, id=430, 803.0pt x 602.25pt
 >
 File: images/Spatial_Study/Order_Of_Accuracy_Summary.jpg Graphic file (type jpg
 )
@@ -933,9 +933,85 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ) (./Chapter-5/Chapter-5.tex [18 <./images/Temporal_Study/Order_Of_Accuracy_Sum
 mary.jpg>] [19 <./images/Spatial_Study/Order_Of_Accuracy_Summary.jpg>]
 Chapter 5.
-) (./CADances-thesis.bbl [20
+[20
 
-]
+] <images/Rod_Profile_Summary.png, id=452, 351.714pt x 184.0476pt>
+File: images/Rod_Profile_Summary.png Graphic file (type png)
+
+<use images/Rod_Profile_Summary.png>
+Package pdftex.def Info: images/Rod_Profile_Summary.png used on input line 116.
+
+(pdftex.def)             Requested size: 251.50227pt x 131.60988pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/Rod_Profile_Errors.png, id=453, 344.0052pt x 188.8656pt>
+File: images/Rod_Profile_Errors.png Graphic file (type png)
+
+<use images/Rod_Profile_Errors.png>
+Package pdftex.def Info: images/Rod_Profile_Errors.png used on input line 123.
+(pdftex.def)             Requested size: 251.50227pt x 138.0811pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21] [22 <./images/Rod_Profile_Summary.png> <./images/Rod_Profile_Errors.png>]
+<images/rod_profile.jpg, id=472, 501.875pt x 501.875pt>
+File: images/rod_profile.jpg Graphic file (type jpg)
+
+<use images/rod_profile.jpg>
+Package pdftex.def Info: images/rod_profile.jpg used on input line 168.
+(pdftex.def)             Requested size: 251.50227pt x 251.50357pt.
+
+<images/trans_rod1_axial10_SI.jpg, id=473, 602.25pt x 401.5pt>
+File: images/trans_rod1_axial10_SI.jpg Graphic file (type jpg)
+
+<use images/trans_rod1_axial10_SI.jpg>
+Package pdftex.def Info: images/trans_rod1_axial10_SI.jpg used on input line 19
+5.
+(pdftex.def)             Requested size: 251.50227pt x 167.66699pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/trans_rod1_axial10_I.jpg, id=474, 602.25pt x 401.5pt>
+File: images/trans_rod1_axial10_I.jpg Graphic file (type jpg)
+
+<use images/trans_rod1_axial10_I.jpg>
+Package pdftex.def Info: images/trans_rod1_axial10_I.jpg used on input line 202
+.
+(pdftex.def)             Requested size: 251.50227pt x 167.66699pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23 <./images/rod_profile.jpg>]
+<images/profile_rod1_level_10_SI.jpg, id=479, 602.25pt x 401.5pt>
+File: images/profile_rod1_level_10_SI.jpg Graphic file (type jpg)
+
+<use images/profile_rod1_level_10_SI.jpg>
+Package pdftex.def Info: images/profile_rod1_level_10_SI.jpg used on input line
+ 217.
+(pdftex.def)             Requested size: 251.50227pt x 167.66699pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/profile_rod1_level_10_I.jpg, id=480, 602.25pt x 401.5pt>
+File: images/profile_rod1_level_10_I.jpg Graphic file (type jpg)
+
+<use images/profile_rod1_level_10_I.jpg>
+Package pdftex.def Info: images/profile_rod1_level_10_I.jpg used on input line 
+224.
+(pdftex.def)             Requested size: 251.50227pt x 167.66699pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./CADances-thesis.bbl [24 <./images/trans_rod1_axial10_SI.jpg> <./images/tra
+ns_rod1_axial10_I.jpg>] [25 <./images/profile_rod1_level_10_SI.jpg> <./images/p
+rofile_rod1_level_10_I.jpg>]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -950,7 +1026,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 508.
- [21
+ [26
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
@@ -959,7 +1035,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 508.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 508.
 Package rerunfilecheck Info: File `CADances-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0A1BEE29D59E78FE95BE8ACDC3847541;1247.
+(rerunfilecheck)             Checksum: 50897CCF60ED26CF35314ACE89B6C467;1397.
 
 
 LaTeX Warning: There were undefined references.
@@ -967,10 +1043,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 508.
  ) 
 Here is how much of TeX's memory you used:
- 11313 strings out of 493117
- 172634 string characters out of 6135433
- 291316 words of memory out of 5000000
- 14256 multiletter control sequences out of 15000+600000
+ 11382 strings out of 493117
+ 174310 string characters out of 6135433
+ 292323 words of memory out of 5000000
+ 14299 multiletter control sequences out of 15000+600000
  79897 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,11n,45p,272b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -997,10 +1073,10 @@ usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/public/lm/lmtt10.pfb>
-Output written on CADances-thesis.pdf (30 pages, 1072367 bytes).
+Output written on CADances-thesis.pdf (35 pages, 1552138 bytes).
 PDF statistics:
- 526 PDF objects out of 1000 (max. 8388607)
- 451 compressed objects within 5 object streams
- 114 named destinations out of 1000 (max. 500000)
- 20711 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 602 PDF objects out of 1000 (max. 8388607)
+ 512 compressed objects within 6 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 20762 words of extra memory for PDF output out of 24883 (max. 10000000)
 

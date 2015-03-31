@@ -16,5 +16,7 @@
 \contentsline {section}{\numberline {4.6}Order of Accuracy}{18}{section..4.6}
 \contentsline {chapter}{\numberline {5}Uniform Heating Problem}{20}{chapter..5}
 \contentsline {section}{\numberline {5.1}Problem Setup}{20}{section..5.1}
-\contentsline {section}{\numberline {5.2}Code Convergence}{20}{section..5.2}
-\contentsline {chapter}{Bibliography}{20}{section..5.2}
+\contentsline {section}{\numberline {5.2}Steady State Analytical Solution}{21}{section..5.2}
+\contentsline {section}{\numberline {5.3}Steady State Results}{21}{section..5.3}
+\contentsline {section}{\numberline {5.4}Transient Results}{23}{section..5.4}
+\contentsline {chapter}{Bibliography}{24}{figure..5.7}
