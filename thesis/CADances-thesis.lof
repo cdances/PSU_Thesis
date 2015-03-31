@@ -34,3 +34,11 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Scaling of numerical error with constant time step size for density}}{30}{figure..6.3}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Temporal Order of Accuracy for density}}{30}{figure..6.4}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Advection of isokinetic density wave $\frac {kg}{m^{3}}$ in time and space for CFL=1}}{31}{figure..6.5}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Setup for the shock tube problem}}{32}{figure..7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Regions within the shock tube based on rarefaction and compression}}{34}{figure..7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Comparison of analytical and numerical results for shock tube}}{35}{figure..7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Truncation error for shock tube}}{36}{figure..7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Richardson Extrapolation of the shock tube results N=50}}{37}{figure..7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Temporal Order of Accuracy for shock tube}}{37}{figure..7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Jacobian matrix for fluid and solid residuals}}{38}{figure..7.7}

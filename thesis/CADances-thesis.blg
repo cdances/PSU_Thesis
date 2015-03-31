@@ -4,12 +4,13 @@ The top-level auxiliary file: CADances-thesis.aux
 The style file: GLG-bibstyle.bst
 Database file #1: CADances-thesis.bib
 Warning--I didn't find a database entry for "Knupp2000"
+Warning--I didn't find a database entry for "McGraw-Hill"
 Warning--empty journal in Salko2014
 Warning--there's a number but no volume in Salko2014
 Warning--empty journal in Lloyd2014
 You've used 9 entries,
             2552 wiz_defined-function locations,
-            616 strings with 6073 characters,
+            618 strings with 6095 characters,
 and the built_in function-call counts, 3415 in all, are:
 = -- 224
 > -- 103
@@ -48,4 +49,4 @@ warning$ -- 3
 while$ -- 19
 width$ -- 10
 write$ -- 81
-(There were 4 warnings)
+(There were 5 warnings)

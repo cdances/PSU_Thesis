@@ -24,4 +24,10 @@
 \BOOKMARK [2][-]{subsubsection..6.1.0.1}{Density Advection and Error}{section..6.1}% 24
 \BOOKMARK [3][-]{subsubsection..6.1.0.2}{Modified Equation Analysis}{subsubsection..6.1.0.1}% 25
 \BOOKMARK [3][-]{subsubsection..6.1.0.3}{Scaling of Error}{subsubsection..6.1.0.1}% 26
-\BOOKMARK [0][-]{figure..6.5}{Bibliography}{}% 27
+\BOOKMARK [0][-]{chapter..7}{Shock Tube}{}% 27
+\BOOKMARK [1][-]{section..7.1}{Problem Setup}{chapter..7}% 28
+\BOOKMARK [2][-]{subsubsection..7.1.0.4}{Analytical Solution}{section..7.1}% 29
+\BOOKMARK [3][-]{subsubsection..7.1.0.5}{Results and Error}{subsubsection..7.1.0.4}% 30
+\BOOKMARK [3][-]{subsubsection..7.1.0.6}{Scaling of Error}{subsubsection..7.1.0.4}% 31
+\BOOKMARK [2][-]{subsection..7.1.1}{Conduction Equations}{section..7.1}% 32
+\BOOKMARK [0][-]{figure..7.7}{Bibliography}{}% 33
