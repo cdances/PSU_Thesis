@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -41,6 +41,10 @@
   solving differential equations,} \emph{Computers and Chemical Engineering},
   \textbf{24}, pp. 2633--2654.
 
+\bibitem{Anderson1990}
+\textsc{Anderson, J.~D.} (1990) \emph{Modern Compressible Flow With Historical
+  Perspective}, McGraw-Hill Inc.
+
 \bibitem{Oberkampf2008}
 \textsc{Oberkampf, W.~L.} and \textsc{T.~G. Trucano} (2008)
   \enquote{{Verification and Validation Benchmarks},} \emph{Nuclear Engineering
@@ -50,5 +54,12 @@
 \textsc{Villatoro, F.} and \textsc{J.~Ramos} (1999), \enquote{{On the method of
   modified equations. I: Asymptotic analysis of the Euler forward difference
   method},} .
+
+\bibitem{SAND2000-1444}
+\textsc{Salari, K.} and \textsc{P.~Knupp} (2000) \emph{Code Verification by the
+  Method of Manufactured Solutions}, \emph{Tech. Rep. SAND2000-1444},
+  Aerosciences and Compressible Fluid Mechanics Department, Parallel Computing
+  Sciences Department at Sandia National Laboratories, P.O. Box 5800,
+  Albuquerque, NM 87185-0825.
 
 \end{thebibliography}

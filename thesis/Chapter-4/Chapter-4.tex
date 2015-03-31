@@ -1,172 +1,95 @@
 %SourceDoc ../YourName-Dissertation.tex
 \vspace*{-80mm}
-\chapter{Isokinetic Sine Wave Advection} \label{chapter4:verification_1}
-	    
-The procedures that can be used for code verification, from least to most
-rigorous, include: expert judgment, error quantification,
-consistency/convergence, and order of accuracy \cite{Oberkampf2008}. For this
-work, the Richardson extrapolation will be used to check for convergence and
-order of accuracy of the error in space and time. The error should converge to
-zero, and the order of accuracy should converge to the values obtained through
-the modified equation analysis \cite{Villatoro1999} at the end of this section.
+\chapter{Isokinetic Step Advection} \label{chapter4:Isokinetic_Step_Advection}
  
-\section{Problem Setup}
-
-%Round off error, iterative convergence error.
-%Discretization error?? (Check with)
-
-To obtain an analytical solution for a subchannel code, typically the method
-of manufactured solutions \cite{Knupp2000} is needed. To readily obtain an
-analytical solution and isolate only the mass and energy conservation equations,
-several simplifications to the verification problem are made. Only one channel
-is considered to make the problem 1-D. In order to make the problem perfectly
-isobaric and isokinetic, grid spacer losses, frictional losses, and gravity head
-losses are set to zero representing a smooth horizontal pipe. Small fluctuations
-in pressure and velocity may still occur due to the assumption that the EOS is
-linear. The channel geometry and operating conditions approximate a standard PWR
-as shown in table \ref{table:parameters}. The inlet of the channel has a
-constant velocity with a fluctuating enthalpy that corresponds to be near the
-standard PWR rod bundle coolant channel inlet conditions. The problem will aslo
-have constant axial spacing and time step size. The length of the
-transient was defined to be quadruple the time needed for the liquid at the
-inlet to advect to the outlet. The frequency of the sine wave was defined to
-generate a full period of a spatial wave across the length of the channel. With
-these simplifications, the method of manufacturing solutions is unnecessary
-since the known solutions are simply the advection of the transinet inlet
-conditions. The functions for the etnhalpy $h$ and mass flow rate, $\dot{m}$,
-are given in equations \ref{eq:Sine_Wave:h} and \ref{eq:Sine_Wave:m_dot} where
-$x$ is the length from the inlet and $t$ is the simulated time. The functions
-smoothly transition to the initial condition of a straight line across the
-domain. The enthalpy and mass flow rate vary proportionally to the density such
-that an isokinetic boundary condition is created at the inlet. While these
-simplifications do not model a realistic problem, they appropriately isolate the
-1-D single phase mass and energy conservation equations for the purpose of
-verification. 
-
-\begin{table}[h]
-\center
-\caption{Problem Parameters}
-\label{table:parameters}
-\begin{tabular}{|c|c|c|c|}
-\hline
-Parameter	&	Symbol	&	Value	&	Unit	\\ \hline
-Axial Length	&	$L$	&	3.6586	&	$m$	\\ \hline
-Channel Area	&	$A_{ch}$	&	4.94E-005	&	$m^{2}$	\\ \hline
-Wetted Perimeter	&	$P_{w}$	&	1.49E-002	&	$m$	\\ \hline
-Velocity	&	$V_{o}$	&	7.35	&	$\frac{m}{s}$	\\ \hline
-Pressure	&	$P_{o}$	&	155.00	&	bar	\\ \hline
-Temperature 1	&	$T_{1}$	&	289.500	&	$^{\circ}$C	\\ \hline
-Temperature 2	&	$T_{2}$	&	327.00	&	$^{\circ}$C	\\ \hline
-Enthalpy 1	&	$h_{1}$	&	1281.55	&	$\frac{kJ}{kg}$	\\ \hline
-Enthalpy 2	&	$h_{2}$	&	1497.21	&	$\frac{kJ}{kg}$	\\ \hline
-Mass Flow Rate 1	&	$\dot{m}_{1}$	&	0.2713	&	$\frac{kg}{s}$	\\ \hline
-Mass Flow Rate 2	&	$\dot{m}_{2}$	&	0.2399	&	$\frac{kg}{s}$	\\ \hline
-Final Time	&	$t_{f}$	&	2.00	&	sec	\\ \hline
-Wave Frequency	&	$\omega$	&	1.00	&	Hz	\\ \hline
-\end{tabular}
-\end{table}
-
-\begin{equation}
-	\label{eq:Sine_Wave:h}
-	h(i,j) = \frac{1}{2} \left( 
-			(h_{1}+h_{2}) + (h_{1}-h_{2}) cos\left(
-				\omega \left( j \Delta t + \frac{i \Delta x}{V_{o}} \right)
-				\right)
-			\right)
-\end{equation}
-
-\begin{equation}
-	\label{eq:Sine_Wave:m_dot}
-	\dot{m}(i,j) = \frac{1}{2} \left( 
-			(\dot{m}_{1}+\dot{m}_{2}) + (\dot{m}_{1}-\dot{m}_{2}) cos\left(
-				\omega \left( j \Delta t + \frac{i \Delta x}{V_{o}} \right)
-				\right)
-			\right)
-\end{equation}
-
-The comparison between the data table and the output in CTF are shown for
-enthalpy and mass flow rate in figures \ref{fig:Inlet_h} and
-\ref{fig:Inlet_m_dot}, respectively. The CTF output was read from the high
-precision VTK data files at each point in time, which omitted the actual ghost
-cell where these values were applied. The CTF values are located at the nearest
-node to the inlet, and will experience small amounts of numerical diffusion. For
-large mesh sizes, this discrepancy is negligible as can be seen by the
-overlapping profiles in figures \ref{fig:Inlet_h} and \ref{fig:Inlet_m_dot}.
-
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.55\textwidth]{images/Code_Verification/run_00_00/residual/results/Inlet_h.png}
-	\caption{Enthalpy Near the Inlet and the Analytical Solution}
-	\label{fig:Inlet_h}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.55\textwidth]{images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png}
-	\caption{Density Near the Inlet and the Analytical Solution}
-	\label{fig:Inlet_m_dot}
-\end{figure}
-
-% For the original version of CTF, there is a small discrepancy in the way the
-% density is calculated at the inlet that causes the velocity to be non-constant.
-%as shown in figure \ref{fig:Inlet_vel}.
- The pressure and the velocity fluctuate by less than $0.25\%$ during the
- simulation due to approximating the EOS as a linear function. This is considered small for
- this problem and should not greatly affect the order of accuracy of the error. 
- The VTK output files allow for a high level of precision, reducing
- round off error in the output during the post processing.
-
-\section{Code Convergence}
-
-The current version of CTF uses global code convergence criteria that are
-used to estimate the rate of change of global mass and energy conservation. The
-transient values of these criteria are shown in figure \ref{fig:Code_Convergence:Original} for the original version of
-CTF simulating the verification problem. Mass balance and storage are in units
-of $\frac{kg}{s}$. The energy balance, fluid energy, and solid energy are in units of $kW$.
-The solid energy storage is zero since there are not any heat structures present. The fluctuating values
-represent differences between the energy and mass entering and leaving the
-system. The flat profile for the mass storage term means that the sine wave has
-fully developed spatially through the channel. 
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.50\textwidth]{images/Code_Verification/run_00_00/original/results/Convergence_Plot.png}
-	\caption{Code Convergence Criteria for the Original Version of CTF}
-	\label{fig:Code_Convergence:Original}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.50\textwidth]{images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png}
-	\caption{Summation of the Residuals for the Residual Version of CTF}
-	\label{fig:Residuals_Plot}
-\end{figure}
-
-The residual formulation prints out the summation of the equation residuals
-across the domain to an output file at the end of each time step and can be seen
-in figure \ref{fig:Residuals_Plot}. The mass equation residual is in units of
-$\frac{kg}{m^{3}s}$. The energy equation residual is in units of
-$\frac{kW}{m^{3}}$. The momentum residual is in units of
-$\frac{kg}{m^{2}s^{2}}$. The flat profile of the mass and energy residuals shows
-that the sine wave has fully developed spatially through the channel.
-
-\section{Modified Equation Analysis}
+	\section{Problem Setup} \label{Verification:Advection}
     
+    A tube with no gravity acting in the direction of fluid flow has an initial
+    condition of $U_{1},\rho_{1},h_{1},P_{1},\dot{m}_{1}$ everywhere except at the 
+    starting position that has an intitial conditions of $h_{2},\rho_{2},\dot{m}_{2}$. 
+    When the time step for the calcuation is taken be exactly equal to the CFL
+    number as seen in equation \ref{eq:CFL}, the inlet conditions should advect
+    through the rest of the system in the form of a square wave. This is a
+    unique situation where the CFL can be held constant throughout the
+    simulation, and where the spatial and temporal trucation error can cancel
+    each other out at $CFL=1$. When the CFL is less than 1, numerical
+    diffusion occurs based on the truncation terms produced by the modified
+    equation analysis.
     
-    The order of accuracy in time and space can be analytically determined for
-    this problem through a modified equation analysis. Because the velocity is
-    constant, it can be pulled out of the spatial derivative as shown in
-    equation \ref{eq:isokinetic_start}. Using upwinding, the finite difference
-    can be written to look like equation \ref{eq:mass_isok_fd}.  A second order
-    Taylor series approximation can  be used for $\rho_{i}^{n+1}$  and
-    $\rho_{i-1}^{n}$ as shown in equations \ref{eq:rho_taylor_series_time} and
-    \ref{eq:rho_taylor_series_space} respectively. The higher order terms
-    ($O(\Delta x^{2},\Delta t^{2} )$) are not taken into account for this
-    approximation. The Taylor series approximations can then be substituted into
-    \ref{eq:mass_isok_fd} to yield \ref{eq:MEA_start}. This is the beginning of
-    the modified equation analysis. The goal will be to isolate the original PDE
-    and define the truncation error.
+    \begin{equation}
+    	\label{eq:CFL}
+    	CFL = \frac{\Delta t  U_{0} }{\Delta x}
+    \end{equation}
+    
+    \begin{figure}[!h]
+    	\centering
+    	\includegraphics[width=0.65\textwidth]{images/Verification_Problem1_advection}
+    	\label{fig:Verification_1}
+    	\caption{Setup for the isokinetic advection problem}
+    \end{figure}
+    
+    The problem was set up using the parameters given in table
+    \ref{table:Advection_Params}. Initial temperature, density, and mass flow
+    rate of the sysmte differs from the inlet temperature, density, and mass
+    flow rate. The pressure and velocity of the system remains constant. The
+    transient runs until the center of the advected wave reaches the end of the
+    tube at roughly 60 seconds. The value of the parameters are more or less
+    arbitrary, but approximate a single channel about the length of a fuel
+    assembly undergoing a 10 C temperature difference. The water is close to
+    standard temperature and pressure. 
+    
+    \begin{table}[!h]
+    	\center
+    	\label{table:Advection_Params}
+    	\caption{Input Parameters for Isokinetic Advection}
+    	\begin{tabular}{|c|c|c|}
+    		\hline
+	    	Length 	  				&  3.00		& m 		\\ \hline 
+	    	Channel Area			&  0.0001	& $m^{2}$	\\ \hline
+	    	Wetted Perimeter		&  0.040	& m			\\ \hline
+	    	Pressure  				&  1.00		& bar		\\ \hline
+	    	Initial Temperature		&  40.00	& C			\\ \hline
+	    	Inlet Temperature		&  30.00 	& C			\\ \hline
+	    	Inlet Mass Flow Rate 	&  0.005	& kg/s		\\ \hline 
+	    	Inlet Density			&  992.61	& kg/$m^{3}$\\ \hline
+	    	Velocity				&  0.050372	& m/s		\\ \hline
+    	\end{tabular}
+    \end{table}
+    
+    \section{Density Advection and Error}
+    
+    Figure \ref{fig:enthalpy_wave} compares the analytical and numerical
+    advection of density through the domain for a CFL number of 0.500. The
+    higher density in the colder region is on the left, and the lower density of
+    the warmer region is on the right. The red line on the right of the figure
+    depicts the truncation error at the current time step. The truncation error
+    occurs around the original dicontinuity as it advects through the solution.
+    As the discontinuity propogates it becomes more diffuse spatially. Once it
+    reaches the outlet the discontiuty leaves the domain and the overall error
+    drops to nearly zero. For this problem, the truncation error can be shown to
+    be a direct function of the CFL number and can be reduced to nearly zero
+    throughout the simulation. This simplified problem with an exact solution is
+    used for code verification.
+    
+    \begin{figure}[!h]
+    	\centering
+   		\includegraphics[width=0.85\textwidth]{images/linear_CTF_CFL_0.500/tmp/plot_density_0030}
+    	\caption{Comparison of density advection to analytical solution}
+    	\label{fig:enthalpy_wave}
+    \end{figure}
+    
+    \section{Modified Equation Analysis}
+    
+    For this isokinetic problem, the original mass balance equation can be re-written to 
+    look like equation \ref{eq:isokinetic_start}. Using upwinding, the finite difference
+    can be written to look like equation \ref{eq:mass_isok_fd}. A second order Taylor 
+    series approximation can be used for $\rho_{i}^{n+1}$ and $\rho_{i-1}^{n}$ as shown 
+    in equations \ref{eq:rho_taylor_series_time} and \ref{eq:rho_taylor_series_space} 
+    respectively. The higher order terms ($O(\Delta x^{2},\Delta t^{2} )$) are
+    not taken into account for this approximation. The Taylor series
+    approximations can then be substituted into \ref{eq:mass_isok_fd} to yield
+    \ref{eq:MEA_start}. This is the beginning of the modified equation analysis.
+    The goal will be to isolate the original PDE and define the truncation error.
     
     \begin{equation}
     	\label{eq:isokinetic_start}
@@ -196,8 +119,10 @@ that the sine wave has fully developed spatially through the channel.
     The lengthy equation \ref{eq:MEA_start} can be reduced to equation
     \ref{eq:MEA_p0} since the $\rho_{i}^{n}$ terms subtract out and the $\Delta
     t$ and $\Delta x$ terms in the denominator cancel out. This reduced equation
-    can be re-written into equation \ref{eq:MEA_p1}, with the original PDE
-    followed by the truncation terms. 
+    can the be re-written into equation \ref{eq:MEA_p1}, with the original PDE
+    followed by the truncation terms. Notice how the terms on the right are
+    dependent on both the numerical spacing $\Delta t$ and $\Delta x$, but also
+    on the second derivatives of density with respect to space and time.
     
     \begin{equation}
     	\label{eq:MEA_start}
@@ -217,120 +142,142 @@ that the sine wave has fully developed spatially through the channel.
     	 = 0
     \end{equation}
     
-    The terms to the right of the original PDE are the first order accurate
-    truncation terms. Notice how the truncation error is  dependent on both the
-    on the second derivatives of density with respect to space and time, and on
-    the numerical spacing $\Delta t$ and $\Delta x$. Since the truncation
-    error is linearly dependent on $\Delta t$ and $\Delta x$, the order of
-    accuracy is 1 with respect to time and space. 
-    
     \begin{equation}
     	\label{eq:MEA_p1}
     	 \frac{\partial \rho}{\partial t}  +  U_{0} \frac{\partial \rho}{\partial x} + 
     	 \frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t -
     	   U_{0}  \frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x  
     	   + O(\Delta x^{2},\Delta t^{2}) = 0 
-    \end{equation} 
+    \end{equation} \linebreak
     
-    When the energy equation undergoes a similar modified eqution analysis, the
-    order of accuracy is also 1 for time and space. The momentum conservation
-    equation does not apply for this problem since the velocity is
-    constant.
+    Before we can procede, we need to take the derivative of the original PDE with respect
+    to space and time as shown in equations \ref{eq:mass_dt} and  \ref{eq:mass_dx} 
+    respectively. These two derivatives can substitute into each other using the common 
+    term $\frac{\partial^2 \rho}{\partial x \partial t}$. The second derivatives of density with 
+    respect to space and time are therefore related by the velocity squared as
+    shown by equation \ref{eq:mass_second_derivatives}.
     
+    \begin{equation}
+    \label{eq:mass_dt}
+    	 \frac{\partial^2 \rho}{\partial t^2} + U_{0} \frac{\partial^2 \rho}{\partial x \partial t} = 0
+    \end{equation}
+    
+    \begin{equation}
+    \label{eq:mass_dx}
+    	 \frac{\partial^2 \rho}{\partial t \partial x} + U_{0} \frac{\partial^2 \rho}{\partial x^2} = 0
+    \end{equation}
+    
+    \begin{equation}
+    \label{eq:mass_second_derivatives}
+    	 \frac{\partial^2 \rho}{\partial t^2} =  U_{0}^2 \frac{\partial^2 \rho}{\partial x^2}
+    \end{equation} \linebreak
+    
+    This relationship can then be substituted back into equation \ref{eq:MEA_p1}, 
+    which can be reduced to equation \ref{eq:MEA_result} after igonoring the higher
+    order terms. The error depends on the CFL number, the axial spacing, and the
+    second order derivative of density with respect to space. This derivative is
+    what gives the error the characterisitcs of diffusion. When the CFL number is
+    less than one, the error term is negative and the diffusion is dampening. When
+    the CFL number is greater than one, the error term becomes positive, and the
+    accumulation of the error destabilizes the solution. 
+    
+    \begin{equation}
+    	 \frac{\partial \rho}{\partial t}  +  U_{0} \frac{\partial \rho}{\partial x} - 
+    	  \frac{1}{2}  \left(  \Delta x U_{0} \frac{\partial^2 \rho}{\partial
+    	  x^2} -   U_{0}^2 \frac{\partial^2 \rho}{\partial x^2} \Delta t  \right) 
+    	   + O(\Delta x^{2},\Delta t^{2}) = 0
+    \end{equation}
+    
+    \begin{equation}
+    \label{eq:MEA_result}
+    	 \frac{\partial \rho}{\partial t}  +  U_{0} \frac{\partial \rho}{\partial x} - 
+    	 \frac{\Delta x U_{0}}{2} \frac{\partial^2 \rho}{\partial x^2}  
+    	 \left(  1 - CFL  \right) 
+    	 + O(\Delta x^{2},\Delta t^{2})  = 0
+    \end{equation}
+    
+    Modified eqauation analysis can be applied to the energy balance equation
+    presented in equation \ref{eq:MEA_energy}. The energy equation is presented in a form where
+    the momentum equation was substituted in as zero and then divided through by
+    density. The result presented in equation \ref{eq:MEA_ene_result} is similar in
+    form to the result for the mass balance equation \ref{eq:MEA_result}.
+    
+    \begin{equation}
+    	\label{eq:MEA_energy}
+    	\frac{\partial h}{\partial t} - \frac{1}{\rho} \frac{\partial P}{\partial t} +
+    	U_{0} \frac{\partial h}{\partial x} = 0
+    \end{equation}
+    
+    \begin{equation}
+    \label{eq:MEA_ene_result}
+    	\frac{\partial h}{\partial t} - \frac{1}{\rho} \frac{\partial P}{\partial t} +
+    	U_{0} \frac{\partial h}{\partial x} - 
+    	\frac{\Delta x U_{0}}{2} \frac{\partial^2 h}{\partial x^2}
+    	\left( 1 - CFL \right)
+    	= 0
+    \end{equation}
+    
+    \section{Scaling of Error}
 
-\section{Richardson Extrapolation}
+	From the modifed equation analysis, the advection problem should prove to
+	be first order accurate in time and space. Assuming a fixed number of points,
+	the time step was halved several times. The relative difference between each
+	step was taken and $\ell 1$ normalized across space at at a particular time.
+	The plot of this difference can be seen for density in figure
+	\ref{fig:Difference_rho}. 
+    
+%    \begin{figure}[!h]
+%    	\centering
+%    	\includegraphics[width=0.50\textwidth]{images/Isokinetic_Advection/Difference_h}
+%    	\caption{Scaling of numerical error with constant time step size for
+%    	enthalpy}
+%    	\label{fig:Difference_h}
+%    \end{figure}
+    
+    
+    \begin{figure}[!h]
+    	\centering
+    	\includegraphics[width=0.50\textwidth]{images/Isokinetic_Advection/Difference_rho}
+    	\caption{Scaling of numerical error with constant time step size for
+    	density}
+    	\label{fig:Difference_rho}
+    \end{figure}
+    
+    The power fit for density has a high correlation coefficient, and
+    shows that the order of accuracy temporally is close to 1. Richardson
+    extrapolation to determine the order of accuracy at each point as shown by 
+    figure \ref{fig:Temporal_Order_Of_Accuracy_rho}. As the time step size
+    decreases, the order of accuracy approaches 1.0 due to smaller higher order
+    terms. 
+        
+%   \begin{figure}[!h]
+%   	\centering
+%   	\includegraphics[width=0.50\textwidth]{images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_h}
+%   	\caption{Temporal Order of Accuracy for density}
+%   	\label{fig:Temporal_Order_Of_Accuracy_h}
+%   \end{figure}
+    
+    \begin{figure}[!h]
+    	\centering
+    	\includegraphics[width=0.50\textwidth]{images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho}
+    	\caption{Temporal Order of Accuracy for density}
+    	\label{fig:Temporal_Order_Of_Accuracy_rho}
+    \end{figure}
+    
+    When the CFL number is set to 1, the spatial error and temporal error
+    cancel out producing a perfect square wave in time and space as shown by
+    figure \ref{fig:density_2D}. This holds true for a variety of spatial
+    mesh sizes, confirming that both the temporal and spatial errors are first
+    order accurate. 
+    
+    \begin{figure}[!h]
+    	\centering
+    	\includegraphics[width=0.50\textwidth]{images/Isokinetic_Advection/density_2D}
+    	\caption{Advection of isokinetic density wave $\frac{kg}{m^{3}}$ in time
+    	and space for CFL=1}
+    	\label{fig:density_2D}
+    \end{figure}
 
-The Richardson extrapolation was performed by refining the spatial and temporal
-step sizes by a factor of 2 for a set number of times. The spatial and temporal
-studies are refined separately in their own study in order to isolate the
-spatial and temporal affects on the solution. The generation of the inputs,
-running of the codes, and analysis of the output were automated with a python
-script in order to reduce user input errors and increase repeatability.  For
-this analysis, a significant amount of information was added to the hdf5 output
-files, increasing memory usage and run time. The computational resources for the
-spatial study was much higher than the temporal study due to the need to keep
-the courant number below 0.500. To keep the computational resources needed
-to perform this analysis reasonable, fewer spatial refinements were performed
-compared to the temporal analysis.
-
-\section{Convergence of Error}
-
-The difference between iterations was computed at each time step and spatial
-location for each quanitity of interest. This difference is considered as the
-error between each iteration. For the spatial refinement, the lower iterate
-values were numerically integrated to match the shape of the initial domain. The
-errors were then summed over the entire domain to yield a total error for each
-variable. The total error for density is plotted in figures
-\ref{fig:Temporal:Diff_rho} and \ref{fig:Spatial:Diff_rho} as a function of
-temporal and spatial step size.
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.60\textwidth]{images/Temporal_Study/Difference_rho}
-	\caption{Difference Between Successive Temporal Refinements for Density}
-	\label{fig:Temporal:Diff_rho}
-\end{figure} 
-
-The data points were chosen to be inside of the asymptotic range as shown by
-the good power fit with an exponent near 1. The power fit shows that as the
-temporal and spatial step sizes are reduced, the numerical error approaches
-zero. The discretization error between the original version of CTF is
-relatively small and is most likely due to the small fluctuations in the
-velocity present in the original version of the code. 
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.60\textwidth]{images/Spatial_Study/Difference_rho}
-	\caption{Difference Between Successive Spatial Refinements for Density}
-	\label{fig:Spatial:Diff_rho}
-\end{figure} 
-
-\section{Order of Accuracy}
-
-The order of accuracy for this verification problem is first order as shown by
-the modified equation analysis. This can be considered to be the exponent on
-the power fits as seen in figures \ref{fig:Temporal:Diff_rho}. However the order
-of accuracy $p$ can be calculated by using equation \ref{eq:OOA} where $f_{1}$,
-$f_{2}$, $f_{3}$ are consecutive levels within the same Richardson extrapolation
-study. The refinement factor, $R$, has the constant value of 2 for both the
-spatial and temporal studies.
-
-\begin{equation}
-	\label{eq:OOA}
-	p= \frac{
-	      	ln \left(
-	      	\frac{f_{3}-f_{2}}{f_{2}-f_{1}}
-	      	\right)
-	    }{ln(R)}
-\end{equation}
-
-The order of accuracy for all of the variables are presented for the temporal
-analysis and spatial analysis in figures \ref{fig:Temporal:OOA} and
-\ref{fig:Spatial:OOA} respectively. The temporal order of accuracy is well
-within the asymptotic range for the whole analysis, and moves closer to 1.0 with
-decreasing time step size. The spatial order of accuracy is a slightly outside
-the asymptotic range, but approaches an order of accuracy of 1.0 with
-decreasing mesh size. 
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.60\textwidth]{images/Temporal_Study/Order_Of_Accuracy_Summary}
-	\caption{Temporal Order of Accuracy}
-	\label{fig:Temporal:OOA}
-\end{figure}
-
-The slight differences between the original version of CTF and the residual
-formulation might be due to the different solution methods and back substitution
-of variables. Despite the small differences, both versions of the code exhibit
-order of accuracies very close the values obtained through the modified
-equation analysis.
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.60\textwidth]{images/Spatial_Study/Order_Of_Accuracy_Summary}
-	\caption{Spatial Order of Accuracy}
-	\label{fig:Spatial:OOA}
-\end{figure}
 
 
 

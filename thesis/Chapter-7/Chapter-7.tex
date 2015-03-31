@@ -1,237 +1,234 @@
 %SourceDoc ../YourName-Dissertation.tex
 \vspace*{-80mm}
-\chapter{Shock Tube} \label{chapter7:Shock_Tube}
+\chapter{Uniform Heating Problem} \label{chapter7:uniform_heating}
  
-	\section{Problem Setup} \label{Verification:Shock_Tube}
-        
-    A shock tube is a very common and standard method of verification for
-    momentum and pressure. However, an exact analytical solution is more readily
-    obtained for an ideal gas such as air. A shock tube is created by setting
-    the initial mass flow rate and velocity to zero with no gravity. The
-    boundary conditions at the inlet and outlet are also set to zero, simulating
-    a closed system. A region of high pressure is defined for one half of the
-    domain, and a region of low pressure for the second half. An imaginary
-    diaphragm divides the two regions before the simulation, and at $t=0$
-    disappears.
-    
-    \begin{figure}[!h]
-    	\centering
-    	\includegraphics[width=0.55\textwidth]{images/Verification_Problem2_shock_tube}
-    	\label{fig:Verification_2}
-    	\caption{Setup for the shock tube problem}
-    \end{figure}
-    
-    The problem was set up using the parameters given in table
-    \ref{table:ST_Params}. The geometry is similar to the previous problem, but
-    the length of the tube was elongated to take into account the faster
-    propogation of the rarefaction and compression waves. The temperature and
-    pressure of the air are near standard conditions.
-    
-    \begin{table}[!h]
-    	\center
-    	\label{table:ST_Params}
-    	\caption{Input Parameters for Shock Tube Verification Probelm}
-    	\begin{tabular}{|c|c|c|}
-    		\hline
-	    	Length 	  				&  25.00	& m 		\\ \hline 
-	    	Channel Area			&  0.0001	& $m^{2}$	\\ \hline
-	    	Wetted Perimeter		&  0.040	& m			\\ \hline
-	    	Initial Pressure  		&  1.00		& bar		\\ \hline
-	    	Initial Enthalpy		&  304.66575& kJ/kg		\\ \hline
-	    	Initial Mass Flow Rate 	&  0.000	& kg/s		\\ \hline
-	    	Initial Pressure Drop	&  0.09576  & bar 		\\ \hline
-    	\end{tabular}
-    \end{table}    
-    
-    Each region has a unique density corresponding to the different pressures
-    using the equation of state for air given in equation \ref{eq:EOS_air} where $\gamma
-    = 1.4$ is the ratio of specific heats for air. Additionally, the specific
-    heat $Cp = 1.005 \frac{kJ}{kg-K}$ to convert between enthalpy and
-    temperature. The initial enthalpy of the system is constant, but will change
-    non-uniformly as a function of time. The velocity is initially set to zero,
-    but will change as the compression and rarefaction waves move. Since the
-    velocity is set to zero initially, it can't be used to evaluate the time
-    step size. Instead the speed of sound can be evaluated using equation
-    \ref{eq:sound_speed}, and this velocity can be used to calculate the time
-    step. While there might be some slight change in the speed of sound due to
-    enthalpy changes, it should remain effectively constant.
-    
-    \begin{equation}
-    \label{eq:EOS_air}
-    	\rho = \left( \frac{\gamma}{\gamma - 1} \right) \frac{P_{abs}}{h} 
-    \end{equation}
-    
-    \begin{equation}
-    \label{eq:sound_speed}
-    a = \sqrt{ \left( \gamma - 1 \right) h }
-    \end{equation}
-    
-    \begin{equation}
-    \gamma = \frac{C_{p}}{C_{v}}
-    \end{equation}
-    
-    \subsubsection{Analytical Solution}
-    
-    When the diaphragm disappears, a compression wave will move to the right and a
-    rarefaction wave to the left. These two waves split the domain into four
-    distinct regions. There is a region to the left of the rarefaction wave that has
-    the same properties as the initial left region. There is a region between the
-    rarefaction wave and the initial location of the diaphragm. There is a region
-    between the initial location of the diaphragm and the compression wave. There is
-    a region to the right of the compression wave, that has the same properties
-    as the initial right region. The analytical solution does not take into
-    account reflection off of the walls, however the numerical solution can due
-    to the applied boundary conditions for mass flow rate.
-    
-    \begin{figure}[!h]
-    	\centering
-    	\includegraphics[width=0.65\textwidth]{images/Shock_Tube/Shock_Tube_regions}
-    	\label{fig:V2_pressure_scaling}
-    	\caption{Regions within the shock tube based on rarefaction and compression}
-    \end{figure}
-    
-    For a perfectly caloric gas, the following equations are provided
-    \cite[p. 238]{McGraw-Hill} given the initial conditions for state 1 and
-    4 in conjuction with equation \ref{eq:sound_speed}. An iterative method is required
-    to solve \ref{eq:ref1_7.94} for $\frac{P_{2}}{P_{1}}$. Once the region
-    properties are obtained, the regions themselves are mapped by comparing the
-    current position and time to the velocity of the rarefaction and compression
-    wave. 
-    
-    \begin{equation}
-    \label{eq:ref1_7.94}
-    	\frac{P_{4}}{P_{1}} = \frac{P_{2}}{P_{1}} \frac{
-    	\left( 1 - (\gamma-1)(\frac{a_{1}}{a_{4}})(\frac{P_{2}}{P_{1}} -1) \right) }
-    	{\sqrt{2 \gamma \left[ 2 \gamma + (\gamma +1)(\frac{P_{2}}{P_{1}} -1)\right]}}^{
-    	- \frac{2 \gamma}{\gamma - 1}}
-    \end{equation}
-    
-    \begin{equation}
-    	\frac{T_{2}}{T_{1}} = \frac{P_{2}}{P_{1}} \left(
-    	\frac{\frac{\gamma + 1}{\gamma - 1} + \frac{P_{2}}{P_{1}}}
-    	{1 + (\frac{\gamma +1}{\gamma - 1}) \frac{P_{2}}{P_{1}}} \right)
-    \end{equation}
-    
-    \begin{equation}
-    	\frac{\rho_{2}}{\rho_{1}} =
-    	\frac{1 + (\frac{\gamma + 1}{\gamma - 1}) \frac{P_{2}}{P_{1}}}
-    	{\frac{\gamma + 1}{\gamma - 1} + \frac{P_{2}}{P_{1}}} 
-    \end{equation}
-    
-    \begin{equation}
-    	W = a_{1} \sqrt{ \frac{\gamma + 1}{2 \gamma} 
-    	                 \left( \frac{P_{2}}{P_{1}} -1 \right) +1 }
-    \end{equation}
-    
-    \begin{equation}
-    	P_{2} = P_{3}
-    \end{equation}
-    
-    \begin{equation}
-    	\frac{P_{3}}{P_{4}} = 
-    	\left( \frac{\rho_{3}}{\rho_{4}} \right)^{\gamma} =
-    	\left( \frac{T_{3}}{T_{4}} \right)^{\frac{\gamma}{\gamma -1}}
-    \end{equation}
-    
-    \subsubsection{Results and Error}
-    
-    Enthlapy and density have a discontinuity as seen in figure
-    \ref{fig:V2_result_top} where the diaphragm was initially placed . Similarly
-    there are discontinuities that move with the rarefacation and compression
-    waves for pressure, density, and velocity. The largest error occurs around
-    these discontinuities as seen in figure \ref{fig:V2_result_bottom}. A 
-    fine spatial mesh and a small time step are needed to accurately reflect the
-    exact solution.
-    
-    \pagebreak
-    \begin{figure}[!h]
-    	\centering
-    	\includegraphics[width=1.30\textwidth,angle=90.0]{images/wave1_200dP_N1000/tmp/plot_shocktube_0034}
-    	\caption{Comparison of analytical and numerical results for shock tube}
-    	\label{fig:V2_result_top}
-    \end{figure}
-    
-    \pagebreak
-    \begin{figure}[!h]
-    	\centering
-    	\includegraphics[width=1.30\textwidth,angle=90.0]{images/wave1_200dP_N1000/tmp/plot_st_err_0679}
-    	\caption{Truncation error for shock tube}
-    	\label{fig:V2_result_bottom}
-    \end{figure}
-    
-    \pagebreak
-    \subsubsection{Scaling of Error}
-    
-    A Richardson Extrapolation was performed on the density, enthalpy, and mass
-    flow rate for the shock tube analysis in time. The error approaches zero
-    as the time step size gets smaller as seen in figure
-    \ref{fig:ST_Err_rho}. The order of accuracy with respect to time is
-    converges to first order accurate as the time step size decreases. The range
-    of time step values shown are within the asymptotic limit. 
-    
-    \begin{figure}[!h]
-    	\centering
-    	\includegraphics[width=0.5\textwidth]{images/Shock_Tube/Difference_rho}
-    	\caption{Richardson Extrapolation of the shock tube results N=50}
-    	\label{fig:ST_Err_rho}
-    \end{figure}
-    
-    \begin{figure}[!h]
-    	\centering
-    	\includegraphics[width=0.50\textwidth]{images/Shock_Tube/Temporal_Order_Of_Accuracy_rho}
-    	\caption{Temporal Order of Accuracy for shock tube}
-    	\label{fig:ST_OOA_rho}
-    \end{figure}
-	
-	\clearpage
-	\subsection{Conduction Equations} \label{Cond_Eqs}
-	For this project, the equation for a 1-D slab \eqref{eq:heat_cond} was used
-	instead of using cylindrical coordinates. 
-	
-	\begin{equation}
-		M c_{p} \left( \frac{\partial T_{i,solid}}{\partial t} \right)
-		- A \left( \frac{\partial k_{solid} T_{i,solid}}{\partial x}\right) 
-		- Q 
-		+ A_{surf} h_{ht} \left( T_{w,solid} - T_{liq}\right) 
-		= 0
-		\label{eq:heat_cond}
-	\end{equation}
-	
-	The first term is the thermal mass of the control volume multiplied by the rate
-	of change of the temperature.The next term describes the conduction to adjacent
-	control volumes. If the cell face is at the center, then the gradient through
-	the face is zero to account for symmetry within the control volume. The area is
-	taken as the cross sectional area at the middle of the cell. The next term is
-	the heat generated within the region. The last term is the heat transfer out of
-	the region due to convection. If the cell is not adjacent to the fluid, then
-	this term gets dropped by setting the heat transfer coefficient to zero. This
-	same term must be added to the single phase liquid energy residual to conserve energy.
-	
-	\begin{equation}
-		M_{i} c_{p_{i}}\left(T_{i}^{n}\right) 
-		\left( \frac{\partial T_{i,solid}}{\partial t} \right) 
-		- A \left( \frac{\partial k_{solid} T_{i,solid}}{\partial x}\right) - Q 
-		+ A_{surf} h_{ht} \left( T_{w,solid} - T_{liq}\right) 
-		= 0
-		\label{eq:FD:heat_cond}
-	\end{equation}
-	
-	\begin{figure}[!h]
-		\centering
-    	\includegraphics[width=0.65\textwidth]{images/Heat_Conduction_Jacobian_Diagram}
-    	\caption{Jacobian matrix for fluid and solid residuals}
-    	\label{fig:solid_liquid_jacobian}
-	\end{figure}
-	
-	When the conduction equation \eqref{eq:heat_cond} is written as residual
-	function, it can be appended to the Jacobian structure as shown in figure
-	\ref{fig:solid_liquid_jacobian}. The original fluid jacobian matrix is in the
-	top left and has a block entry for each fluid cell. The solid jacobian matrix
-	is in the bottom right, where each row corresponds to a single solid energy
-	balance. Each block in the diagram represents an axial level with 4 radial
-	positions. The first entry only has two temperatures due to symmetry about the
-	center. The last entry only has two entries since it is interacting with the
-	fluid and the surface temperature is lagging. While this represents the full
-	jacobian matrix, the heat conduction solution is not fully coupled with the
-	single phase liquid solution. This can be seen by the lack of terms in the
-	upper right and lower left quadrants.
+\section{Problem Setup}
+
+%Round off error, iterative convergence error.
+%Discretization error?? (Check with)
+
+The test problem is a nuclear rod with uniform heat generation with parameters
+given in Table \ref{table:heating:parameters}. The fuel and cladding are assumed
+to have constant material properties. The mass flow rate, reference pressure, and inlet
+temperature approximate normal PWR operating conditions. However, the heat
+generation rate is much less than normal PWR operating conditions to ensure that
+the problem remains well  within the single-phase regime with an expected outlet
+temperature of under 300.0 $^{\circ}C$. Additionally, the problem is set
+up so that the calculation of the heat transfer coefficient using the Dittus-Boelter
+correlation is appropriate. The subchannel is rod centered with no grid spacers
+or frictional losses. Gravity pressure losses in the vertical direction are
+taken into account. 
+
+\begin{table}[h]
+\center
+\caption{Problem Parameters}
+\label{table:heating:parameters}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Parameter			&	Symbol	&	Value	&	Unit	\\ \hline
+Mass Flow Rate 		& $\dot{m}$ &   0.300   &   $\frac{kg}{sec}$  \\ \hline
+Pressure			&	$P_{o}$	&	165.00	&	bar	\\ \hline
+Inlet Temperature	&$T_{inlet}$&	290.00	&	$^{\circ}$C	\\ \hline
+Linear Heat  Rate	& $q'$  	& 	4.00 	& $\frac{kW}{m-rod}$ \\ \hline
+Active Fuel Length 	& $L$		& 	3.658	& $m$	\\ \hline
+Fuel Radius	& $r_{fuel}$ & 0.4096 & $cm$ \\ \hline
+Outer Cladding Radius &	$r_{co}$ & 	0.475	& $cm$ \\ \hline
+Inner Cladding Radius & $r_{ci}$ &	0.4174	& $cm$ \\ \hline
+Rod Pitch	& $p$ &	12.60	& $cm$ \\ \hline
+Clad Specific Heat	& $c_{p,clad}$	& 0.431&  $\frac{kJ}{kg-K}$ \\ \hline
+Clad Density & $\rho_{clad}$ &	8470.57 & $\frac{kg}{m^{3}}$ \\ \hline
+Clad Thermal Conductivity & $k_{clad}$ & 14.83 & $\frac{W}{m-k}$ \\ \hline
+Fuel Specific Heat Capacity & $c_{p,fuel}$ & 0.289 & $kJ/kg-K$ \\ \hline
+Fuel Density & $\rho_fuel$ & 10970.40 & $\frac{kg}{m^{3}}$ \\ \hline
+Fuel Thermal Conductivity & $k_fuel$ & 14.83 & $\frac{W}{m-k}$ \\ \hline
+Gap Heat Transfer Coefficient & $h_{gap}$ & 5678.30	& $\frac{W}{m^2-K}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Steady State Analytical Solution}
+
+At steady state conditions and for uniform heat generation, the original
+conduction equation can be integrated to obtain equation \ref{eq:uheat:fuel} for
+$0.0 \leq r < r_{fuel}$.
+
+\begin{equation}
+	\label{eq:uheat:fuel}
+	T_{rod}(r,z)-T_{rod}(r_{fuel},z)
+	=\frac{q''' r_{fuel}^{2}}{4 k_{fuel}}\left(1-\frac{r^{2}}{r_{fuel}^{2}}\right)
+\end{equation}
+
+The temperature at the fuel surface can be calculated from the cladding inner
+surface temperature and the thermal resistance across the gap as given in equation
+\ref{eq:uheat:fuel-surface} for $r_{fuel} \leq r < r_{ci}$.
+
+\begin{equation}
+	\label{eq:uheat:fuel-surface}
+	T_{rod}(r_{fuel},z)-T_{rod}(r_{ci},z)
+	=\frac{q'}{2 \pi r h_{gap}}
+\end{equation}
+
+The temperature at the inner surface of the cladding can be calculated from the
+cladding inner surface temperature and the thermal resistance across the 
+cladding as given by equation \ref{eq:uheat:clad-inner} for $r_{ci} \leq r
+< r_{co}$.
+
+\begin{equation}
+	\label{eq:uheat:clad-inner}
+	T_{rod}(r_{ci},z)-T_{rod}(r_{co},z)
+	=\frac{q'}{2 \pi k_{clad}}
+\end{equation}
+
+The temperature at the outer surface of the cladding can be calculated from the
+fluid temperature and the thermal resistance due to convection as given by
+equation \ref{eq:uheat:clad-outer} for $ r = r_{co}$.
+
+\begin{equation}
+	\label{eq:uheat:clad-outer}
+	T_{rod}(r_{co},z)-T_{fluid}(z)
+	=\frac{q'}{2 \pi r_{co} h_{fluid}}
+\end{equation}
+
+The temperatures can be computed by working from the known fluid temperature,
+and  working solving for temperatures from the outside surface of the cladding
+to the  center of the fuel.Notice that the difference between any radial
+temperature  and the fluid temperature at the same axial level is independent of
+the axial height.  This difference will be compared first to verify that the
+conduction equation is working properly
+
+\section{Steady State Results}
+
+The temperature distribution within the fuel rod relative to the wall surface
+temperature can be seen in Figure \ref{fig:Rod_Profile_Summary}. The analytical
+solution matches well with the  different solution methods both within the fuel
+and at the cladding surfaces.  The difference between the analytical solution
+and the numerical solutions are  highest at the fuel centerline as can be seen
+by figure \ref{fig:Rod_Profile_Errors}. This error is due to the numerical
+error from  the finite differencing approximations made within the fuel. The
+fuel centerline  temperature  is extrapolated from the first and second nodal
+temperatures  using a second order accurate forward differencing approximation
+of the  boundary condition in equation \ref{eq:bc_centerline}. Normally CTF 
+uses a different extrapolation method, but to consistently compare  to the
+residual formulation was not used.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/Rod_Profile_Summary.png}
+	\caption{Steady State Radial Temperature Distribution Difference to Rod Surface Temperature }
+	\label{fig:Rod_Profile_Summary}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/Rod_Profile_Errors.png}
+	\caption{Error of Different Numerical Methods to Analytical Solution}
+	\label{fig:Rod_Profile_Errors}
+\end{figure}
+
+The relative error given in Table \ref{table:heating:errors} is shown to
+scale with the inverse of the number of radial nodes in the fuel. The relative error does not scale with heat
+flux, but the temperature gradient from the fuel centerline to the rod wall
+does. The numerical error will also change for non-uniform heating and variable
+material properties within the fuel. The implicit transient solution method has
+slightly higher numerical error than the semi-implicit transient and implicit
+steady state solution methods. However, all three residual formulation methods
+have lower numerical error compared to the original steady state method from
+CTF. The order of accuracy is difficult to compute, since CTF uses non-uniform
+meshing near the rod center and since the fuel centerline temperature is
+extrapolated using a second order accurate method. The non-uniform mesh size
+also means that a Richardson extrapolation is not valid.
+
+\begin{table}[h]
+\center
+\caption{Relative Error of Difference Between Fuel Centerline to Rod Surface Temperature}
+\label{table:heating:errors}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+NR &	SI Trans	&	I Trans	& I SS & Original SS	\\ \hline
+5  & 1.33 $ \% $ & 1.35$ \% $ & 1.32$ \% $ & 2.15$ \% $ \\ \hline
+10 & 0.45 $ \% $ & 0.48$ \% $ & 0.45$ \% $ & 0.78$ \% $ \\ \hline
+20 & 0.15 $ \% $ & 0.18$ \% $ & 0.14$ \% $ & 0.20$ \% $ \\ \hline
+\end{tabular}
+\end{table}
+
+
+While there is on solid conduction in the axial direction, the fluid will have a
+temperature gradient in the axial direction. This will cause a 2-D temperature
+distribution as shown by Figure \ref{fig:Rod_Profile}. The fluid temperature
+only changes by about 10 $^{\circ}C$ from the inlet to the outlet, but the fuel
+temperature changes by about 90 $^{\circ}C$ from the outer surface of the
+cladding to the fuel centerline temperature. The hottest location of the fuel
+is located on the centerline at the top of the rod. The centerline fuel
+temperature is slightly under predicted by both the residual formulation and
+the original versions of CTF. However as table \ref{table:heating:errors}
+shows, this is attributable to numerical error.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/rod_profile.jpg}
+	\caption{Steady State Axial and Radial Temperature Distribution in the Fuel Rod}
+	\label{fig:Rod_Profile}
+\end{figure}
+
+
+\section{Transient Results}
+
+The transient simulations were run for 30.0 seconds to reach a pseudo-steady
+state condition. The rate of change of the temperatures have reached near steady
+state conditions as shown by Figure 7 were the red lines are fuel node
+temperatures, and the black lines are cladding node temperatures. The
+semi-implicit method is used on the left, and the fully implicit method is on
+the right. For the semi-implicit solution method, a maximum time step size of
+0.02 sec was needed to ensure stability. For the implicit solution method time
+step sizes well over 0.2 seconds could be taken. For the data in the figure,
+time steps of 1.0 second were used. The implicit Jacobian matrix is stiffer than
+the Jacobian matrix for the semi-implicit method and therefore takes longer to
+solve. Additionally, for time steps with large residuals multiple up to 5
+iterations are needed. However the advantage of being able to take significantly
+longer time steps makes up for the increased computational cost per time step
+required by the semi-implicit method. The temperatures gained from the
+semi-implicit method and the implicit methods do not differ by significant
+amounts.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/trans_rod1_axial10_SI.jpg}
+	\caption{Plot of the Radial Nodal Temperatures for the Semi-Implicit Method}
+	\label{fig:trans_rod1_axial10_SI}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/trans_rod1_axial10_I.jpg}
+	\caption{Plot of the Radial Nodal Temperatures for the Implicit Method}
+	\label{fig:trans_rod1_axial10_I}
+\end{figure}
+
+The transient behavior of temperature profile is shown in Figure 8 where the
+flat green line is the initial condition, the red line is the final profile, and
+the black lines are intermediate time steps. It is easier to observe the
+difference in the number of time steps between the semi-implicit method on the
+left and the implicit method on the right. The intermediary time steps are still
+the same, as is the final solution. However, the implicit method will have
+greater numerical error compared to the semi-implicit method.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/profile_rod1_level_10_SI.jpg}
+	\caption{Temperature profile over time for the Semi-Implicit Method}
+	\label{fig:profile_rod1_level_10_SI}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/profile_rod1_level_10_I.jpg}
+	\caption{Temperature profile over time for the Implicit Method}
+	\label{fig:profile_rod1_level_10_I}
+\end{figure}
+
+
+
+
+
+
+
