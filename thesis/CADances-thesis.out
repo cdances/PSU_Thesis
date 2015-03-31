@@ -19,4 +19,9 @@
 \BOOKMARK [1][-]{section..5.2}{Steady State Analytical Solution}{chapter..5}% 19
 \BOOKMARK [1][-]{section..5.3}{Steady State Results}{chapter..5}% 20
 \BOOKMARK [1][-]{section..5.4}{Transient Results}{chapter..5}% 21
-\BOOKMARK [0][-]{figure..5.7}{Bibliography}{}% 22
+\BOOKMARK [0][-]{chapter..6}{Isokinetic Step Advection}{}% 22
+\BOOKMARK [1][-]{section..6.1}{Problem Setup}{chapter..6}% 23
+\BOOKMARK [2][-]{subsubsection..6.1.0.1}{Density Advection and Error}{section..6.1}% 24
+\BOOKMARK [3][-]{subsubsection..6.1.0.2}{Modified Equation Analysis}{subsubsection..6.1.0.1}% 25
+\BOOKMARK [3][-]{subsubsection..6.1.0.3}{Scaling of Error}{subsubsection..6.1.0.1}% 26
+\BOOKMARK [0][-]{figure..6.5}{Bibliography}{}% 27
