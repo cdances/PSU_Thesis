@@ -1,0 +1,52 @@
+%SourceDoc ../YourName-Dissertation.tex
+\vspace*{-80mm}
+\chapter{Uniform Heating Problem} \label{chapter5:uniform_heating1}
+ 
+\section{Problem Setup}
+
+%Round off error, iterative convergence error.
+%Discretization error?? (Check with)
+
+The test problem is a nuclear rod with uniform heat generation with parameters
+given in Table \ref{table:heating:parameters}. The fuel and cladding are assumed
+to have constant material properties. The mass flow rate, reference pressure, and inlet
+temperature approximate normal PWR operating conditions. However, the heat
+generation rate is much less than normal PWR operating conditions to ensure that
+the problem remains well  within the single-phase regime with an expected outlet
+temperature of 300.0 $^{\circ}C$. Additionally, the problem is set up so that
+the calculation of the heat transfer coefficient using the Dittus-Boelter
+correlation is appropriate.
+
+\begin{table}[h]
+\center
+\caption{Problem Parameters}
+\label{table:heating:parameters}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Parameter		&	Symbol	&	Value	&	Unit	\\ \hline
+Mass Flow Rate 	& $\dot{m}$ &   0.300   &   $\frac{kg}{sec}$  \\ \hline
+Pressure		&	$P_{o}$	&	165.00	&	bar	\\ \hline
+Inlet Temperature&$T_{inlet}$&	290.00	&	$^{\circ}$C	\\ \hline
+Linear Heat Generation Rate& $q'$  & 4.00 & $\frac{kW}{m-rod}$ \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Code Convergence}
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

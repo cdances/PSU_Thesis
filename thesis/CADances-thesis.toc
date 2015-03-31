@@ -14,4 +14,7 @@
 \contentsline {section}{\numberline {4.4}Richardson Extrapolation}{16}{section..4.4}
 \contentsline {section}{\numberline {4.5}Convergence of Error}{16}{section..4.5}
 \contentsline {section}{\numberline {4.6}Order of Accuracy}{18}{section..4.6}
-\contentsline {chapter}{Bibliography}{18}{figure..4.8}
+\contentsline {chapter}{\numberline {5}Uniform Heating Problem}{20}{chapter..5}
+\contentsline {section}{\numberline {5.1}Problem Setup}{20}{section..5.1}
+\contentsline {section}{\numberline {5.2}Code Convergence}{20}{section..5.2}
+\contentsline {chapter}{Bibliography}{20}{section..5.2}
