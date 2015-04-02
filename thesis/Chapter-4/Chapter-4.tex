@@ -173,11 +173,11 @@
     \end{equation} \linebreak
     
     This relationship can then be substituted back into equation \ref{eq:MEA_p1}, 
-    which can be reduced to equation \ref{eq:MEA_result} after igonoring the higher
+    which can be reduced to equation \ref{eq:MEA_result} after ignoring the higher
     order terms. The error depends on the CFL number, the axial spacing, and the
     second order derivative of density with respect to space. This derivative is
-    what gives the error the characterisitcs of diffusion. When the CFL number is
-    less than one, the error term is negative and the diffusion is dampening. When
+    what gives the error the characteristics of diffusion. When the CFL number
+    is less than one, the error term is negative and the diffusion is dampening. When
     the CFL number is greater than one, the error term becomes positive, and the
     accumulation of the error destabilizes the solution. 
     
@@ -196,7 +196,7 @@
     	 + O(\Delta x^{2},\Delta t^{2})  = 0
     \end{equation}
     
-    Modified eqauation analysis can be applied to the energy balance equation
+    Modified equation analysis can be applied to the energy balance equation
     presented in equation \ref{eq:MEA_energy}. The energy equation is presented in a form where
     the momentum equation was substituted in as zero and then divided through by
     density. The result presented in equation \ref{eq:MEA_ene_result} is similar in
@@ -219,7 +219,7 @@
     
     \section{Scaling of Error}
 
-	From the modifed equation analysis, the advection problem should prove to
+	From the modified equation analysis, the advection problem should prove to
 	be first order accurate in time and space. Assuming a fixed number of points,
 	the time step was halved several times. The relative difference between each
 	step was taken and $\ell 1$ normalized across space at at a particular time.

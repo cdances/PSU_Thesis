@@ -32,8 +32,8 @@ transient was defined to be quadruple the time needed for the liquid at the
 inlet to advect to the outlet. The frequency of the sine wave was defined to
 generate a full period of a spatial wave across the length of the channel. With
 these simplifications, the method of manufacturing solutions is unnecessary
-since the known solutions are simply the advection of the transinet inlet
-conditions. The functions for the etnhalpy $h$ and mass flow rate, $\dot{m}$,
+since the known solutions are simply the advection of the transient inlet
+conditions. The functions for the enthalpy $h$ and mass flow rate, $\dot{m}$,
 are given in equations \ref{eq:Sine_Wave:h} and \ref{eq:Sine_Wave:m_dot} where
 $x$ is the length from the inlet and $t$ is the simulated time. The functions
 smoothly transition to the initial condition of a straight line across the
@@ -232,7 +232,7 @@ that the sine wave has fully developed spatially through the channel.
     	   + O(\Delta x^{2},\Delta t^{2}) = 0 
     \end{equation} 
     
-    When the energy equation undergoes a similar modified eqution analysis, the
+    When the energy equation undergoes a similar modified eqaution analysis, the
     order of accuracy is also 1 for time and space. The momentum conservation
     equation does not apply for this problem since the velocity is
     constant.
@@ -246,7 +246,7 @@ studies are refined separately in their own study in order to isolate the
 spatial and temporal affects on the solution. The generation of the inputs,
 running of the codes, and analysis of the output were automated with a python
 script in order to reduce user input errors and increase repeatability.  For
-this analysis, a significant amount of information was added to the hdf5 output
+this analysis, a significant amount of information was added to the VTK output
 files, increasing memory usage and run time. The computational resources for the
 spatial study was much higher than the temporal study due to the need to keep
 the CFL number below 0.500. To keep the computational resources needed
@@ -256,7 +256,7 @@ compared to the temporal analysis.
 \section{Convergence of Error}
 
 The difference between iterations was computed at each time step and spatial
-location for each quanitity of interest. This difference is considered as the
+location for each quantity of interest. This difference is considered as the
 error between each iteration. For the spatial refinement, the lower iterate
 values were numerically integrated to match the shape of the initial domain. The
 errors were then summed over the entire domain to yield a total error for each
@@ -332,14 +332,14 @@ equation analysis.
 	\label{fig:Spatial:OOA}
 \end{figure}
 
-Taking the derivative of the analytical solutuion, the exact numerical error can
+Taking the derivative of the analytical solution, the exact numerical error can
 be calculated from the modified equation analysis and compared to the
 calculated error as seen in figure \ref{fig:Error_comparison_rho}. This error
-was scaled by a factor of $\frac{x}{L}$ to account for numerical propogation.
+was scaled by a factor of $\frac{x}{L}$ to account for numerical propagation.
 The temporal and spatial mesh sizes were selected to have order of accuracies
 that were closest to 1. There still exists a small discrepancy between the
-expected error, and the calculated error. However, this is small enought that it
-is most likely due to truncation error in either the solution of the jacobian
+expected error, and the calculated error. However, this is small enough that it
+is most likely due to truncation error in either the solution of the Jacobian
 matrix or in values read in from CTF. 
 
 \begin{figure}[!h]

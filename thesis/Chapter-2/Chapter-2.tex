@@ -14,7 +14,7 @@
 	cells are represented with an index $i$, and the faces with indexes of
 	$i+\frac{1}{2}$ or $i-\frac{1}{2}$. This project will initially focus
 	on this 1-D configuration. Usually the code is three dimensional, with
-	channels connecting to each other in two more dimmensions. Fully 3-D
+	channels connecting to each other in two more dimensions. Fully 3-D
 	equations will be considered in future work.
 	
 	\begin{figure}[!h]
@@ -25,7 +25,7 @@
 	\end{figure}
 
 	The thermal hydraulics of a LWR core is an important part of nuclear
-	reactor desigin. COBRA-TF solves 8 conservation equations for liquid,
+	reactor design. COBRA-TF solves 8 conservation equations for liquid,
 	entrained droplet, and vapor phases of water boiling within the rod structure
 	of a LWR reactor core \cite{Salko2014}. Currently, the conservation
 	equations analytically reduce into a pressure matrix in a semi-implicit
@@ -36,13 +36,13 @@
 	solved directly. Verification of the residuals was done by comparing
 	calculated results to analytical solutions for isokinetic advection and shock
 	tube problems. For each verification problem, a scaling study of the
-	truncation error was compared to the predicted behaviour derived from modified
+	truncation error was compared to the predicted behavior derived from modified
 	equation analysis using Richardson extrapolation. Further work was then
 	applied to represent 1-D heat conduction within the heater rods. Some initial
-	work was done to allow the code to solve either semi-implicitly, or fully impicitly.
-    The single phase Euler partial differential equations for mass
+	work was done to allow the code to solve either semi-implicitly, or fully
+	implicitly. The single phase Euler partial differential equations for mass
     \eqref{eq:pde_mass}, momentum \eqref{eq:pde_momentum}, and energy
-    \eqref{eq:pde_energy} corresond to the unknown variables density $\rho$,
+    \eqref{eq:pde_energy} correspond to the unknown variables density $\rho$,
     velocity $u$, pressure $P$, and enthalpy $h$. The first terms in each of the
     equations are temporal terms. The rest of the terms are steady state spatial
     terms. The last term in the energy equation represents the net heat transfer
@@ -117,8 +117,8 @@
     	= 0
     \end{equation}
     
-    The 1-D equations are then evaluated at a position index $ i $ and a certian time
-    $n$ in order to solve for the next time value of $n+1$. In the mass equation
+    The 1-D equations are then evaluated at a position index $ i $ and a certain
+    time $n$ in order to solve for the next time value of $n+1$. In the mass equation
     \eqref{eq:FD_mass}, the velocities are located at the cell faces
     $i+\frac{1}{2}$ and $i-\frac{1}{2}$. The density at a corresponding face is
     either upwinded $\dot{\rho}_{i+\frac{1}{2}}^{n}$, or averaged
