@@ -5,8 +5,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The finite volume structure for COBRA-TF}}{3}{figure..2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Radial Rod Meshing}}{6}{figure..2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Rod Axial}}{6}{figure..2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Radial Rod Meshing}}{7}{figure..2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Radial Rod Meshing}}{7}{figure..2.4}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Strucutre of the jacobian matrix for single phase liquid}}{10}{figure..3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Strucutre of jacobian matrix for single phase liquid explicitly coupled to solid conduction}}{11}{figure..3.2}
@@ -33,6 +34,7 @@
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Difference Between Successive Spatial Refinements for Density}}{29}{figure..6.6}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Temporal Order of Accuracy}}{30}{figure..6.7}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Spatial Order of Accuracy}}{31}{figure..6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Comparison of the Error for Density}}{31}{figure..6.9}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Steady State Radial Temperature Distribution Difference to Rod Surface Temperature }}{34}{figure..7.1}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Error of Different Numerical Methods to Analytical Solution}}{34}{figure..7.2}
@@ -41,3 +43,4 @@
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Plot of the Radial Nodal Temperatures for the Implicit Method}}{36}{figure..7.5}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Temperature profile over time for the Semi-Implicit Method}}{37}{figure..7.6}
 \contentsline {figure}{\numberline {7.7}{\ignorespaces Temperature profile over time for the Implicit Method}}{37}{figure..7.7}
+\addvspace {10\p@ }

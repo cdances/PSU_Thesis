@@ -29,4 +29,5 @@
 \contentsline {section}{\numberline {7.2}Steady State Analytical Solution}{33}{section..7.2}
 \contentsline {section}{\numberline {7.3}Steady State Results}{33}{section..7.3}
 \contentsline {section}{\numberline {7.4}Transient Results}{35}{section..7.4}
-\contentsline {chapter}{Bibliography}{36}{figure..7.7}
+\contentsline {chapter}{\numberline {8}Conclusions}{38}{chapter..8}
+\contentsline {chapter}{Bibliography}{38}{chapter..8}

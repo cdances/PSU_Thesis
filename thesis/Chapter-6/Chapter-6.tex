@@ -332,6 +332,22 @@ equation analysis.
 	\label{fig:Spatial:OOA}
 \end{figure}
 
+Taking the derivative of the analytical solutuion, the exact numerical error can
+be calculated from the modified equation analysis and compared to the
+calculated error as seen in figure \ref{fig:Error_comparison_rho}. This error
+was scaled by a factor of $\frac{x}{L}$ to account for numerical propogation.
+The temporal and spatial mesh sizes were selected to have order of accuracies
+that were closest to 1. There still exists a small discrepancy between the
+expected error, and the calculated error. However, this is small enought that it
+is most likely due to truncation error in either the solution of the jacobian
+matrix or in values read in from CTF. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.00\textwidth]{images/Error_comparison_rho.png}
+	\caption{Comparison of the Error for Density}
+	\label{fig:Error_comparison_rho}
+\end{figure}
 
 
 

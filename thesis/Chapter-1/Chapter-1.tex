@@ -12,32 +12,21 @@ is CTF, which is a subchannel thermal-hydraulics code developed from
 COBRA-TF \cite{Salko2014}. This FORTRAN based code solves 8 conservation
 equations for liquid, entrained droplet, and vapor phases phases, plus one
 conservation equation for non-condensable gases. A 1-D residual formulation of
-the code has been created. While other residual formulations have been
-formed for other versions of COBRA-TF \cite{Lloyd2014}, none have been
-integrated into the CASL version of CTF. The current version of CTF has standard
+the code has been created for single phase liquid coupled to radial conduction.
+While other residual formulations have been formed for other versions of
+COBRA-TF \cite{Lloyd2014}, none have been integrated into the CASL version of
+CTF. A large portion of this work focues on the verification of both the
+residual formulation and the original version of CTF for the single phase liquid
+and radial conduction equations. The current version of CTF has standard
 verification practices that focus on software quality engineering similar to
-those in other versions of COBRA-TF \cite{Aumiller2013}, but lacks an in
-depth verification document that focuses on numerical algorithm verification.
-This paper focues on this second type of verification and outlines the initial
-verification of the original version of the code as well as the residual version
-of the code. The verification problem is a single phase 1-D channel with
-transient inlet density and mass flow rate. The problem will undergo a
-Richardson's extrapolation in the temporal and spatial domains to verify the
-convergence and order of accuracy of the error. The study of the order of
-accuracy is considered one of the more rigorous verification criteria \cite{Roy2005}.
-This work will be expanded to perform verificaiton on the single
-phase equations in both axial and transverse dimensions \cite{Merroun2009}, and
-coupled multiphysics \cite{Mahadevan2009}.
+those in other versions of COBRA-TF \cite{Aumiller2013}, but currently lacks an
+in depth verification document that focuses on numerical algorithm verification.
+This work focues on this second type of verification for the residual
+formulation and original versions of CTF. The verificaiton problems will study
+of the order of accuracy of the errors, which considered one of the more
+rigorous verification criteria \cite{Roy2005}. This work will be
+considered a starting point for future work to perform verificaiton
+on the single phase equations in both axial and transverse dimensions
+\cite{Merroun2009}, and coupled multiphysics \cite{Mahadevan2009}.
 
 %\section{CTF}
-
-
-
-
-
-
-
-
-
-
-

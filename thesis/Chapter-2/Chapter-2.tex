@@ -214,17 +214,25 @@ giving the boundary condition in equation \ref{eq:bc_centerline}
 	\left(\frac{\partial T}{\partial r}\right)_{r=0}=0
 \end{equation}
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.40\textwidth]{images/rod-axial.png}
+	\caption{Rod Axial}
+	\label{fig:rod-axial}
+\end{figure}
+
 The nuclear rod geometry types in CTF are meshed at each axial level according
-to figure \ref{fig:radial_diagram} where the red region is fuel and the grey
-region is cladding. The black dots represent the nodes within the fuel. Each
-node covers a region within the rod as bounded by the dashed lines. The nodes
-within the fuel are located at the center of the region. Each region is assumed
-to have uniform properties with values evaluated at the node. The last node
-within  the fuel is located at the surface of the fuel at the interface with the
-gap.  There are two additional nodes that represent the outer clad surface and
-the inner  clad surface respectively. The gap between the outer surface of the
-fuel and the  inner surface of the cladding has a specified heat transfer
-coefficient or  is calculated using the dynamic gap conductance model.
+to figure \ref{fig:rod-axial}. Each axial level will be meshed as seen in figure
+\ref{fig:radial_diagram} where the red region is fuel and the grey region is
+cladding. The black dots represent the nodes within the fuel. Each node covers
+a region within the rod as bounded by the dashed lines. The nodes within the
+fuel are located at the center of the region. Each region is assumed to have
+uniform properties with values evaluated at the node. The last node within  the
+fuel is located at the surface of the fuel at the interface with the gap. 
+There are two additional nodes that represent the outer clad surface and the
+inner  clad surface respectively. The gap between the outer surface of the fuel
+and the inner surface of the cladding has a specified heat transfer coefficient
+or is calculated using the dynamic gap conductance model.
 
 	\begin{figure}[!h]
 		\centering
