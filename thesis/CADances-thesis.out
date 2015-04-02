@@ -6,7 +6,7 @@
 \BOOKMARK [0][-]{chapter..2}{Conservation Equations}{}% 6
 \BOOKMARK [1][-]{section..2.1}{Single Phase Liquid Euler Equations}{chapter..2}% 7
 \BOOKMARK [1][-]{section..2.2}{1-D Radial Solid Conduction Equation}{chapter..2}% 8
-\BOOKMARK [0][-]{chapter..3}{Residual Formulation}{}% 9
+\BOOKMARK [0][-]{chapter..3}{Residual Formulation and Jacobian Construction}{}% 9
 \BOOKMARK [0][-]{chapter..4}{Isokinetic Step Advection}{}% 10
 \BOOKMARK [1][-]{section..4.1}{Problem Setup}{chapter..4}% 11
 \BOOKMARK [1][-]{section..4.2}{Density Advection and Error}{chapter..4}% 12

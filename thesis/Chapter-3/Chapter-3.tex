@@ -1,10 +1,11 @@
 %SourceDoc ../YourName-Dissertation.tex
 \vspace*{-80mm}
-\chapter{Residual Formulation} \label{chapter3:residual_formulation}
+\chapter{Residual Formulation and Jacobian Construction}
+\label{chapter3:residual_formulation}
 	    
     A residual is simply the difference between the value at some future time
     $n+1$ and the value at the current iteration $k$. This can be applied to
-    desired variables as shown in equations
+    desired variables as shown in equations %Source?
     \eqref{eq:residual_def:P}, \eqref{eq:residual_def:h},
     \eqref{eq:residual_def:u}, and \eqref{eq:residual_def:rho}. Residuals can
     also be applied to the conservation equations by substituting the definition
@@ -70,7 +71,7 @@
     
     \begin{figure}[!h]
     	\centering
-    	\includegraphics[width=0.45\textwidth]{images/Jacobian_Setup}
+    	\includegraphics[width=0.35\textwidth]{images/Jacobian_Setup}
     	\caption{Strucutre of the jacobian matrix for single phase liquid}
     	\label{fig:Jacobian_Setup}
     \end{figure}
@@ -80,11 +81,30 @@
 	\ref{fig:Explicit-Diagram}, where blue values represent negative entries and
 	red values positive entries. The black lines were drawn on top of the image to
 	represent artificial boundaries between the liquid Jacobian matrix in the top
-	left corner and the solid Jacobian matrix in the top right corner.
+	left corner and the solid Jacobian matrix in the top right corner. The fluid
+	Jacobian matrix contains 3 conservation equations for every axial level. The
+	liquid function residuals are appended in the order of mass conservation,
+	energy conservation, and momentum conservation for each axial level. These
+	correspond the pressure, enthalpy, and velocity at each axial level. The liquid
+	Jacobian matrix can be evaluated as either semi-implicit or fully implicit. The
+	solid Jacobian matrix contains 1 energy conservation equation for each node in
+	the rod. Since axial and azimuthal conduction are not computed, each radial
+	level is computed separately from the rest. This can be seen by the lack of
+	cross terms in the Jacobian matrix at each axial level. The Jacobian matrix on
+	the right is an implicit coupling between the implicit liquid Jacobian matrix
+	and the implicit solid matrix. The cross terms in the top right corner
+	represent the effect of the wall temperature on the energy equation in the
+	liquid Jacobian matrix. The terms on the bottom left represent the effects of
+	pressure, enthalpy, and velocity on the energy equation in the solid Jacobian
+	matrix. The implicit matrix is unconditionally stable, allowing for time steps
+	greater than the material Courant limits. Once the coupled Jacobian matrix is
+	constructed, it is solved using the linear Krylov solver from PETSC . The
+	residuals for each of the conservation equations are then L2 normalized over
+	the domain to determine the convergence of the system.
 	
 	\begin{figure}[!h]
     	\centering
-    	\includegraphics[width=0.50\textwidth]{images/Explicit-Diagram.jpg}
+    	\includegraphics[width=0.40\textwidth]{images/Explicit-Diagram.jpg}
     	\caption{Strucutre of jacobian matrix for single phase liquid
     	explicitly coupled to solid conduction}
     	\label{fig:Explicit-Diagram}
@@ -92,32 +112,27 @@
     
     \begin{figure}[!h]
     	\centering
-    	\includegraphics[width=0.50\textwidth]{images/Implicit-Diagram.jpg}
+    	\includegraphics[width=0.40\textwidth]{images/Implicit-Diagram.jpg}
     	\caption{Strucutre of the jacobian matrix for single phase liquid
     	implicitly coupled to solid conduction}
     	\label{fig:Implicit-Diagram}
     \end{figure}
     
-    The fluid Jacobian matrix contains 3 conservation equations for every axial
-    level. The liquid function residuals are appended in the order of mass
-    conservation, energy conservation, and momentum conservation for each axial
-    level. These correspond the pressure, enthalpy, and velocity at each axial
-    level. The liquid Jacobian matrix can be evaluated as either semi-implicit
-    or fully implicit. The solid Jacobian matrix contains 1 energy conservation
-    equation for each node in the rod. Since axial and azimuthal conduction are
-    not computed, each radial level is computed separately from the rest. This
-    can be seen by the lack of cross terms in the Jacobian matrix at each axial
-    level. The Jacobian matrix on the right is an implicit coupling between the
-    implicit liquid Jacobian matrix and the implicit solid matrix. The cross
-    terms in the top right corner represent the effect of the wall temperature
-    on the energy equation in the liquid Jacobian matrix. The terms on the
-    bottom left represent the effects of pressure, enthalpy, and velocity on the
-    energy equation in the solid Jacobian matrix. The implicit matrix is
-    unconditionally stable, allowing for time steps greater than the material
-    Courant limits. Once the coupled Jacobian matrix is constructed, it is
-    solved using the linear Krylov solver from PETSC. The residuals for each of
-    the conservation equations are then L2 normalized over the domain to
-    determine the convergence of the system.
+    Numerically building the matrix in this fashion can be very computationally
+    expensive. An easy way to optimize the construction of the matrix, is to not
+    compute the indexes which are known to be zero. An optional optimization
+    flag was added to the code that allows for the non-zero structure to be
+    remebered after the first construction, and following constructions only
+    compute entries that were previously non-zero. This drastically decreases
+    computations cost, but at the risk of serious potential error in the event
+    of previously zero entries becoming non-zero later in the problem. For the
+    verification problems covered in this work, this does not occur and
+    therefore this optimization method is appropriate. Other optimization work
+    could be in the parallelization of the construction and solution of the
+    Jacobian matrix. 
+   
+    
+    
     
     
 
