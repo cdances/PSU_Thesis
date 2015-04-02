@@ -4,22 +4,42 @@
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem{Salko2014}
-\textsc{Salko, R.~K.} (2014) \enquote{{CTF Theory Manual},} (814).
+\bibitem{Schmidt2014}
+\textsc{Schmidt, R.} and \textsc{et~al.} (2014) \enquote{An approach for
+  coupled-code multiphysics core simulations from a common input,} \emph{Annals
+  of Nuclear Energy}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.anucene.2014.11.015}
 
-\bibitem{Lloyd2014}
-\textsc{Lloyd, L.~J.} (2014) \enquote{{Development of a Spatially-Selective,
-  Nonlinear Refinement Algorithm for Thermal-Hydraulic Safety Analysis},} .
+\bibitem{CTF_theory}
+\textsc{Salko, R.~K.} and \textsc{M.~N. Avramova} (2014) \enquote{CTF Theory
+  Manual,} .
+
+\bibitem{Oberkampf2008}
+\textsc{Oberkampf, W.~L.} and \textsc{T.~G. Trucano} (2008)
+  \enquote{{Verification and Validation Benchmarks},} \emph{Nuclear Engineering
+  and Design}, \textbf{238}, pp. 716--743.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.nucengdes.2007.02.032}
+
+\bibitem{Avramova2015}
+\textsc{Avramova, M.}, \textsc{K.~Ivanov}, and \textsc{et~al.} (2015)
+  \enquote{Multi-physics and multi-scale benchmarking and uncertainty
+  quantification within OECD/NEA framework,} \emph{Annals of Nuclear Energy}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.anucene.2014.12.014}
 
 \bibitem{Aumiller2013}
 \textsc{Aumiller, D.~L.}, \textsc{G.~W. Swartele}, \textsc{F.~X. Lane, J.
   W.~Buschman}, and \textsc{M.~Meholic} (2013) \enquote{Development of
   Verification Testing Capabilities for Safety Codes,} \emph{NURETH-15}.
 
+\bibitem{Lloyd2014}
+\textsc{Lloyd, L.~J.} (2014) \enquote{{Development of a Spatially-Selective,
+  Nonlinear Refinement Algorithm for Thermal-Hydraulic Safety Analysis},} .
+
 \bibitem{Roy2005}
 \textsc{Roy, C.~J.} (2005) \enquote{{Review of code and solution verification
   procedures for computational simulation},} \emph{Journal of Computational
   Physics}, \textbf{205}, pp. 131--156.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.jcp.2004.10.036}
 
 \bibitem{Merroun2009}
 \textsc{Merroun, O.}, \textsc{A.~Almers}, \textsc{T.~E. Bardouni},
@@ -35,25 +55,46 @@
   Conference on Mathematics, Computational Methods \& Reactor Physics}.
 \newline\urlprefix\url{http://mathematicsandcomputation.cowhosting.net/MC09/pdfs/201961.pdf}
 
+\bibitem{Salko2014}
+\textsc{Salko, R.~K.}, \textsc{R.~C. Schmidt}, and \textsc{M.~N. Avramova}
+  (2014) \enquote{Optimization and parallelization of the thermal hydraulic
+  subchannel code CTF for high-fidelity multi-physics applications,}
+  \emph{Annals of Nuclear Energy}.
+\newline\urlprefix\url{http://dx.doi.org/10.1016/j.anucene.2014.11.005}
+
 \bibitem{Botte2000}
 \textsc{Botte, G.}, \textsc{J.~Ritter}, and \textsc{R.~White} (2000)
   \enquote{Comparison of finite difference and control volume methods for
   solving differential equations,} \emph{Computers and Chemical Engineering},
   \textbf{24}, pp. 2633--2654.
 
+\bibitem{Incropera1998}
+\textsc{Incropera, F.}, \textsc{D.~Dewitt}, \textsc{T.~Bergman}, and
+  \textsc{A.~Lavine} (2007) \emph{Fundamentals of Mass and Heat Transfer}, John
+  Wiley \& Sons, sixth ed.
+
+\bibitem{kelly1995}
+\textsc{Kelly, C.} (1995) \emph{Iterative Methods for linear nad nonlinear
+  equations}, Society for Industrial and Applied Mathematics.
+
+\bibitem{kelly2003}
+---{}---{}--- (2003) \emph{Solving Nonlinear Equations with Newton's Method},
+  Society for Industrial and Applied Mathematics.
+
+\bibitem{PETSc}
+\textsc{Balay} and \textsc{et~al.} (2014), \enquote{PETSc Users Manual,}
+  Mathematics and Computer Science Division, Argonne National Laboratory.
+\newline\urlprefix\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manual.pdf}
+
 \bibitem{Anderson1990}
 \textsc{Anderson, J.~D.} (1990) \emph{Modern Compressible Flow With Historical
   Perspective}, McGraw-Hill Inc.
-
-\bibitem{Oberkampf2008}
-\textsc{Oberkampf, W.~L.} and \textsc{T.~G. Trucano} (2008)
-  \enquote{{Verification and Validation Benchmarks},} \emph{Nuclear Engineering
-  and Design}, \textbf{238}, pp. 716--743.
 
 \bibitem{Villatoro1999}
 \textsc{Villatoro, F.} and \textsc{J.~Ramos} (1999), \enquote{{On the method of
   modified equations. I: Asymptotic analysis of the Euler forward difference
   method},} .
+\newline\urlprefix\url{http://dx.doi.org/10.1016/S0096-3003(98)10031-0}
 
 \bibitem{SAND2000-1444}
 \textsc{Salari, K.} and \textsc{P.~Knupp} (2000) \emph{Code Verification by the
@@ -61,5 +102,13 @@
   Aerosciences and Compressible Fluid Mechanics Department, Parallel Computing
   Sciences Department at Sandia National Laboratories, P.O. Box 5800,
   Albuquerque, NM 87185-0825.
+
+\bibitem{Schroeder1998}
+\textsc{Schroeder, W.} (1998) \emph{The VTK user's guide}, Kitware Inc.
+
+\bibitem{python}
+ (2014), \enquote{Python Language Reference, version 2.7,} Python Software
+  Foundation.
+\newline\urlprefix\url{http://www.python.org}
 
 \end{thebibliography}

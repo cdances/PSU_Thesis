@@ -4,8 +4,8 @@
 \label{chapter3:residual_formulation}
 	    
     A residual is simply the difference between the value at some future time
-    $n+1$ and the value at the current iteration $k$. This can be applied to
-    desired variables as shown in equations %Source?
+    $n+1$ and the value at the current iteration $k$ \cite{kelly1995}. This can
+    be applied to desired variables as shown in equations
     \eqref{eq:residual_def:P}, \eqref{eq:residual_def:h},
     \eqref{eq:residual_def:u}, and \eqref{eq:residual_def:rho}. Residuals can
     also be applied to the conservation equations by substituting the definition
@@ -98,9 +98,9 @@
 	pressure, enthalpy, and velocity on the energy equation in the solid Jacobian
 	matrix. The implicit matrix is unconditionally stable, allowing for time steps
 	greater than the material Courant limits. Once the coupled Jacobian matrix is
-	constructed, it is solved using the linear Krylov solver from PETSC . The
-	residuals for each of the conservation equations are then L2 normalized over
-	the domain to determine the convergence of the system.
+	constructed, it is solved using the linear Krylov solver \cite{kelly2003} from
+	PETSc \cite{PETSc}. The residuals for each of the conservation equations are
+	then L2 normalized over the domain to determine the convergence of the system.
 	
 	\begin{figure}[!h]
     	\centering
@@ -129,7 +129,8 @@
     verification problems covered in this work, this does not occur and
     therefore this optimization method is appropriate. Other optimization work
     could be in the parallelization of the construction and solution of the
-    Jacobian matrix. 
+    Jacobian matrix similar to what was done for the original version of CTF
+    \cite{Salko2014}.
    
     
     

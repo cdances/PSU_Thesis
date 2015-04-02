@@ -6,27 +6,30 @@ For the past several decades, the primary focus in nuclear engineering within
 the United States has been on light water reactors (LWR). Commercially,
 all nuclear reactors are either boiling water reactors (BWR) or pressurized
 water reactors (PWR). Correct computation of the thermal hydraulics within the
-reactor core leads to efficient design and accuracy in the safety analysis. A
-popular subchannel code for modeling the hydrodynamics within the reactor core
-is CTF, which is a subchannel thermal-hydraulics code developed from
-COBRA-TF \cite{Salko2014}. This FORTRAN based code solves 8 conservation
-equations for liquid, entrained droplet, and vapor phases phases, plus one
-conservation equation for non-condensable gases. A 1-D residual formulation of
-the code has been created for single phase liquid coupled to radial conduction.
+reactor core leads to efficient design and accuracy in the safety analysis. 
+CASL is a key player in the effort, and utilizes the popular subchannel code,
+CTF, for modeling the hydrodynamics within the reactor core \cite{Schmidt2014}.
+This FORTRAN based code developed from COBRA-TF solves 8 conservation equations
+for liquid, entrained droplet, and vapor phases phases, plus one conservation
+equation for non-condensable gases \cite{CTF_theory}. The set of procedures
+for ensuring that simlution codes such as CTF are accurate and reliable is
+called software validation and verification \cite{Oberkampf2008}. CTF has
+continually undergone software uncertiainty quantificaiton and benchmark
+validation \cite{Avramova2015}. The current version of CTF has standard verification
+practices that focus on software quality engineering similar to those in other
+versions of COBRA-TF \cite{Aumiller2013}, but currently lacks an in depth
+verification document that focuses on numerical algorithm verification.
+This work focuses on this second type of verification for the original version
+of CTF as well as a residual formulation. The 1-D residual formulation of the
+code has been created for single phase liquid coupled to radial conduction.
 While other residual formulations have been formed for other versions of
 COBRA-TF \cite{Lloyd2014}, none have been integrated into the CASL version of
-CTF. A large portion of this work focuses on the verification of both the
-residual formulation and the original version of CTF for the single phase liquid
-and radial conduction equations. The current version of CTF has standard
-verification practices that focus on software quality engineering similar to
-those in other versions of COBRA-TF \cite{Aumiller2013}, but currently lacks an
-in depth verification document that focuses on numerical algorithm verification.
-This work focuses on this second type of verification for the residual
-formulation and original versions of CTF. The verification problems will study
-of the order of accuracy of the errors, which considered one of the more
-rigorous verification criteria \cite{Roy2005}. This work will be
-considered a starting point for future work to perform verification
-on the single phase equations in both axial and transverse dimensions
-\cite{Merroun2009}, and coupled multiphysics \cite{Mahadevan2009}.
+CTF. This work details the verification of both the residual formulation and the
+original version of CTF for the single phase liquid and radial conduction
+equations. The verification problems will study of the order of accuracy of the
+errors, which is considered one of the more rigorous verification criteria
+\cite{Roy2005}. This work will be considered a starting point for future work to
+perform verification on the single phase equations in both axial and transverse
+dimensions \cite{Merroun2009}, and two phase flow \cite{Mahadevan2009}.
 
 %\section{CTF}

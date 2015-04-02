@@ -87,12 +87,11 @@ Wave Frequency	&	$\omega$	&	1.00	&	Hz	\\ \hline
 The comparison between the data table and the output in CTF are shown for
 enthalpy and mass flow rate in figures \ref{fig:Inlet_h} and
 \ref{fig:Inlet_m_dot}, respectively. The CTF output was read from the high
-precision VTK data files at each point in time, which omitted the actual ghost
-cell where these values were applied. The CTF values are located at the nearest
+precision VTK data files \cite{Schroeder1998} at each point in time, which
+omitted the actual ghost cell where these values were applied. The CTF values are located at the nearest
 node to the inlet, and will experience small amounts of numerical diffusion. For
 large mesh sizes, this discrepancy is negligible as can be seen by the
 overlapping profiles in figures \ref{fig:Inlet_h} and \ref{fig:Inlet_m_dot}.
-
 
 \begin{figure}[!h]
 	\centering
@@ -245,13 +244,13 @@ step sizes by a factor of 2 for a set number of times. The spatial and temporal
 studies are refined separately in their own study in order to isolate the
 spatial and temporal affects on the solution. The generation of the inputs,
 running of the codes, and analysis of the output were automated with a python
-script in order to reduce user input errors and increase repeatability.  For
-this analysis, a significant amount of information was added to the VTK output
-files, increasing memory usage and run time. The computational resources for the
-spatial study was much higher than the temporal study due to the need to keep
-the CFL number below 0.500. To keep the computational resources needed
-to perform this analysis reasonable, fewer spatial refinements were performed
-compared to the temporal analysis.
+\cite{python} script in order to reduce user input errors and increase
+repeatability. For this analysis, a significant amount of information was added
+to the VTK output files, increasing memory usage and run time. The computational
+resources for the spatial study was much higher than the temporal study due to
+the need to keep the CFL number below 0.500. To keep the computational resources
+needed to perform this analysis reasonable, fewer spatial refinements were
+performed compared to the temporal analysis.
 
 \section{Convergence of Error}
 
