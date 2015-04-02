@@ -6,37 +6,33 @@
 %Discretization error?? (Check with)
 
 The residual formulation of CTF allows for a numerical computation of the
-multivariable Jacobian matrix compared to the original analytical derivation of
-a pressure matrix. The 1-D isokinetic single phase liquid verification problem
-is a good verification problem due its isolation of the order of accuracies
-through modified equation analysis. The discretization error for both versions
-of the code converged to zero with decreasing time step and axial mesh size.
-The order of accuracy for the temporal and spatial refinements matched very
-closely with the modified equation analysis for both codes. For all of these
-data points, the residual formulation of the code showed discretization errors
-that were very close with the original version of the code. Future work should
-compare the numerical error obtained in the code to the analytical error
-predicted by the modified equation analysis using the derivatives of the known
-solutions. While within the asymptotic range, the first order accurate
-analytical error should almost exactly match the error from the code.
+multivariable Jacobian matrix and produces comparable results to the original
+code which uses an analytical derivation of a pressure matrix. The 1-D
+single phase liquid verification problems were able to
+isolate of the order of accuracies for the conservation equations and show that
+they match the values obtained from the modified equation analysis. The
+discretization error for both versions of the code converged to zero with
+decreasing time step and axial mesh size. The order of accuracy for the temporal
+and spatial refinements matched very closely with the modified equation analysis
+for both codes. For all of these data points, the residual formulation of the
+code showed discretization errors that were very close with the original version
+of the code. The numerical error obtained from the output matched closely to
+the analytical error predicted by the modified equation analysis using the
+derivatives of the known solutions while within the asymptotic range. Future
+work will involve adding in form losses, tranverse flow, and multiple phases.
 
-The residual formulation of the one-dimensional single-phase liquid and solid
-residual formulations were listed. Combining the liquid and solid equations into
-a single Jacobian matrix allowed for easy explicit or implicit coupling. This
-solution method was tested against the analytical solution for a single rod with
-uniform heat generation and shown to give good results. Future work will involve
-performing a more in depth verification analysis of the steady state and
-transient solutions. The effect of temperature dependent material properties
-and dynamic gap conductance will also be considered. A homogenous energy
-equation can now be easily implemented by adding the liquid and solid
-conservation equations. Future work will be analyzing the homogeneous energy
-approximation over a state space to see when the approximation is valid. Future
-work will also involve extending the conduction equations to azimuthal and axial
-directions.
-
-
-
-
-
+Combining the liquid and solid equations into a single Jacobian matrix allowed
+for easy explicit or implicit coupling. This solution method was tested against
+the analytical solution for a single rod with uniform heat generation and shown
+to give good results for both the residual formulation and the original version
+of CTF. The discrepancy between the results from CTF and the analytical solution
+were shown to be dependent on the radial mesh size. Future verificaiton work
+will involve performing a Richardson extrapolation to obtain an order of
+accuracy. The effect of temperature dependent material properties and dynamic
+gap conductance will also be considered. A homogenous energy equation can now be
+easily implemented by adding the liquid and solid conservation equations. Future
+work will be analyzing the homogeneous energy approximation over a state space
+to see when the approximation is valid. Future work will also involve extending
+the conduction equations to azimuthal and axial directions.
 
 
