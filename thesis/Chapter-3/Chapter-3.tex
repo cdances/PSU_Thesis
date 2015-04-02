@@ -1,7 +1,9 @@
 %SourceDoc ../YourName-Dissertation.tex
 \vspace*{-80mm}
-\chapter{Residual Formulation and Jacobian Construction}
-\label{chapter3:residual_formulation}
+\chapter{Solution Methods}
+\label{chapter3:Solution Methods}
+
+	\section{Residual Formulation}
 	    
     A residual is simply the difference between the value at some future time
     $n+1$ and the value at the current iteration $k$ \cite{kelly1995}. This can
@@ -41,6 +43,8 @@
     	J \delta X = - F(X)
     \end{equation}
     
+    \section{Jacobian Construction}
+    
     The Jacobian matrix is defined in equation \eqref{eq:jac_def} as the derivative
     of each response of the function $F_{j}$ with respect to each variable $X_{i}$.
     The derivative can be calculated numerically as shown by equation
@@ -71,7 +75,7 @@
     
     \begin{figure}[!h]
     	\centering
-    	\includegraphics[width=0.35\textwidth]{images/Jacobian_Setup}
+    	\includegraphics[width=0.30\textwidth]{images/Jacobian_Setup}
     	\caption{Structure of the jacobian matrix for single phase liquid}
     	\label{fig:Jacobian_Setup}
     \end{figure}
@@ -104,7 +108,7 @@
 	
 	\begin{figure}[!h]
     	\centering
-    	\includegraphics[width=0.40\textwidth]{images/Explicit-Diagram.jpg}
+    	\includegraphics[width=0.30\textwidth]{images/Explicit-Diagram.jpg}
     	\caption{Structure of jacobian matrix for single phase liquid
     	explicitly coupled to solid conduction}
     	\label{fig:Explicit-Diagram}
@@ -112,7 +116,7 @@
     
     \begin{figure}[!h]
     	\centering
-    	\includegraphics[width=0.40\textwidth]{images/Implicit-Diagram.jpg}
+    	\includegraphics[width=0.30\textwidth]{images/Implicit-Diagram.jpg}
     	\caption{Structure of the jacobian matrix for single phase liquid
     	implicitly coupled to solid conduction}
     	\label{fig:Implicit-Diagram}
