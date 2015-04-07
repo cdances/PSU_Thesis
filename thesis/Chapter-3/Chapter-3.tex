@@ -50,7 +50,7 @@
     The derivative can be calculated numerically as shown by equation
     \eqref{eq:jac_numerical} where $\epsilon$ is a small numerical value. For
     COBRA-TF the equations are linear, and this numerical approximation
-    of the Jacobian matrix is exact. This should produce the same jacobian
+    of the Jacobian matrix is exact. This should produce the same Jacobian
     matrix that COBRA-TF currently generates analytically. 
     
     \begin{equation}
@@ -63,20 +63,20 @@
     	J_{i,j}  \approx \frac{F_{j}(X_{i}+\epsilon)-F_{j}(X)}{\epsilon}
     \end{equation}
     
-    To build the jacobian matrix, an object oriented class was created that
+    To build the Jacobian matrix, an object oriented class was created that
     contains three arrays. An array that points to the residual functions, an
     array that points to the position within a target variable array, and an
     array that has the index that the function is to be evaluated at. These
     lists can be appended to in any order, but have to be appended all at the
     same time so that variables and functions must correspond with each other.
-    Then to construct the jacobian matrix, the residual function and residual
-    variable arrays can each be looped over to numerically build the jacobian
+    Then to construct the Jacobian matrix, the residual function and residual
+    variable arrays can each be looped over to numerically build the Jacobian
     matrix as seen in figure \ref{fig:Jacobian_Setup}. 
     
     \begin{figure}[!h]
     	\centering
     	\includegraphics[width=0.30\textwidth]{images/Jacobian_Setup}
-    	\caption{Structure of the jacobian matrix for single phase liquid}
+    	\caption{Structure of the Jacobian matrix for single phase liquid}
     	\label{fig:Jacobian_Setup}
     \end{figure}
 
@@ -109,7 +109,7 @@
 	\begin{figure}[!h]
     	\centering
     	\includegraphics[width=0.30\textwidth]{images/Explicit-Diagram.jpg}
-    	\caption{Structure of jacobian matrix for single phase liquid
+    	\caption{Structure of Jacobian matrix for single phase liquid
     	explicitly coupled to solid conduction}
     	\label{fig:Explicit-Diagram}
     \end{figure}
@@ -117,7 +117,7 @@
     \begin{figure}[!h]
     	\centering
     	\includegraphics[width=0.30\textwidth]{images/Implicit-Diagram.jpg}
-    	\caption{Structure of the jacobian matrix for single phase liquid
+    	\caption{Structure of the Jacobian matrix for single phase liquid
     	implicitly coupled to solid conduction}
     	\label{fig:Implicit-Diagram}
     \end{figure}
