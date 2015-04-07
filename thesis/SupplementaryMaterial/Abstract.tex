@@ -5,11 +5,12 @@ expand the capabilities of  these codes, state of the art numerical methods and
 computer science need to be  implemented. One of the key players in this effort
 is the Consortium for Advanced  Simulation of Light Water Reactors (CASL) and
 through development of the  Virtual Environment for Reactor Applications (VERA).
-The sub-channel thermal  hydraulic code used in VERA, COBRA-TF (Coolant-Boiling
-in Rod Arrays - Three  Fluids), is partially developed at the Pennsylvania State
-University by the Reactor  Dynamics and Fuel Management Research Group (RDFMG).
+The sub-channel thermal  hydraulic code used in VERA is CTF, which is a version
+of COBRA-TF (Coolant-Boiling in Rod Arrays - Three  Fluids) partially developed
+at the Pennsylvania State University by the Reactor Dynamics and Fuel Management
+Research Group (RDFMG).
 
-Currently, COBRA-TF solves 8 conservation equations for liquid, entrained
+Currently, CTF solves 8 conservation equations for liquid, entrained
 droplet, and vapor phases of  water boiling within the rod structure of a LWR
 reactor core. The conservation  equations analytically reduce into a pressure
 matrix and are solved using a  semi-implicit method. The solid conduction
@@ -17,7 +18,7 @@ equations are then implicitly  solved to determine the temperature within the
 fuel. Since the liquid solution  is solved independent of the solid solution,
 the solid and liquid equations are explicitly coupled.
 
-In an effort to help meet the objectives of CASL,  a version of COBRTA-TF has
+In an effort to help meet the objectives of CASL,  a version of CTF has
 been developed that solves the residual formulation  of the 1D single-phase
 conservation equations. The formulation of the base  equations as residuals
 allows the code to be run semi-implicitly or fully  implicitly while clearly
@@ -27,7 +28,7 @@ expands the solid liquid coupling to be either  explicit or implicit. Different
 physical models, such as the homogeneous liquid  solid energy model, can be
 readily implemented by adding the residual  functions and variables. A simple
 test problem consisting of a single liquid  channel and fuel pin was designed to
-compare the original version of COBRA-TF to  the different numerical and
+compare the original version of CTF to  the different numerical and
 physical models available through the new  residual formulation. The methods are
 compared both for steady state and transient  conditions to quantify the
 accuracy and stability of each method. The input  parameters are varied over a
