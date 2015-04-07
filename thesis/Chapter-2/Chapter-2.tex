@@ -5,48 +5,52 @@
 	
 \section{Single Phase Liquid Euler Equations} \label{sec:euler_equations}
 	
-	The finite volume structure in COBRA-TF in figure \ref{fig:CTF-Cells} is for
+	The finite volume structure in CTF in figure \ref{fig:CTF-Cells} is for
 	a one-dimmensional channel in the axial direction with $n$ number of cells.
 	The first and last cells at $0$ and $n+1$ are ghost cells and act as the
 	boundary conditions for the problem. Pressure, enthalpy, and density are
 	averaged over the cell volume and are located at the center of the cell.
-	Mass flow rate and velocity are located at the faces in between cells. The
-	cells are represented with an index $i$, and the faces with indexes of
-	$i+\frac{1}{2}$ or $i-\frac{1}{2}$. This project will initially focus
-	on this 1-D configuration. Usually the code is three dimensional, with
-	channels connecting to each other in two more dimensions. Fully 3-D
-	equations will be considered in future work.
+	Velocity is located at the faces in between cells and averaged over the flow
+	area of the surface. The cells are represented with an index $i$, and the
+	faces with indexes of $i+\frac{1}{2}$ or $i-\frac{1}{2}$. This project will
+	initially focus on this 1-D configuration. Usually the code is three
+	dimensional, with channels connecting to each other in two more dimensions.
+	Fully 3-D equations will be considered in future work.
 	
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=0.30\textwidth]{images/CTF-Cells}
-		\caption{The finite volume structure for COBRA-TF}
+		\caption{The finite volume structure for CTF}
 		\label{fig:CTF-Cells}
 	\end{figure}
 
 	The thermal hydraulics of a LWR core is an important part of nuclear
-	reactor design. COBRA-TF solves 8 conservation equations for liquid,
+	reactor design. CTF solves 8 conservation equations for liquid,
 	entrained droplet, and vapor phases of water boiling within the rod structure
-	of a LWR reactor core \cite{Salko2014}. Currently, the conservation
-	equations analytically reduce into a pressure matrix in a semi-implicit
-	method with rod temperatures solved for explicitly. This work involves
-	representing the 1-D single phase liquid conservation equations and calculated 
-	variables in a residual formulation. The full Jacobian matrix can then be
-	built numerically, and  can then either be reduced to a pressure matrix or
-	solved directly. Verification of the residuals was done by comparing
-	calculated results to analytical solutions for isokinetic advection and shock
-	tube problems. For each verification problem, a scaling study of the
-	truncation error was compared to the predicted behavior derived from modified
-	equation analysis using Richardson extrapolation. Further work was then
-	applied to represent 1-D heat conduction within the heater rods. Some initial
-	work was done to allow the code to solve either semi-implicitly, or fully
-	implicitly. The single phase Euler partial differential equations for mass
-    \eqref{eq:pde_mass}, momentum \eqref{eq:pde_momentum}, and energy
-    \eqref{eq:pde_energy} correspond to the unknown variables density $\rho$,
-    velocity $u$, pressure $P$, and enthalpy $h$. The first terms in each of the
-    equations are temporal terms. The rest of the terms are steady state spatial
-    terms. The last term in the energy equation represents the net heat transfer
-    from the adjacent rods to the current fluid subchannel.
+	of a LWR reactor core \cite{Salko2014}. Currently, the discretized conservation
+	equations are analytically reduced into a pressure matrix. This pressure
+	matrix is then solved for using a semi-implicit method and the new time
+	fluid quantities are back calculated using the new time pressure values. The
+	rod temperatures are implicitly solved for using an explicit coupling with the
+	fluid solution.  This work involves representing the 1-D single phase liquid
+	conservation equations and calculated variables in a residual formulation. The
+	full Jacobian matrix can then be built numerically, and  can then either be
+	reduced to a pressure matrix or solved directly. Verification of the residuals
+	was done by comparing calculated results to analytical solutions for isokinetic
+	advection and shock tube problems. For each verification problem, a scaling
+	study of the truncation error was compared to the predicted behavior derived
+	from modified equation analysis using Richardson extrapolation. Further work
+	was then applied to represent 1-D heat conduction within nuclear rod types.
+	The fluid solution can be solved for semi-implicitly, or implicitly with either
+	explicit or implicit coupling to the solid implicit solution . The single phase
+	Euler partial differential equations for mass \eqref{eq:pde_mass}, momentum
+	\eqref{eq:pde_momentum}, and energy \eqref{eq:pde_energy} correspond to the
+	unknown variables pressure $P$, velocity $u$, and enthalpy $h$. The equation
+	of state \eqref{eq:pde_EOS} realates density $\rho$ as a function of pressure
+	and enthalpy. The first terms in each of the equations are temporal terms. The
+	rest of the terms are steady state spatial terms. The last term in the energy
+	equation represents the net heat transfer from the adjacent rods to the
+	current fluid subchannel.
     
     \begin{equation}
     	\label{eq:pde_mass}
@@ -65,8 +69,12 @@
     	\frac{ \partial  P}{\partial t} + 
     	\bigtriangledown ( \rho  u h )%  -
     	+ \frac{q_{rod}}{\forall_{fluid}}
-    	%u \frac{ \partial  P}{\partial x}
     	= 0
+    \end{equation}
+    
+    \begin{equation}
+    	\label{eq:pde_EOS}
+    	\rho = EOS(P,h)
     \end{equation}
     
     The 1-D formulation of the Euler Equations will assume a direction $x$ as shown
@@ -120,16 +128,17 @@
     The 1-D equations are then evaluated at a position index $ i $ and a certain
     time $n$ in order to solve for the next time value of $n+1$. In the mass equation
     \eqref{eq:FD_mass}, the velocities are located at the cell faces
-    $i+\frac{1}{2}$ and $i-\frac{1}{2}$. The density at a corresponding face is
-    either upwinded $\dot{\rho}_{i+\frac{1}{2}}^{n}$, or averaged
-    $\bar{\rho}_{i+\frac{1}{2}}^{n}$. In equation \eqref{eq:FD_momentum}, the
-    derivative $\frac{ \partial u}{ \partial x}$ is upwinded assuming that the
-    flow is positive. In the energy equation, \eqref{eq:FD_energy} the enthalpy
-    values in the first spatial term are upwinded and shown here assuming a
-    positive velocity. The equation of state \eqref{eq:EOS} solves for density
-    assuming that it is a linear combination of changes due to pressure and
-    enthalpy. The partial derivatives in the equation are calculated from
-    steam tables as functions of old time pressure and enthalpy. 
+    $i+\frac{1}{2}$ and $i-\frac{1}{2}$. The density  in the mass and energy
+    equations is upwinded $\dot{\rho}_{i+\frac{1}{2}}^{n}$ and averaged
+    $\bar{\rho}_{i+\frac{1}{2}}^{n}$ in the momentum equation. In equation
+    \eqref{eq:FD_momentum}, the derivative $\frac{ \partial u}{ \partial x}$ is
+    upwinded assuming that the flow is positive. In the energy equation,
+    \eqref{eq:FD_energy} the enthalpy values in the first spatial term are
+    upwinded and shown here assuming a positive velocity. The equation of state
+    \eqref{eq:EOS} solves for density assuming that it is a linear combination
+    of changes due to pressure and enthalpy. The partial derivatives in the
+    equation are calculated from steam tables as functions of old time pressure
+    and enthalpy.
     
     \begin{equation}
     	\label{eq:FD_mass}
@@ -165,10 +174,10 @@
     \begin{equation}
     	\label{eq:EOS}
     	\rho_{i}^{n+1} - \rho_{i}^{n} = 
-    	\left( \frac{ \partial \rho }{\partial P} \right) 
+    	\left( \frac{ \partial \rho }{\partial P} \bigg|_{i}^{n}  \right) 
     	\left( P_{i}^{n+1} - P_{i}^{n} \right)
     	+ 
-    	\left( \frac{ \partial \rho }{\partial h} \right) 
+    	\left( \frac{ \partial \rho }{\partial h} \bigg|_{i}^{n} \right)
     	\left( h_{i}^{n+1} - h_{i}^{n} \right)
     \end{equation}
 
@@ -183,7 +192,7 @@ the solid.
 
 \begin{equation}
 	\label{eq:full_conduction}
-	  \rho_{i}c_{p,i}\frac{\partial T}{\partial t}
+	  \rho_{fuel}c_{p}\frac{\partial T}{\partial t}
 	- \frac{1}{r}\frac{\partial}{\partial r}\left( 
 		kr\frac{\partial T}{\partial r}\right)
 	- \frac{1}{r^{2}}\frac{\partial}{\partial \theta}\left(
@@ -199,7 +208,7 @@ to equation \ref{eq:rad_conduction}.
 
 \begin{equation}
 	\label{eq:rad_conduction}
-	  \rho_{i}c_{p,i}\frac{\partial T}{\partial t}
+	  \rho_{fuel}c_{p}\frac{\partial T}{\partial t}
 	- \frac{1}{r}\frac{\partial}{\partial r}\left( 
 		kr\frac{\partial T}{\partial r}\right)
 	- q'''
@@ -217,7 +226,7 @@ giving the boundary condition in equation \ref{eq:bc_centerline}
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.40\textwidth]{images/rod-axial.png}
-	\caption{Rod Axial}
+	\caption{Rod Axial Mesh}
 	\label{fig:rod-axial}
 \end{figure}
 
@@ -265,7 +274,7 @@ version of CTF. The implicit  finite difference equation now looks like equation
 \begin{equation}
 	\small
 	\label{eq:rod:fuel:conduction}
-	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
+	  \rho_{fuel}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
 	- \frac{2\pi}{A_{i}}\left( 
 		\left(k_{i+\frac{1}{2}}r_{i+\frac{1}{2}}
 		\frac{T^{n+1}_{i+1}-T^{n+1}_{i}}{\Delta r_{i+\frac{1}{2}}}\right)
@@ -277,9 +286,8 @@ version of CTF. The implicit  finite difference equation now looks like equation
 \end{equation}
 
 The density on the temporal term is defined as the cold mass of the node divided
-by the current volume of the node, so that mass is not lost in the presence of
-expansion. The temporal derivative is approximated with first order accurate
-forward differencing. The spatial derivatives are evaluated at the right
+by the volume of the node. The temporal derivative is approximated with first
+order accurate forward differencing. The spatial derivatives are evaluated at the right
 boundary, $i+\frac{1}{2}$, and at the left boundary,$i-\frac{1}{2}$ using first
 order forward differencing. When $i=1$ at the inner most node, the radius at the
 left boundary and the derivative of the temperature is zero. At the boundary
@@ -289,7 +297,7 @@ different set of finite difference equations are needed as given by equation
 
 \begin{equation}
 	\label{eq:rod:fuel_surface:conduction}
-	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
+	  \rho_{fuel}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
 	+ \frac{2\pi}{A_{i}}
  	    \left(k_{i-\frac{1}{2}}r_{i-\frac{1}{2}}
 		\frac{T^{n+1}_{i}-T^{n+1}_{i-1}}{\Delta r_{i-\frac{1}{2}}}\right)
@@ -309,7 +317,7 @@ perimeter of the cladding divided by the area of the inner cladding region.
 
 \begin{equation}
 	\label{eq:rod:clad_inner:conduction}
-	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
+	  \rho_{clad}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
 	+ \frac{2\pi r_{i}h_{gap}}{A_{i}}\left(T^{n+1}_{i}-T^{n+1}_{i-1}\right)
 	- \frac{2\pi}{A_{i}}
  	    \left(k_{i+\frac{1}{2}}r_{i+\frac{1}{2}}
@@ -326,7 +334,7 @@ fluid and divided by the outer cladding region.
 
 \begin{equation}
 	\label{eq:rod:clad_outer:conduction}
-	  \rho_{i}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
+	  \rho_{clad}c_{p,i}\frac{T^{n+1}_{i}-T^{n}_{i}}{\Delta t}
 	+ \frac{2\pi}{A_{i}}
  	    \left(k_{i-\frac{1}{2}}r_{i-\frac{1}{2}}
 		\frac{T^{n+1}_{i}-T^{n+1}_{i-1}}{\Delta r_{i-\frac{1}{2}}}\right)
