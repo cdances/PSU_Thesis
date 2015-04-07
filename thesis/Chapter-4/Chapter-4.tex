@@ -18,7 +18,7 @@
     
     \begin{equation}
     	\label{eq:CFL}
-    	CFL = \frac{\Delta t  U_{0} }{\Delta x}
+    	CFL = \frac{\Delta t  U_{1} }{\Delta x}
     \end{equation}
     
     \begin{figure}[!h]
@@ -30,7 +30,7 @@
     
     The problem was set up using the parameters given in table
     \ref{table:Advection_Params}. Initial temperature, density, and mass flow
-    rate of the sysmte differs from the inlet temperature, density, and mass
+    rate of the system differs from the inlet temperature, density, and mass
     flow rate. The pressure and velocity of the system remains constant. The
     transient runs until the center of the advected wave reaches the end of the
     tube at roughly 60 seconds. The value of the parameters are more or less
@@ -78,18 +78,22 @@
     	\label{fig:enthalpy_wave}
     \end{figure}
     
-    \section{Modified Equation Analysis}
+    \section{Modified Equation Analysis} \label{Verification:MEA}
     
-    For this isokinetic problem, the original mass balance equation can be re-written to 
-    look like equation \ref{eq:isokinetic_start}. Using upwinding, the finite difference
-    can be written to look like equation \ref{eq:mass_isok_fd}. A second order Taylor 
-    series approximation can be used for $\rho_{i}^{n+1}$ and $\rho_{i-1}^{n}$ as shown 
-    in equations \ref{eq:rho_taylor_series_time} and \ref{eq:rho_taylor_series_space} 
+    The order of accuracy in time and space can be analytically determined for
+    this problem through a modified equation analysis \cite{Villatoro1999}. The
+    goal will be to isolate the original PDE and define the truncation error.
+    For this isokinetic problem, the original mass balance equation can be
+    re-written to look like equation \ref{eq:isokinetic_start}. Using
+    upwinding, the finite difference can be written to look like equation
+    \ref{eq:mass_isok_fd}. A second order Taylor series approximation can be
+    used for $\rho_{i}^{n+1}$ and $\rho_{i-1}^{n}$ as shown in equations
+    \ref{eq:rho_taylor_series_time} and \ref{eq:rho_taylor_series_space}
     respectively. The higher order terms ($O(\Delta x^{2},\Delta t^{2} )$) are
     not taken into account for this approximation. The Taylor series
     approximations can then be substituted into \ref{eq:mass_isok_fd} to yield
-    \ref{eq:MEA_start}. This is the beginning of the modified equation analysis.
-    The goal will be to isolate the original PDE and define the truncation error.
+    \ref{eq:MEA_start}. This is the beginning of the modified equation
+    analysis. 
     
     \begin{equation}
     	\label{eq:isokinetic_start}
@@ -120,9 +124,11 @@
     \ref{eq:MEA_p0} since the $\rho_{i}^{n}$ terms subtract out and the $\Delta
     t$ and $\Delta x$ terms in the denominator cancel out. This reduced equation
     can the be re-written into equation \ref{eq:MEA_p1}, with the original PDE
-    followed by the truncation terms. Notice how the terms on the right are
-    dependent on both the numerical spacing $\Delta t$ and $\Delta x$, but also
-    on the second derivatives of density with respect to space and time.
+    followed by the truncation error shown in brackets. Since the truncation
+    error scales linearly with $\Delta t$ and $\Delta x$, it is said to be first
+    order accurate with respect to time and space. Notice how the truncation
+    error is also dependent on the second derivatives of density with respect to
+    space and time.
     
     \begin{equation}
     	\label{eq:MEA_start}
@@ -144,18 +150,23 @@
     
     \begin{equation}
     	\label{eq:MEA_p1}
-    	 \frac{\partial \rho}{\partial t}  +  U_{0} \frac{\partial \rho}{\partial x} + 
-    	 \frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t -
-    	   U_{0}  \frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x  
-    	   + O(\Delta x^{2},\Delta t^{2}) = 0 
+    	 \frac{\partial \rho}{\partial t}  +  U_{0} \frac{\partial \rho}{\partial x}
+    	 + \left[
+    	      \frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t 
+    	    - U_{0}  \frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x  
+    	    + O(\Delta x^{2},\Delta t^{2})
+    	   \right] 
+    	 = 0 
     \end{equation} \linebreak
     
-    Before we can procede, we need to take the derivative of the original PDE with respect
-    to space and time as shown in equations \ref{eq:mass_dt} and  \ref{eq:mass_dx} 
-    respectively. These two derivatives can substitute into each other using the common 
-    term $\frac{\partial^2 \rho}{\partial x \partial t}$. The second derivatives of density with 
-    respect to space and time are therefore related by the velocity squared as
-    shown by equation \ref{eq:mass_second_derivatives}.
+    While the truncation error has been identified, some additional analysis is
+    still possible since the problem is isokinetic. The  derivative of the
+    original PDE with respect to space and time can be taken as shown in
+    equations \ref{eq:mass_dt} and  \ref{eq:mass_dx} respectively. These two
+    derivatives can substitute into each other using the common term
+    $\frac{\partial^2 \rho}{\partial x \partial t}$. The second derivatives of
+    density with respect to space and time are therefore related by the
+    velocity squared as shown by equation \ref{eq:mass_second_derivatives}.
     
     \begin{equation}
     \label{eq:mass_dt}
@@ -219,7 +230,7 @@
     
     \section{Scaling of Error}
 
-	From the modified equation analysis, the advection problem should prove to
+	From the modified equation analysis, the advection problem is shown to
 	be first order accurate in time and space. Assuming a fixed number of points,
 	the time step was halved several times. The relative difference between each
 	step was taken and $\ell 1$ normalized across space at at a particular time.

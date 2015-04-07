@@ -7,8 +7,8 @@ rigorous, include: expert judgment, error quantification,
 consistency/convergence, and order of accuracy \cite{Oberkampf2008}. For this
 work, the Richardson extrapolation will be used to check for convergence and
 order of accuracy of the error in space and time. The error should converge to
-zero, and the order of accuracy should converge to the values obtained through
-the modified equation analysis \cite{Villatoro1999} at the end of this section.
+zero, and the order of accuracy should converge to the 1 as obtained through
+the modified equation analysis in section \ref{Verification:MEA}.
  
 \section{Problem Setup}
 
@@ -149,93 +149,6 @@ $\frac{kg}{m^{3}s}$. The energy equation residual is in units of
 $\frac{kW}{m^{3}}$. The momentum residual is in units of
 $\frac{kg}{m^{2}s^{2}}$. The flat profile of the mass and energy residuals shows
 that the sine wave has fully developed spatially through the channel.
-
-\section{Modified Equation Analysis}
-    
-    
-    The order of accuracy in time and space can be analytically determined for
-    this problem through a modified equation analysis. Because the velocity is
-    constant, it can be pulled out of the spatial derivative as shown in
-    equation \ref{eq:isokinetic_start}. Using upwinding, the finite difference
-    can be written to look like equation \ref{eq:mass_isok_fd}.  A second order
-    Taylor series approximation can  be used for $\rho_{i}^{n+1}$  and
-    $\rho_{i-1}^{n}$ as shown in equations \ref{eq:rho_taylor_series_time} and
-    \ref{eq:rho_taylor_series_space} respectively. The higher order terms
-    ($O(\Delta x^{2},\Delta t^{2} )$) are not taken into account for this
-    approximation. The Taylor series approximations can then be substituted into
-    \ref{eq:mass_isok_fd} to yield \ref{eq:MEA_start}. This is the beginning of
-    the modified equation analysis. The goal will be to isolate the original PDE
-    and define the truncation error.
-    
-    \begin{equation}
-    	\label{eq:isokinetic_start}
-    	\frac{\partial \rho}{\partial t} + U_{0} \frac{\partial \rho}{\partial x} = 0
-    \end{equation}
-    
-    \begin{equation}
-    	\label{eq:mass_isok_fd}
-    	\frac{ \rho_{i}^{n+1} - \rho_{i}^{n} }{\Delta t} 
-    	+ U_{0} \frac{\rho_{i}^{n} - \rho_{i-1}^{n}}{\Delta x} = 0
-    \end{equation}
-    
-    \begin{equation}
-    	\label{eq:rho_taylor_series_time}
-    	\rho_{i}^{n+1} =  \rho_{i}^{n} + 
-    	\frac{\partial \rho}{\partial t} \Delta t +
-    	\frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t^2 + O(\Delta t^{3})
-    \end{equation}
-    
-    \begin{equation}
-    	\label{eq:rho_taylor_series_space}
-    	\rho_{i-1}^{n} =  \rho_{i}^{n} - 
-    	\frac{\partial \rho}{\partial x} \Delta x +
-    	\frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x^2 + O(\Delta x^{3})
-    \end{equation}
-    
-    The lengthy equation \ref{eq:MEA_start} can be reduced to equation
-    \ref{eq:MEA_p0} since the $\rho_{i}^{n}$ terms subtract out and the $\Delta
-    t$ and $\Delta x$ terms in the denominator cancel out. This reduced equation
-    can be re-written into equation \ref{eq:MEA_p1}, with the original PDE
-    followed by the truncation terms. 
-    
-    \begin{equation}
-    	\label{eq:MEA_start}
-    	\frac{ \left( \rho_{i}^{n} + \frac{\partial \rho}{\partial t} \Delta t +
-    	\frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t^2 \right)-\rho_{i}^{n} }{\Delta t} 
-    	+ U_{0} \frac{\rho_{i}^{n} - \left( \rho_{i}^{n} -  \frac{\partial \rho}{\partial x} \Delta x + 
-    	\frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x^2 \right)}{\Delta x} 
-    	+ O(\Delta x^{2},\Delta t^{2}) 
-    	= 0
-    \end{equation}
-    
-    \begin{equation}
-    	\label{eq:MEA_p0}
-    	 \frac{\partial \rho}{\partial t}  + \frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t +
-    	 U_{0} \left(   \frac{\partial \rho}{\partial x}  - \frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x \right) 
-    	 + O(\Delta x^{2},\Delta t^{2}) 
-    	 = 0
-    \end{equation}
-    
-    The terms to the right of the original PDE are the first order accurate
-    truncation terms. Notice how the truncation error is  dependent on both the
-    on the second derivatives of density with respect to space and time, and on
-    the numerical spacing $\Delta t$ and $\Delta x$. Since the truncation
-    error is linearly dependent on $\Delta t$ and $\Delta x$, the order of
-    accuracy is 1 with respect to time and space. 
-    
-    \begin{equation}
-    	\label{eq:MEA_p1}
-    	 \frac{\partial \rho}{\partial t}  +  U_{0} \frac{\partial \rho}{\partial x} + 
-    	 \frac{1}{2} \frac{\partial^2 \rho}{\partial t^2} \Delta t -
-    	   U_{0}  \frac{1}{2} \frac{\partial^2 \rho}{\partial x^2} \Delta x  
-    	   + O(\Delta x^{2},\Delta t^{2}) = 0 
-    \end{equation} 
-    
-    When the energy equation undergoes a similar modified eqaution analysis, the
-    order of accuracy is also 1 for time and space. The momentum conservation
-    equation does not apply for this problem since the velocity is
-    constant.
-    
 
 \section{Richardson Extrapolation}
 
