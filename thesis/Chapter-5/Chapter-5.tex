@@ -74,18 +74,22 @@
     
     When the diaphragm disappears, a compression wave will move to the right and a
     rarefaction wave to the left. These two waves split the domain into four
-    distinct regions. There is a region to the left of the rarefaction wave that has
-    the same properties as the initial left region. There is a region between the
-    rarefaction wave and the initial location of the diaphragm. There is a region
-    between the initial location of the diaphragm and the compression wave. There is
-    a region to the right of the compression wave, that has the same properties
-    as the initial right region. The analytical solution does not take into
-    account reflection off of the walls, however the numerical solution can due
-    to the applied boundary conditions for mass flow rate.
+    distinct regions as shown in figure \ref{fig:V2_pressure_scaling}. 
+    
+    \begin{enumerate}
+      \item left of the rarefaction wave
+      \item between the rarefaction wave and the initial location of the diaphragm
+      \item between the initial location of the diaphragm and the compression wave
+      \item right of the compression wave
+    \end{enumerate}
+    
+    The analytical solution does not take into account reflection off of the
+    walls, however the numerical solution can due to the applied boundary
+    conditions for mass flow rate.
     
     \begin{figure}[!h]
     	\centering
-    	\includegraphics[width=0.65\textwidth]{images/Shock_Tube/Shock_Tube_regions}
+    	\includegraphics[width=0.50\textwidth]{images/Shock_Tube/Shock_Tube_regions}
     	\label{fig:V2_pressure_scaling}
     	\caption{Regions within the shock tube based on rarefaction and compression}
     \end{figure}
