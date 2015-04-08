@@ -91,7 +91,7 @@ equation \ref{eq:uheat:clad-outer} for $ r = r_{co}$.
 
 The temperatures can be computed by working from the known fluid temperature,
 and  working solving for temperatures from the outside surface of the cladding
-to the  center of the fuel.Notice that the difference between any radial
+to the  center of the fuel. Notice that the difference between any radial
 temperature  and the fluid temperature at the same axial level is independent of
 the axial height.  This difference will be compared first to verify that the
 conduction equation is working properly
@@ -99,7 +99,7 @@ conduction equation is working properly
 \section{Steady State Results}
 
 The temperature distribution within the fuel rod relative to the wall surface
-temperature can be seen in Figure \ref{fig:Rod_Profile_Summary}. The analytical
+temperature can be seen in figure \ref{fig:Rod_Profile_Summary}. The analytical
 solution matches well with the  different solution methods both within the fuel
 and at the cladding surfaces.  The difference between the analytical solution
 and the numerical solutions are  highest at the fuel centerline as can be seen
@@ -135,8 +135,7 @@ steady state solution methods. However, all three residual formulation methods
 have lower numerical error compared to the original steady state method from
 CTF. The order of accuracy is difficult to compute, since CTF uses non-uniform
 meshing near the rod center and since the fuel centerline temperature is
-extrapolated using a second order accurate method. The non-uniform mesh size
-also means that a Richardson extrapolation is not valid.
+extrapolated using a second order accurate method. 
 
 \begin{table}[h]
 \center
@@ -152,9 +151,9 @@ NR &	SI Trans	&	I Trans	& I SS & Original SS	\\ \hline
 \end{table}
 
 
-While there is on solid conduction in the axial direction, the fluid will have a
+While there is no conduction in the axial direction, the fluid will have a
 temperature gradient in the axial direction. This will cause a 2-D temperature
-distribution as shown by Figure \ref{fig:Rod_Profile}. The fluid temperature
+distribution as shown by figure \ref{fig:Rod_Profile}. The fluid temperature
 only changes by about 10 $^{\circ}C$ from the inlet to the outlet, but the fuel
 temperature changes by about 90 $^{\circ}C$ from the outer surface of the
 cladding to the fuel centerline temperature. The hottest location of the fuel
@@ -174,20 +173,23 @@ shows, this is attributable to numerical error.
 \section{Transient Results}
 
 The transient simulations were run for 30.0 seconds to reach a pseudo-steady
-state condition. The rate of change of the temperatures have reached near steady
-state conditions as shown by Figure 7 were the red lines are fuel node
-temperatures, and the black lines are cladding node temperatures. The
-semi-implicit method is used on the left, and the fully implicit method is on
-the right. For the semi-implicit solution method, a maximum time step size of
-0.02 sec was needed to ensure stability. For the implicit solution method time
-step sizes well over 0.2 seconds could be taken. For the data in the figure,
-time steps of 1.0 second were used. The implicit Jacobian matrix is stiffer than
-the Jacobian matrix for the semi-implicit method and therefore takes longer to
-solve. Additionally, for time steps with large residuals multiple up to 5
-iterations are needed. However the advantage of being able to take significantly
-longer time steps makes up for the increased computational cost per time step
-required by the semi-implicit method. The temperatures gained from the
-semi-implicit method and the implicit methods do not differ by significant
+state condition. Two different solution methods were used. The first 
+explicitly couples a semi-implicit fluid matrix to an implicit solid matrix.
+The second implicitly couples an implicit fluid matrix to an implicit solid
+matrix. The rate of change of the temperatures have reached near steady state
+conditions as shown by figures \ref{fig:trans_rod1_axial10_SI} and
+\ref{fig:trans_rod1_axial10_I} for the first and second solution methods
+respectively. The red lines are fuel node temperatures, and the black lines are
+cladding node temperatures. For the explicitly coupled solution, a maximum time
+step size of 0.02 sec was needed to ensure stability. For the implicitly coupled
+solution, time step sizes well over 0.2 seconds could be taken. For the data in
+the figure, time steps of 1.0 second were used. The implicit Jacobian matrix is
+stiffer than the Jacobian matrix for the firs method and therefore takes longer
+to solve. Additionally, for time steps with large residuals multiple up to 5
+iterations are needed. However the advantage of being able to take
+significantly longer time steps makes up for the increased computational cost
+per time step. The temperatures obtained from the explicitly coupled solution
+and the implicitly coupled solution methods do not differ by significant
 amounts.
 
 \begin{figure}[!h]
@@ -204,13 +206,17 @@ amounts.
 	\label{fig:trans_rod1_axial10_I}
 \end{figure}
 
-The transient behavior of temperature profile is shown in Figure 8 where the
-flat green line is the initial condition, the red line is the final profile, and
-the black lines are intermediate time steps. It is easier to observe the
-difference in the number of time steps between the semi-implicit method on the
-left and the implicit method on the right. The intermediary time steps are still
-the same, as is the final solution. However, the implicit method will have
-greater numerical error compared to the semi-implicit method.
+The transient behavior of temperature profile is shown in figures
+\ref{fig:profile_rod1_level_10_SI} and \ref{fig:profile_rod1_level_10_I} for
+the explicitly coupled and implicitly coupled solutions respectively. The flat
+green line is the initial condition, the red line is the final profile, and the
+black lines are intermediate time steps. These graph more clearly show 
+difference in the number of time steps between the two coupling methods. The
+intermediary time steps are have the same temperatures, as does the final
+solution. While the semi-implicit solution method for the fluid domain has less
+numerical error than the implicit solution method for the fluid domain, the
+explicitly and implicitly solid liquid coupling methods should have comparable
+error.
 
 \begin{figure}[!h]
 	\centering
