@@ -22,14 +22,13 @@
 \contentsline {chapter}{\numberline {6}Isokinetic Sine Wave Advection}{24}{chapter..6}
 \contentsline {section}{\numberline {6.1}Problem Setup}{24}{section..6.1}
 \contentsline {section}{\numberline {6.2}Code Convergence}{26}{section..6.2}
-\contentsline {section}{\numberline {6.3}Modified Equation Analysis}{26}{section..6.3}
-\contentsline {section}{\numberline {6.4}Richardson Extrapolation}{28}{section..6.4}
-\contentsline {section}{\numberline {6.5}Convergence of Error}{28}{section..6.5}
-\contentsline {section}{\numberline {6.6}Order of Accuracy}{30}{section..6.6}
-\contentsline {chapter}{\numberline {7}Uniform Heating Problem}{32}{chapter..7}
-\contentsline {section}{\numberline {7.1}Problem Setup}{32}{section..7.1}
-\contentsline {section}{\numberline {7.2}Steady State Analytical Solution}{33}{section..7.2}
-\contentsline {section}{\numberline {7.3}Steady State Results}{33}{section..7.3}
-\contentsline {section}{\numberline {7.4}Transient Results}{35}{section..7.4}
-\contentsline {chapter}{\numberline {8}Conclusions}{38}{chapter..8}
-\contentsline {chapter}{Bibliography}{38}{chapter..8}
+\contentsline {section}{\numberline {6.3}Richardson Extrapolation}{27}{section..6.3}
+\contentsline {section}{\numberline {6.4}Convergence of Error}{27}{section..6.4}
+\contentsline {section}{\numberline {6.5}Order of Accuracy}{28}{section..6.5}
+\contentsline {chapter}{\numberline {7}Uniform Heating Problem}{31}{chapter..7}
+\contentsline {section}{\numberline {7.1}Problem Setup}{31}{section..7.1}
+\contentsline {section}{\numberline {7.2}Steady State Analytical Solution}{32}{section..7.2}
+\contentsline {section}{\numberline {7.3}Steady State Results}{32}{section..7.3}
+\contentsline {section}{\numberline {7.4}Transient Results}{34}{section..7.4}
+\contentsline {chapter}{\numberline {8}Conclusions}{37}{chapter..8}
+\contentsline {chapter}{Bibliography}{37}{chapter..8}

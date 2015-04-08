@@ -22,14 +22,13 @@
 \BOOKMARK [0][-]{chapter..6}{Isokinetic Sine Wave Advection}{}% 22
 \BOOKMARK [1][-]{section..6.1}{Problem Setup}{chapter..6}% 23
 \BOOKMARK [1][-]{section..6.2}{Code Convergence}{chapter..6}% 24
-\BOOKMARK [1][-]{section..6.3}{Modified Equation Analysis}{chapter..6}% 25
-\BOOKMARK [1][-]{section..6.4}{Richardson Extrapolation}{chapter..6}% 26
-\BOOKMARK [1][-]{section..6.5}{Convergence of Error}{chapter..6}% 27
-\BOOKMARK [1][-]{section..6.6}{Order of Accuracy}{chapter..6}% 28
-\BOOKMARK [0][-]{chapter..7}{Uniform Heating Problem}{}% 29
-\BOOKMARK [1][-]{section..7.1}{Problem Setup}{chapter..7}% 30
-\BOOKMARK [1][-]{section..7.2}{Steady State Analytical Solution}{chapter..7}% 31
-\BOOKMARK [1][-]{section..7.3}{Steady State Results}{chapter..7}% 32
-\BOOKMARK [1][-]{section..7.4}{Transient Results}{chapter..7}% 33
-\BOOKMARK [0][-]{chapter..8}{Conclusions}{}% 34
-\BOOKMARK [0][-]{chapter..8}{Bibliography}{}% 35
+\BOOKMARK [1][-]{section..6.3}{Richardson Extrapolation}{chapter..6}% 25
+\BOOKMARK [1][-]{section..6.4}{Convergence of Error}{chapter..6}% 26
+\BOOKMARK [1][-]{section..6.5}{Order of Accuracy}{chapter..6}% 27
+\BOOKMARK [0][-]{chapter..7}{Uniform Heating Problem}{}% 28
+\BOOKMARK [1][-]{section..7.1}{Problem Setup}{chapter..7}% 29
+\BOOKMARK [1][-]{section..7.2}{Steady State Analytical Solution}{chapter..7}% 30
+\BOOKMARK [1][-]{section..7.3}{Steady State Results}{chapter..7}% 31
+\BOOKMARK [1][-]{section..7.4}{Transient Results}{chapter..7}% 32
+\BOOKMARK [0][-]{chapter..8}{Conclusions}{}% 33
+\BOOKMARK [0][-]{chapter..8}{Bibliography}{}% 34

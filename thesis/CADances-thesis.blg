@@ -1,53 +1,52 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CADances-thesis.aux
 The style file: GLG-bibstyle.bst
 Database file #1: CADances-thesis.bib
 Warning--entry type for "PETSc" isn't style-file defined
---line 127 of file CADances-thesis.bib
+--line 129 of file CADances-thesis.bib
 Warning--entry type for "python" isn't style-file defined
---line 136 of file CADances-thesis.bib
+--line 138 of file CADances-thesis.bib
 Warning--empty journal in CTF_theory
-Warning--empty journal in Lloyd2014
 You've used 20 entries,
             2552 wiz_defined-function locations,
-            680 strings with 7976 characters,
-and the built_in function-call counts, 6333 in all, are:
-= -- 373
+            681 strings with 8011 characters,
+and the built_in function-call counts, 6334 in all, are:
+= -- 379
 > -- 205
 < -- 5
 + -- 63
 - -- 43
-* -- 437
-:= -- 678
-add.period$ -- 34
+* -- 435
+:= -- 680
+add.period$ -- 33
 call.type$ -- 20
-change.case$ -- 3
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 746
-empty$ -- 710
+cite$ -- 21
+duplicate$ -- 745
+empty$ -- 706
 format.name$ -- 56
-if$ -- 1424
+if$ -- 1426
 int.to.chr$ -- 0
 int.to.str$ -- 20
 missing$ -- 149
 newline$ -- 76
 num.names$ -- 19
-pop$ -- 275
+pop$ -- 270
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 168
+skip$ -- 166
 stack$ -- 0
-substring$ -- 148
-swap$ -- 422
+substring$ -- 149
+swap$ -- 425
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
+warning$ -- 1
 while$ -- 29
 width$ -- 22
-write$ -- 178
-(There were 4 warnings)
+write$ -- 181
+(There were 3 warnings)

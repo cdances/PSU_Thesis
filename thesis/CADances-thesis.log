@@ -1,19 +1,19 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  2 APR 2015 15:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.8)  7 APR 2015 21:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CADances-thesis
 (./CADances-thesis.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (./psuthesis.cls
 Document Class: psuthesis 2013/10/18 v2.4.0 psuthesis class
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/book.cls
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/bk10.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
 File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -29,7 +29,7 @@ File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count88
 \calc@Bcount=\count89
@@ -37,15 +37,15 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bdimen=\dimen104
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
-LaTeX Info: Redefining \setlength on input line 75.
-LaTeX Info: Redefining \addtolength on input line 76.
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count90
 \calc@Cskip=\skip45
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tocloft/tocloft.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 44.
 \cftparskip=\skip46
@@ -85,7 +85,7 @@ Package tocloft Info: The document has chapter divisions on input line 44.
 \cfttabindent=\skip78
 \cfttabnumwidth=\skip79
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip80
 \f@ncyO@elh=\skip81
 \f@ncyO@erh=\skip82
@@ -96,7 +96,7 @@ Package tocloft Info: The document has chapter divisions on input line 44.
 \f@ncyO@olf=\skip87
 \f@ncyO@orf=\skip88
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/textcase/textcase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 )
 \mylength=\skip89
@@ -106,14 +106,14 @@ Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 \psu@sigafteroptionskip=\skip92
 \psu@intersigspace=\skip93
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/lmodern.sty
+(/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -148,7 +148,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -163,7 +163,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -229,11 +229,11 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 \MT@toks=\toks15
@@ -243,7 +243,7 @@ LaTeX Info: Redefining \textls on input line 766.
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
 \MT@listname@count=\count94
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
@@ -252,27 +252,27 @@ LaTeX Info: Redefining \lslig on input line 915.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/microtype.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip95
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen106
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen107
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count95
@@ -313,25 +313,25 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/eqlist/eqlist.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eqlist/eqlist.sty
 eqlist.sty by M. Vaeth: Revision 2.1
 Package: eqlist 2002/08/15 v2.1
-(/usr/local/texlive/2014/texmf-dist/tex/latex/eqparbox/eqparbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eqparbox/eqparbox.sty
 Package: eqparbox 2013/03/15 v4.0 Create equal-widthed boxes
 \eqp@tempdima=\skip98
 \eqp@tempdimb=\skip99
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen115
 \extrarowheight=\dimen116
@@ -343,35 +343,35 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \eqp@list@box=\box30
 \eqp@list@indent=\skip102
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2013/04/01 v0.3 A new environment syntax
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )))
 \eql@cnt=\count107
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count108
@@ -379,23 +379,23 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen117
 \Gin@req@width=\dimen118
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
+Package color Info: Driver file: pdftex.def on input line 130.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/cite/cite.sty
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titlesec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box31
 \beforetitleunit=\skip103
@@ -407,14 +407,14 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen122
 \titlewidthfirst=\dimen123
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -455,25 +455,25 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen124
 \Hy@linkcounter=\count109
 \Hy@pagecounter=\count110
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count111
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -485,7 +485,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count112
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -510,12 +510,12 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count117
 \c@bookmark@seq@number=\count118
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -523,10 +523,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip105
 )
 (./SupplementaryMaterial/UserDefinedCommands.tex)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/block.tss
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/block.tss
 File: block.tss 2011/12/15
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count119
 \lst@gtempboxa=\box32
 \lst@token=\toks23
@@ -540,39 +540,18 @@ File: block.tss 2011/12/15
 \lst@lineno=\count124
 \lst@maxwidth=\dimen131
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 \c@lstnumber=\count125
 \lst@skipnumbers=\count126
 \lst@framebox=\box33
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2014/03/04 1.5c listings configuration
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
-Package: listings 2014/03/04 1.5c (Carsten Heinz)
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
 (./CADances-thesis.aux
-
-LaTeX Warning: Label `eq:isokinetic_start' multiply defined.
-
-
-LaTeX Warning: Label `eq:mass_isok_fd' multiply defined.
-
-
-LaTeX Warning: Label `eq:rho_taylor_series_time' multiply defined.
-
-
-LaTeX Warning: Label `eq:rho_taylor_series_space' multiply defined.
-
-
-LaTeX Warning: Label `eq:MEA_start' multiply defined.
-
-
-LaTeX Warning: Label `eq:MEA_p0' multiply defined.
-
-
-LaTeX Warning: Label `eq:MEA_p1' multiply defined.
-
 
 LaTeX Warning: Label `chapter7:uniform_heating' multiply defined.
 
@@ -594,7 +573,7 @@ LaTeX Font Info:    ... okay on input line 370.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 370.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 370.
 
- (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 370.
@@ -602,7 +581,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 370.
 LaTeX Font Info:    ... okay on input line 370.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 370.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmr.fd
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Info: Redefining \microtypecontext on input line 370.
@@ -616,11 +595,11 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count127
 \scratchdimen=\dimen132
@@ -633,27 +612,27 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 \MPnumerator=\count131
 \makeMPintoPDFobject=\count132
 \everyMPtoPDFconversion=\toks25
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.jpg,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box35
 Package hyperref Info: Link coloring OFF on input line 370.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count133
@@ -670,34 +649,33 @@ LaTeX Info: Redefining \nameref on input line 370.
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 392.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 397.
 
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 397.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omllmm.fd
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 397
 .
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omslmsy.fd
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMX+lmex on input line 397
 .
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omxlmex.fd
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -708,32 +686,31 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 397.
 LaTeX Font Info:    Try loading font information for U+msa on input line 397.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/mt-msa.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 397.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/mt-msb.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [2]
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 401.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
+(/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-(./SupplementaryMaterial/Abstract.tex) [3
+ (./SupplementaryMaterial/Abstract.tex) [3
 
 ] (./CADances-thesis.toc [4
 
@@ -741,27 +718,26 @@ Package microtype Info: Loading generic settings for font family
 \tf@toc=\write4
 \openout4 = `CADances-thesis.toc'.
 
- [5]
-(./CADances-thesis.lof [6
+ [5] (./CADances-thesis.lof [6
 
 
 ])
 \tf@lof=\write5
 \openout5 = `CADances-thesis.lof'.
 
- [7] (./CADances-thesis.lot)
+ [7]
+(./CADances-thesis.lot)
 \tf@lot=\write6
 \openout6 = `CADances-thesis.lot'.
 
  [8
 
 
-]
-(./SupplementaryMaterial/ListOfSymbols.tex [9
+] (./SupplementaryMaterial/ListOfSymbols.tex [9
 
 
-]) [10]
-(./SupplementaryMaterial/Acknowledgments.tex
+])
+[10] (./SupplementaryMaterial/Acknowledgments.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -778,7 +754,7 @@ Chapter 1.
 
 ]
 Chapter 2.
-<images/CTF-Cells.jpg, id=358, 551.05875pt x 1023.825pt>
+<images/CTF-Cells.jpg, id=353, 551.05875pt x 1023.825pt>
 File: images/CTF-Cells.jpg Graphic file (type jpg)
 
 <use images/CTF-Cells.jpg>
@@ -787,72 +763,70 @@ Package pdftex.def Info: images/CTF-Cells.jpg used on input line 22.
  [3
 
  <./images/CTF-Cells.jpg>] [4] [5]
-<images/rod-axial.png, id=407, 313.17pt x 325.215pt>
+<images/rod-axial.png, id=403, 250.9375pt x 324.21124pt>
 File: images/rod-axial.png Graphic file (type png)
 
 <use images/rod-axial.png>
-Package pdftex.def Info: images/rod-axial.png used on input line 219.
-(pdftex.def)             Requested size: 167.66393pt x 174.11484pt.
+Package pdftex.def Info: images/rod-axial.png used on input line 228.
+(pdftex.def)             Requested size: 167.66393pt x 216.6317pt.
 
-<images/radial_diagram.png, id=410, 418.56375pt x 433.62pt>
+<images/radial_diagram.png, id=406, 418.56375pt x 433.62pt>
 File: images/radial_diagram.png Graphic file (type png)
 
 <use images/radial_diagram.png>
-Package pdftex.def Info: images/radial_diagram.png used on input line 239.
+Package pdftex.def Info: images/radial_diagram.png used on input line 248.
 (pdftex.def)             Requested size: 167.66393pt x 173.68973pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/fluid-solid-meshing.png, id=412, 266.9975pt x 591.20876pt>
+[6 <./images/rod-axial.png>]
+<images/fluid-solid-meshing.png, id=414, 266.9975pt x 591.20876pt>
 File: images/fluid-solid-meshing.png Graphic file (type png)
 
 <use images/fluid-solid-meshing.png>
-Package pdftex.def Info: images/fluid-solid-meshing.png used on input line 254.
+Package pdftex.def Info: images/fluid-solid-meshing.png used on input line 263.
 
 (pdftex.def)             Requested size: 83.83195pt x 185.62732pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 266.
+LaTeX Font Warning: Command \small invalid in math mode on input line 275.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 277.
+(Font)              <9> on input line 286.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 277.
-LaTeX Font Info:    Calculating math sizes for size <> on input line 277.
+(Font)              <6> on input line 286.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 286.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <> on input line 277.
+(Font)              <> on input line 286.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <0.7> on input line 277.
+(Font)              <0.7> on input line 286.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <0.5> on input line 277.
-[6 <./images/rod-axial.png>] [7 <./images/radial_diagram.png> <./images/fluid-s
-olid-meshing.png>]) (./Chapter-3/Chapter-3.tex [8]
+(Font)              <0.5> on input line 286.
+[7 <./images/radial_diagram.png> <./images/fluid-solid-meshing.png>])
+(./Chapter-3/Chapter-3.tex [8]
 Chapter 3.
 [9
 
-] <images/Jacobian_Setup.jpg, id=467, 421.575pt x 399.4925pt>
+] <images/Jacobian_Setup.jpg, id=464, 421.575pt x 399.4925pt>
 File: images/Jacobian_Setup.jpg Graphic file (type jpg)
 
 <use images/Jacobian_Setup.jpg>
-Package pdftex.def Info: images/Jacobian_Setup.jpg used on input line 78.
+Package pdftex.def Info: images/Jacobian_Setup.jpg used on input line 80.
 (pdftex.def)             Requested size: 125.75113pt x 119.15985pt.
  [10 <./images/Jacobian_Setup.jpg>]
-<images/Explicit-Diagram.jpg, id=475, 645.41125pt x 795.97375pt>
+<images/Explicit-Diagram.jpg, id=476, 645.41125pt x 795.97375pt>
 File: images/Explicit-Diagram.jpg Graphic file (type jpg)
 
 <use images/Explicit-Diagram.jpg>
-Package pdftex.def Info: images/Explicit-Diagram.jpg used on input line 111.
+Package pdftex.def Info: images/Explicit-Diagram.jpg used on input line 114.
 (pdftex.def)             Requested size: 125.75113pt x 155.08673pt.
 
-<images/Implicit-Diagram.jpg, id=476, 647.41875pt x 791.95876pt>
+<images/Implicit-Diagram.jpg, id=477, 647.41875pt x 791.95876pt>
 File: images/Implicit-Diagram.jpg Graphic file (type jpg)
 
 <use images/Implicit-Diagram.jpg>
-Package pdftex.def Info: images/Implicit-Diagram.jpg used on input line 119.
+Package pdftex.def Info: images/Implicit-Diagram.jpg used on input line 122.
 (pdftex.def)             Requested size: 125.75113pt x 153.82108pt.
 ) (./Chapter-4/Chapter-4.tex [11 <./images/Explicit-Diagram.jpg> <./images/Impl
 icit-Diagram.jpg>]
@@ -864,7 +838,7 @@ d flow has an ini-tial con-di-tion of $\OML/lmm/m/it/10 U[]; ^^Z[]; h[]; P[]; [
 ]$
  []
 
-<images/Verification_Problem1_advection.jpg, id=485, 962.59625pt x 397.485pt>
+<images/Verification_Problem1_advection.jpg, id=486, 962.59625pt x 397.485pt>
 File: images/Verification_Problem1_advection.jpg Graphic file (type jpg)
 
 <use images/Verification_Problem1_advection.jpg>
@@ -874,7 +848,7 @@ ut line 26.
  [12
 
  <./images/Verification_Problem1_advection.jpg>]
-<images/linear_CTF_CFL_0.500/tmp/plot_density_0030.jpg, id=493, 1405.25pt x 803
+<images/linear_CTF_CFL_0.500/tmp/plot_density_0030.jpg, id=494, 1405.25pt x 803
 .0pt>
 File: images/linear_CTF_CFL_0.500/tmp/plot_density_0030.jpg Graphic file (type 
 jpg)
@@ -883,56 +857,53 @@ Package pdftex.def Info: images/linear_CTF_CFL_0.500/tmp/plot_density_0030.jpg
 used on input line 76.
 (pdftex.def)             Requested size: 356.29384pt x 203.59215pt.
  [13 <./images/linear_CTF_CFL_0.500/tmp/plot_density_0030.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
-<images/Isokinetic_Advection/Difference_rho.jpg, id=538, 803.0pt x 602.25pt>
+<images/Isokinetic_Advection/Difference_rho.jpg, id=533, 803.0pt x 602.25pt>
 File: images/Isokinetic_Advection/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Isokinetic_Advection/Difference_rho.jpg>
 Package pdftex.def Info: images/Isokinetic_Advection/Difference_rho.jpg used on
- input line 240.
+ input line 251.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-<images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg, id=540, 803.0pt
+[15]
+<images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg, id=544, 803.0pt
  x 602.25pt>
 File: images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg Graphic fil
 e (type jpg)
 
 <use images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg>
 Package pdftex.def Info: images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_
-rho.jpg used on input line 262.
+rho.jpg used on input line 273.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[15] <images/Isokinetic_Advection/density_2D.jpg, id=550, 602.25pt x 602.25pt>
+<images/Isokinetic_Advection/density_2D.jpg, id=546, 602.25pt x 602.25pt>
 File: images/Isokinetic_Advection/density_2D.jpg Graphic file (type jpg)
 
 <use images/Isokinetic_Advection/density_2D.jpg>
 Package pdftex.def Info: images/Isokinetic_Advection/density_2D.jpg used on inp
-ut line 275.
+ut line 286.
 (pdftex.def)             Requested size: 251.50227pt x 251.5005pt.
 
 
@@ -943,7 +914,7 @@ jpg> <./images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg>]
 [17 <./images/Isokinetic_Advection/density_2D.jpg>]
 Chapter 5.
 
-<images/Verification_Problem2_shock_tube.jpg, id=559, 665.48625pt x 375.4025pt>
+<images/Verification_Problem2_shock_tube.jpg, id=555, 665.48625pt x 375.4025pt>
 File: images/Verification_Problem2_shock_tube.jpg Graphic file (type jpg)
 <use images/Verification_Problem2_shock_tube.jpg>
 Package pdftex.def Info: images/Verification_Problem2_shock_tube.jpg used on in
@@ -956,51 +927,51 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [18
 
  <./images/Verification_Problem2_shock_tube.jpg>]
-<images/Shock_Tube/Shock_Tube_regions.jpg, id=568, 713.66624pt x 642.4pt>
+<images/Shock_Tube/Shock_Tube_regions.jpg, id=565, 713.66624pt x 642.4pt>
 File: images/Shock_Tube/Shock_Tube_regions.jpg Graphic file (type jpg)
 
 <use images/Shock_Tube/Shock_Tube_regions.jpg>
 Package pdftex.def Info: images/Shock_Tube/Shock_Tube_regions.jpg used on input
- line 88.
-(pdftex.def)             Requested size: 272.45547pt x 245.24179pt.
+ line 92.
+(pdftex.def)             Requested size: 209.5831pt x 188.65356pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [19] [20 <./images/Shock_Tube/Shock_Tube_regions.jpg>]
-<images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg, id=595, 2007.5pt x 1204.
+<images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg, id=596, 2007.5pt x 1204.
 5pt>
 File: images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg Graphic file (type j
 pg)
  <use images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg>
 Package pdftex.def Info: images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg u
-sed on input line 149.
+sed on input line 153.
 (pdftex.def)             Requested size: 544.91734pt x 326.94699pt.
  [21 <./images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg>]
-<images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg, id=600, 2007.5pt x 1204.5pt
+<images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg, id=601, 2007.5pt x 1204.5pt
 >
 File: images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg Graphic file (type jpg)
 
  <use images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg>
 Package pdftex.def Info: images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg used
- on input line 157.
+ on input line 161.
 (pdftex.def)             Requested size: 544.91734pt x 326.94699pt.
  [22 <./images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg>]
-<images/Shock_Tube/Difference_rho.jpg, id=606, 803.0pt x 602.25pt>
+<images/Shock_Tube/Difference_rho.jpg, id=607, 803.0pt x 602.25pt>
 File: images/Shock_Tube/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Shock_Tube/Difference_rho.jpg>
 Package pdftex.def Info: images/Shock_Tube/Difference_rho.jpg used on input lin
-e 174.
+e 178.
 (pdftex.def)             Requested size: 209.5831pt x 157.1878pt.
 
-<images/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg, id=607, 803.0pt x 602.25
+<images/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg, id=608, 803.0pt x 602.25
 pt>
 File: images/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg Graphic file (type j
 pg)
  <use images/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg>
 Package pdftex.def Info: images/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg u
-sed on input line 181.
+sed on input line 185.
 (pdftex.def)             Requested size: 209.5831pt x 157.1878pt.
 )
 (./Chapter-6/Chapter-6.tex [23 <./images/Shock_Tube/Difference_rho.jpg> <./imag
@@ -1010,6 +981,9 @@ Chapter 6.
 Overfull \hbox (2.64594pt too wide) in paragraph at lines 3--3
 |\T1/lmss/bx/n/30 Isokinetic Sine Wave Ad-vec-tion| 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [24
 
@@ -1048,10 +1022,6 @@ Package pdftex.def Info: images/Code_Verification/run_00_00/original/results/Co
 nvergence_Plot.png used on input line 133.
 (pdftex.def)             Requested size: 209.5831pt x 157.18156pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 <images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png, id=643
 , 578.16pt x 433.62pt>
 File: images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png Gr
@@ -1062,68 +1032,72 @@ Package pdftex.def Info: images/Code_Verification/run_00_00/residual/results/Re
 siduals_Plot.png used on input line 140.
 (pdftex.def)             Requested size: 209.5831pt x 157.18156pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[26 <./images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png>]
-[27 <./images/Code_Verification/run_00_00/original/results/Convergence_Plot.png
-> <./images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png>]
-<images/Temporal_Study/Difference_rho.jpg, id=668, 803.0pt x 602.25pt>
+[26 <./images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png> <./
+images/Code_Verification/run_00_00/original/results/Convergence_Plot.png>]
+<images/Temporal_Study/Difference_rho.jpg, id=654, 803.0pt x 602.25pt>
 File: images/Temporal_Study/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Temporal_Study/Difference_rho.jpg>
 Package pdftex.def Info: images/Temporal_Study/Difference_rho.jpg used on input
- line 268.
+ line 181.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
- [28]
-<images/Spatial_Study/Difference_rho.jpg, id=674, 803.0pt x 602.25pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[27 <./images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png>]
+<images/Spatial_Study/Difference_rho.jpg, id=661, 803.0pt x 602.25pt>
 File: images/Spatial_Study/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Spatial_Study/Difference_rho.jpg>
 Package pdftex.def Info: images/Spatial_Study/Difference_rho.jpg used on input 
-line 282.
+line 195.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
- [29 <./images/Temporal_Study/Difference_rho.jpg> <./images/Spatial_Study/Diffe
+ [28 <./images/Temporal_Study/Difference_rho.jpg> <./images/Spatial_Study/Diffe
 rence_rho.jpg>]
-<images/Temporal_Study/Order_Of_Accuracy_Summary.jpg, id=684, 803.0pt x 602.25p
+<images/Temporal_Study/Order_Of_Accuracy_Summary.jpg, id=671, 803.0pt x 602.25p
 t>
 File: images/Temporal_Study/Order_Of_Accuracy_Summary.jpg Graphic file (type jp
 g)
  <use images/Temporal_Study/Order_Of_Accuracy_Summary.jpg>
 Package pdftex.def Info: images/Temporal_Study/Order_Of_Accuracy_Summary.jpg us
-ed on input line 316.
+ed on input line 229.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
 
-<images/Spatial_Study/Order_Of_Accuracy_Summary.jpg, id=685, 803.0pt x 602.25pt
+<images/Spatial_Study/Order_Of_Accuracy_Summary.jpg, id=672, 803.0pt x 602.25pt
 >
 File: images/Spatial_Study/Order_Of_Accuracy_Summary.jpg Graphic file (type jpg
 )
  <use images/Spatial_Study/Order_Of_Accuracy_Summary.jpg>
 Package pdftex.def Info: images/Spatial_Study/Order_Of_Accuracy_Summary.jpg use
-d on input line 329.
+d on input line 242.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/Error_comparison_rho.png, id=687, 1156.32pt x 578.16pt>
+<images/Error_comparison_rho.png, id=674, 1156.32pt x 578.16pt>
 File: images/Error_comparison_rho.png Graphic file (type png)
 
 <use images/Error_comparison_rho.png>
-Package pdftex.def Info: images/Error_comparison_rho.png used on input line 346
+Package pdftex.def Info: images/Error_comparison_rho.png used on input line 264
 .
-(pdftex.def)             Requested size: 419.16621pt x 209.57542pt.
+(pdftex.def)             Requested size: 461.08539pt x 230.5365pt.
+
+Overfull \hbox (41.91917pt too wide) in paragraph at lines 264--265
+ [][] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Chapter-7/Chapter-7.tex [30 <./images/Temporal_Study/Order_Of_Accuracy_Sum
-mary.jpg>] [31 <./images/Spatial_Study/Order_Of_Accuracy_Summary.jpg> <./images
+) (./Chapter-7/Chapter-7.tex [29 <./images/Temporal_Study/Order_Of_Accuracy_Sum
+mary.jpg>] [30 <./images/Spatial_Study/Order_Of_Accuracy_Summary.jpg> <./images
 /Error_comparison_rho.png>]
 Chapter 7.
-[32
+[31
 
-] <images/Rod_Profile_Summary.png, id=712, 351.714pt x 184.0476pt>
+] <images/Rod_Profile_Summary.png, id=699, 351.714pt x 184.0476pt>
 File: images/Rod_Profile_Summary.png Graphic file (type png)
 
 <use images/Rod_Profile_Summary.png>
@@ -1134,7 +1108,7 @@ Package pdftex.def Info: images/Rod_Profile_Summary.png used on input line 116.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/Rod_Profile_Errors.png, id=713, 344.0052pt x 188.8656pt>
+<images/Rod_Profile_Errors.png, id=700, 344.0052pt x 188.8656pt>
 File: images/Rod_Profile_Errors.png Graphic file (type png)
 
 <use images/Rod_Profile_Errors.png>
@@ -1144,90 +1118,89 @@ Package pdftex.def Info: images/Rod_Profile_Errors.png used on input line 123.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33] [34 <./images/Rod_Profile_Summary.png> <./images/Rod_Profile_Errors.png>]
-<images/rod_profile.jpg, id=731, 501.875pt x 501.875pt>
+[32] [33 <./images/Rod_Profile_Summary.png> <./images/Rod_Profile_Errors.png>]
+<images/rod_profile.jpg, id=718, 501.875pt x 501.875pt>
 File: images/rod_profile.jpg Graphic file (type jpg)
 
 <use images/rod_profile.jpg>
-Package pdftex.def Info: images/rod_profile.jpg used on input line 168.
+Package pdftex.def Info: images/rod_profile.jpg used on input line 167.
 (pdftex.def)             Requested size: 251.50227pt x 251.50357pt.
 
-<images/trans_rod1_axial10_SI.jpg, id=732, 602.25pt x 401.5pt>
+<images/trans_rod1_axial10_SI.jpg, id=721, 602.25pt x 401.5pt>
 File: images/trans_rod1_axial10_SI.jpg Graphic file (type jpg)
 
 <use images/trans_rod1_axial10_SI.jpg>
 Package pdftex.def Info: images/trans_rod1_axial10_SI.jpg used on input line 19
-5.
+7.
 (pdftex.def)             Requested size: 251.50227pt x 167.66699pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/trans_rod1_axial10_I.jpg, id=733, 602.25pt x 401.5pt>
+<images/trans_rod1_axial10_I.jpg, id=722, 602.25pt x 401.5pt>
 File: images/trans_rod1_axial10_I.jpg Graphic file (type jpg)
 
 <use images/trans_rod1_axial10_I.jpg>
-Package pdftex.def Info: images/trans_rod1_axial10_I.jpg used on input line 202
+Package pdftex.def Info: images/trans_rod1_axial10_I.jpg used on input line 204
 .
 (pdftex.def)             Requested size: 251.50227pt x 167.66699pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[35 <./images/rod_profile.jpg>]
-<images/profile_rod1_level_10_SI.jpg, id=738, 602.25pt x 401.5pt>
+[34 <./images/rod_profile.jpg>]
+<images/profile_rod1_level_10_SI.jpg, id=729, 602.25pt x 401.5pt>
 File: images/profile_rod1_level_10_SI.jpg Graphic file (type jpg)
 
 <use images/profile_rod1_level_10_SI.jpg>
 Package pdftex.def Info: images/profile_rod1_level_10_SI.jpg used on input line
- 217.
+ 223.
 (pdftex.def)             Requested size: 251.50227pt x 167.66699pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/profile_rod1_level_10_I.jpg, id=739, 602.25pt x 401.5pt>
+<images/profile_rod1_level_10_I.jpg, id=730, 602.25pt x 401.5pt>
 File: images/profile_rod1_level_10_I.jpg Graphic file (type jpg)
 
 <use images/profile_rod1_level_10_I.jpg>
 Package pdftex.def Info: images/profile_rod1_level_10_I.jpg used on input line 
-224.
+230.
 (pdftex.def)             Requested size: 251.50227pt x 167.66699pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Conclusion/Conclusion.tex [36 <./images/trans_rod1_axial10_SI.jpg> <./imag
-es/trans_rod1_axial10_I.jpg>] [37 <./images/profile_rod1_level_10_SI.jpg> <./im
+) (./Conclusion/Conclusion.tex [35 <./images/trans_rod1_axial10_SI.jpg> <./imag
+es/trans_rod1_axial10_I.jpg>] [36 <./images/profile_rod1_level_10_SI.jpg> <./im
 ages/profile_rod1_level_10_I.jpg>]
 Chapter 8.
-) (./CADances-thesis.bbl [38
+) (./CADances-thesis.bbl [37
 
 ]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 11.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [39
+
+[38
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
- [40]
+ [39]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 513.
-
-(./CADances-thesis.aux)
+ (./CADances-thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 513.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 513.
 Package rerunfilecheck Info: File `CADances-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FB32B4ECA1602977E99623F87368CF50;2227.
+(rerunfilecheck)             Checksum: F8261900678C4B34D63A6E7CB2058574;2152.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1235,42 +1208,35 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 513.
  ) 
 Here is how much of TeX's memory you used:
- 11604 strings out of 493117
- 179368 string characters out of 6135433
- 294269 words of memory out of 5000000
- 14404 multiletter control sequences out of 15000+600000
- 80471 words of font info for 140 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 35i,11n,45p,272b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
-14/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014/texmf-d
-ist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/
-dvips/lm/lm-mathex.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/l
-m-ts1.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/lm/lmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
-lic/lm/lmmi6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmmi
-7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/lm/lmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/lm/lmr9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri10
-.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/public/lm/lmsy9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm
-/lmtt10.pfb>
-Output written on CADances-thesis.pdf (52 pages, 2387734 bytes).
+ 11605 strings out of 495028
+ 178214 string characters out of 6181498
+ 290465 words of memory out of 5000000
+ 14153 multiletter control sequences out of 15000+600000
+ 80536 words of font info for 140 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 35i,11n,45p,272b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on CADances-thesis.pdf (51 pages, 2385425 bytes).
 PDF statistics:
- 901 PDF objects out of 1000 (max. 8388607)
- 776 compressed objects within 8 object streams
- 213 named destinations out of 1000 (max. 500000)
- 20931 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 892 PDF objects out of 1000 (max. 8388607)
+ 768 compressed objects within 8 object streams
+ 212 named destinations out of 1000 (max. 500000)
+ 20923 words of extra memory for PDF output out of 24883 (max. 10000000)
 
