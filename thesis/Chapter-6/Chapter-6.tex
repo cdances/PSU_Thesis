@@ -244,19 +244,24 @@ equation analysis.
 	\label{fig:Spatial:OOA}
 \end{figure}
 
-Taking the derivative of the analytical solution, the exact numerical error can
-be calculated from the modified equation analysis and compared to the
-calculated error as seen in figure \ref{fig:Error_comparison_rho}. This error
-was scaled by a factor of $\frac{x}{L}$ to account for numerical propagation.
+Taking the derivative of the analytical solution, the exact local numerical
+error can be calculated from the modified equation analysis. However the
+numerical error obtained from CTF is a global error in wich the error will
+accumalate from the inlet to the outlet. When the local error was scaled by a
+factor of $\frac{x}{L}$, it closely matched the global error as shown in figure
+\ref{fig:Error_comparison_rho}. The graph on the left compares numerical and
+analytical results for the density, and the figure on the right compares the
+observed global numerical error from CTF and the scaled analytical local error.
 The temporal and spatial mesh sizes were selected to have order of accuracies
-that were closest to 1. There still exists a small discrepancy between the
-expected error, and the calculated error. However, this is small enough that it
-is most likely due to truncation error in either the solution of the Jacobian
-matrix or in values read in from CTF. 
+that were closest to 1. The error at these small mesh sizes is very small at
+under 5 decimal points of precision. The agreement between the expected errors
+is very good with only subtle differences. This difference could be due to the
+artificial scaling factor applied to the local error, the approximate solution
+of the Jacobian matrix, or truncation error in values read in from CTF.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=1.00\textwidth]{images/Error_comparison_rho.png}
+	\includegraphics[width=1.10\textwidth]{images/Error_comparison_rho.png}
 	\caption{Comparison of the Error for Density}
 	\label{fig:Error_comparison_rho}
 \end{figure}
