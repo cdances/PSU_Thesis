@@ -129,7 +129,7 @@
     expensive. An easy way to optimize the construction of the matrix, is to not
     compute the indexes which are known to be zero. An optional optimization
     flag was added to the code that allows for the non-zero structure to be
-    remebered after the first construction, and following constructions only
+    remembered after the first construction, and following constructions only
     compute entries that were previously non-zero. This drastically decreases
     computations cost, but at the risk of serious potential error in the event
     of previously zero entries becoming non-zero later in the problem. For the

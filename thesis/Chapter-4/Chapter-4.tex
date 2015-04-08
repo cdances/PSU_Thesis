@@ -6,12 +6,12 @@
     
     A tube with no gravity acting in the direction of fluid flow has an initial
     condition of $U_{1},\rho_{1},h_{1},P_{1},\dot{m}_{1}$ everywhere except at the 
-    starting position that has an intitial conditions of $h_{2},\rho_{2},\dot{m}_{2}$. 
-    When the time step for the calcuation is taken be exactly equal to the CFL
+    starting position that has an initial conditions of $h_{2},\rho_{2},\dot{m}_{2}$. 
+    When the time step for the calculation is taken be exactly equal to the CFL
     number as seen in equation \ref{eq:CFL}, the inlet conditions should advect
     through the rest of the system in the form of a square wave. This is a
     unique situation where the CFL can be held constant throughout the
-    simulation, and where the spatial and temporal trucation error can cancel
+    simulation, and where the spatial and temporal truncation error can cancel
     each other out at $CFL=1$. When the CFL is less than 1, numerical
     diffusion occurs based on the truncation terms produced by the modified
     equation analysis.
@@ -63,9 +63,9 @@
     higher density in the colder region is on the left, and the lower density of
     the warmer region is on the right. The red line on the right of the figure
     depicts the truncation error at the current time step. The truncation error
-    occurs around the original dicontinuity as it advects through the solution.
-    As the discontinuity propogates it becomes more diffuse spatially. Once it
-    reaches the outlet the discontiuty leaves the domain and the overall error
+    occurs around the original discontinuity as it advects through the solution.
+    As the discontinuity propagates it becomes more diffuse spatially. Once it
+    reaches the outlet the discontinuity leaves the domain and the overall error
     drops to nearly zero. For this problem, the truncation error can be shown to
     be a direct function of the CFL number and can be reduced to nearly zero
     throughout the simulation. This simplified problem with an exact solution is

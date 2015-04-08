@@ -6,7 +6,7 @@
 \section{Single Phase Liquid Euler Equations} \label{sec:euler_equations}
 	
 	The finite volume structure in CTF in figure \ref{fig:CTF-Cells} is for
-	a one-dimmensional channel in the axial direction with $n$ number of cells.
+	a one-dimensional channel in the axial direction with $n$ number of cells.
 	The first and last cells at $0$ and $n+1$ are ghost cells and act as the
 	boundary conditions for the problem. Pressure, enthalpy, and density are
 	averaged over the cell volume and are located at the center of the cell.
@@ -46,7 +46,7 @@
 	Euler partial differential equations for mass \eqref{eq:pde_mass}, momentum
 	\eqref{eq:pde_momentum}, and energy \eqref{eq:pde_energy} correspond to the
 	unknown variables pressure $P$, velocity $u$, and enthalpy $h$. The equation
-	of state \eqref{eq:pde_EOS} realates density $\rho$ as a function of pressure
+	of state \eqref{eq:pde_EOS} relates density $\rho$ as a function of pressure
 	and enthalpy. The first terms in each of the equations are temporal terms. The
 	rest of the terms are steady state spatial terms. The last term in the energy
 	equation represents the net heat transfer from the adjacent rods to the
@@ -232,7 +232,7 @@ giving the boundary condition in equation \ref{eq:bc_centerline}
 
 The nuclear rod geometry types in CTF are meshed at each axial level according
 to figure \ref{fig:rod-axial}. Each axial level will be meshed as seen in figure
-\ref{fig:radial_diagram} where the red region is fuel and the grey region is
+\ref{fig:radial_diagram} where the red region is fuel and the gray region is
 cladding. The black dots represent the nodes within the fuel. Each node covers
 a region within the rod as bounded by the dashed lines. The nodes within the
 fuel are located at the center of the region. Each region is assumed to have
