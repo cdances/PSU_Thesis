@@ -527,7 +527,12 @@ Approved: \= \rule{2.75in}{0.5pt} \quad Date: \= \rule{1.5in}{0.5pt} \\[-3pt]
     \noindent {\normalsize The \MakeTextLowercase{\psu@documenttype} of \psu@author\ was reviewed and approved$^{*}$ by the following:}\\[3\baselineskip]
 \mbox{}\hfill
 \parbox{\textwidth - 0.5in}{
-
+         \psu@advisor\\[\psu@sigoptionskip]
+         \psu@advisortitle
+         \ifthenelse{\equal{\psu@advisoroption}{}}%
+                    {\\[\psu@intersigspace]}%
+                    {\\[\psu@sigoptionskip]
+                        \psu@advisoroption \\[\psu@sigafteroptionskip]}
 \ifcase \psu@readers
 \or
           \psu@readerone\\[\psu@sigoptionskip]
