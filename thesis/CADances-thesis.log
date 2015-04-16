@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.8)  16 APR 2015 15:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.8)  16 APR 2015 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -751,11 +751,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 ] (./SupplementaryMaterial/Dedication.tex) (./Chapter-1/Chapter-1.tex
 [12
 
-]) (./Chapter-2/Chapter-2.tex [1
-
 ]
 Chapter 1.
-<images/CTF-Cells.jpg, id=348, 551.05875pt x 1023.825pt>
+) (./Chapter-2/Chapter-2.tex [1
+
+]
+Chapter 2.
+<images/CTF-Cells.jpg, id=349, 551.05875pt x 1023.825pt>
 File: images/CTF-Cells.jpg Graphic file (type jpg)
 
 <use images/CTF-Cells.jpg>
@@ -764,14 +766,14 @@ Package pdftex.def Info: images/CTF-Cells.jpg used on input line 22.
  [2
 
  <./images/CTF-Cells.jpg>] [3] [4]
-<images/rod-axial.png, id=398, 250.9375pt x 324.21124pt>
+<images/rod-axial.png, id=399, 250.9375pt x 324.21124pt>
 File: images/rod-axial.png Graphic file (type png)
 
 <use images/rod-axial.png>
 Package pdftex.def Info: images/rod-axial.png used on input line 228.
 (pdftex.def)             Requested size: 167.66393pt x 216.6317pt.
 
-<images/radial_diagram.png, id=401, 418.56375pt x 433.62pt>
+<images/radial_diagram.png, id=402, 418.56375pt x 433.62pt>
 File: images/radial_diagram.png Graphic file (type png)
 
 <use images/radial_diagram.png>
@@ -782,7 +784,7 @@ Package pdftex.def Info: images/radial_diagram.png used on input line 248.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5 <./images/rod-axial.png>]
-<images/fluid-solid-meshing.png, id=409, 266.9975pt x 591.20876pt>
+<images/fluid-solid-meshing.png, id=410, 266.9975pt x 591.20876pt>
 File: images/fluid-solid-meshing.png Graphic file (type png)
 
 <use images/fluid-solid-meshing.png>
@@ -806,24 +808,24 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <0.5> on input line 286.
 [6 <./images/radial_diagram.png> <./images/fluid-solid-meshing.png>])
 (./Chapter-3/Chapter-3.tex [7]
-Chapter 2.
+Chapter 3.
 [8
 
-] <images/Jacobian_Setup.jpg, id=458, 421.575pt x 399.4925pt>
+] <images/Jacobian_Setup.jpg, id=459, 421.575pt x 399.4925pt>
 File: images/Jacobian_Setup.jpg Graphic file (type jpg)
 
 <use images/Jacobian_Setup.jpg>
 Package pdftex.def Info: images/Jacobian_Setup.jpg used on input line 80.
 (pdftex.def)             Requested size: 125.75113pt x 119.15985pt.
  [9 <./images/Jacobian_Setup.jpg>]
-<images/Explicit-Diagram.jpg, id=471, 645.41125pt x 795.97375pt>
+<images/Explicit-Diagram.jpg, id=472, 645.41125pt x 795.97375pt>
 File: images/Explicit-Diagram.jpg Graphic file (type jpg)
 
 <use images/Explicit-Diagram.jpg>
 Package pdftex.def Info: images/Explicit-Diagram.jpg used on input line 114.
 (pdftex.def)             Requested size: 125.75113pt x 155.08673pt.
 
-<images/Implicit-Diagram.jpg, id=472, 647.41875pt x 791.95876pt>
+<images/Implicit-Diagram.jpg, id=473, 647.41875pt x 791.95876pt>
 File: images/Implicit-Diagram.jpg Graphic file (type jpg)
 
 <use images/Implicit-Diagram.jpg>
@@ -831,7 +833,7 @@ Package pdftex.def Info: images/Implicit-Diagram.jpg used on input line 122.
 (pdftex.def)             Requested size: 125.75113pt x 153.82108pt.
 ) (./Chapter-4/Chapter-4.tex [10 <./images/Explicit-Diagram.jpg> <./images/Impl
 icit-Diagram.jpg>]
-Chapter 3.
+Chapter 4.
 
 Overfull \hbox (4.27849pt too wide) in paragraph at lines 7--18
 \T1/lmr/m/n/10 (-20) A tube with no grav-ity act-ing in the di-rec-tion of flui
@@ -839,7 +841,7 @@ d flow has an ini-tial con-di-tion of $\OML/lmm/m/it/10 U[]; ^^Z[]; h[]; P[]; [
 ]$
  []
 
-<images/Verification_Problem1_advection.jpg, id=481, 962.59625pt x 397.485pt>
+<images/Verification_Problem1_advection.jpg, id=482, 962.59625pt x 397.485pt>
 File: images/Verification_Problem1_advection.jpg Graphic file (type jpg)
 
 <use images/Verification_Problem1_advection.jpg>
@@ -849,7 +851,7 @@ ut line 26.
  [11
 
  <./images/Verification_Problem1_advection.jpg>]
-<images/linear_CTF_CFL_0.500/tmp/plot_density_0030.jpg, id=489, 1405.25pt x 803
+<images/linear_CTF_CFL_0.500/tmp/plot_density_0030.jpg, id=490, 1405.25pt x 803
 .0pt>
 File: images/linear_CTF_CFL_0.500/tmp/plot_density_0030.jpg Graphic file (type 
 jpg)
@@ -877,7 +879,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
-<images/Isokinetic_Advection/Difference_rho.jpg, id=528, 803.0pt x 602.25pt>
+<images/Isokinetic_Advection/Difference_rho.jpg, id=529, 803.0pt x 602.25pt>
 File: images/Isokinetic_Advection/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Isokinetic_Advection/Difference_rho.jpg>
@@ -889,7 +891,7 @@ Package pdftex.def Info: images/Isokinetic_Advection/Difference_rho.jpg used on
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14]
-<images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg, id=539, 803.0pt
+<images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg, id=540, 803.0pt
  x 602.25pt>
 File: images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg Graphic fil
 e (type jpg)
@@ -899,7 +901,7 @@ Package pdftex.def Info: images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_
 rho.jpg used on input line 273.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
 
-<images/Isokinetic_Advection/density_2D.jpg, id=541, 602.25pt x 602.25pt>
+<images/Isokinetic_Advection/density_2D.jpg, id=542, 602.25pt x 602.25pt>
 File: images/Isokinetic_Advection/density_2D.jpg Graphic file (type jpg)
 
 <use images/Isokinetic_Advection/density_2D.jpg>
@@ -913,9 +915,9 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ) (./Chapter-5/Chapter-5.tex [15 <./images/Isokinetic_Advection/Difference_rho.
 jpg> <./images/Isokinetic_Advection/Temoral_Order_Of_Accuracy_rho.jpg>]
 [16 <./images/Isokinetic_Advection/density_2D.jpg>]
-Chapter 4.
+Chapter 5.
 
-<images/Verification_Problem2_shock_tube.jpg, id=550, 665.48625pt x 375.4025pt>
+<images/Verification_Problem2_shock_tube.jpg, id=551, 665.48625pt x 375.4025pt>
 File: images/Verification_Problem2_shock_tube.jpg Graphic file (type jpg)
 <use images/Verification_Problem2_shock_tube.jpg>
 Package pdftex.def Info: images/Verification_Problem2_shock_tube.jpg used on in
@@ -928,7 +930,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [17
 
  <./images/Verification_Problem2_shock_tube.jpg>]
-<images/Shock_Tube/Shock_Tube_regions.jpg, id=560, 713.66624pt x 642.4pt>
+<images/Shock_Tube/Shock_Tube_regions.jpg, id=561, 713.66624pt x 642.4pt>
 File: images/Shock_Tube/Shock_Tube_regions.jpg Graphic file (type jpg)
 
 <use images/Shock_Tube/Shock_Tube_regions.jpg>
@@ -940,7 +942,7 @@ Package pdftex.def Info: images/Shock_Tube/Shock_Tube_regions.jpg used on input
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [18] [19 <./images/Shock_Tube/Shock_Tube_regions.jpg>]
-<images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg, id=591, 2007.5pt x 1204.
+<images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg, id=592, 2007.5pt x 1204.
 5pt>
 File: images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg Graphic file (type j
 pg)
@@ -949,7 +951,7 @@ Package pdftex.def Info: images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg u
 sed on input line 153.
 (pdftex.def)             Requested size: 544.91734pt x 326.94699pt.
  [20 <./images/wave1_200dP_N1000/tmp/plot_shocktube_0034.jpg>]
-<images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg, id=596, 2007.5pt x 1204.5pt
+<images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg, id=597, 2007.5pt x 1204.5pt
 >
 File: images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg Graphic file (type jpg)
 
@@ -958,7 +960,7 @@ Package pdftex.def Info: images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg used
  on input line 161.
 (pdftex.def)             Requested size: 544.91734pt x 326.94699pt.
  [21 <./images/wave1_200dP_N1000/tmp/plot_st_err_0679.jpg>]
-<images/Shock_Tube/Difference_rho.jpg, id=602, 803.0pt x 602.25pt>
+<images/Shock_Tube/Difference_rho.jpg, id=603, 803.0pt x 602.25pt>
 File: images/Shock_Tube/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Shock_Tube/Difference_rho.jpg>
@@ -966,7 +968,7 @@ Package pdftex.def Info: images/Shock_Tube/Difference_rho.jpg used on input lin
 e 178.
 (pdftex.def)             Requested size: 209.5831pt x 157.1878pt.
 
-<images/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg, id=603, 803.0pt x 602.25
+<images/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg, id=604, 803.0pt x 602.25
 pt>
 File: images/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg Graphic file (type j
 pg)
@@ -977,7 +979,7 @@ sed on input line 185.
 )
 (./Chapter-6/Chapter-6.tex [22 <./images/Shock_Tube/Difference_rho.jpg> <./imag
 es/Shock_Tube/Temporal_Order_Of_Accuracy_rho.jpg>]
-Chapter 5.
+Chapter 6.
 
 Overfull \hbox (2.64594pt too wide) in paragraph at lines 3--3
 |\T1/lmss/bx/n/30 Isokinetic Sine Wave Ad-vec-tion| 
@@ -989,7 +991,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [23
 
 ]
-<images/Code_Verification/run_00_00/residual/results/Inlet_h.png, id=626, 578.1
+<images/Code_Verification/run_00_00/residual/results/Inlet_h.png, id=627, 578.1
 6pt x 433.62pt>
 File: images/Code_Verification/run_00_00/residual/results/Inlet_h.png Graphic f
 ile (type png)
@@ -999,7 +1001,7 @@ Package pdftex.def Info: images/Code_Verification/run_00_00/residual/results/In
 let_h.png used on input line 98.
 (pdftex.def)             Requested size: 230.5427pt x 172.90237pt.
 
-<images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png, id=628, 5
+<images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png, id=629, 5
 78.16pt x 433.62pt>
 File: images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png Graph
 ic file (type png)
@@ -1014,7 +1016,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [24 <./images/Code_Verification/run_00_00/residual/results/Inlet_h.png>]
 <images/Code_Verification/run_00_00/original/results/Convergence_Plot.png, id=6
-36, 578.16pt x 433.62pt>
+37, 578.16pt x 433.62pt>
 File: images/Code_Verification/run_00_00/original/results/Convergence_Plot.png 
 Graphic file (type png)
 
@@ -1023,7 +1025,7 @@ Package pdftex.def Info: images/Code_Verification/run_00_00/original/results/Co
 nvergence_Plot.png used on input line 133.
 (pdftex.def)             Requested size: 209.5831pt x 157.18156pt.
 
-<images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png, id=637
+<images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png, id=638
 , 578.16pt x 433.62pt>
 File: images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png Gr
 aphic file (type png)
@@ -1035,7 +1037,7 @@ siduals_Plot.png used on input line 140.
 
 [25 <./images/Code_Verification/run_00_00/residual/results/Inlet_m_dot.png> <./
 images/Code_Verification/run_00_00/original/results/Convergence_Plot.png>]
-<images/Temporal_Study/Difference_rho.jpg, id=649, 803.0pt x 602.25pt>
+<images/Temporal_Study/Difference_rho.jpg, id=650, 803.0pt x 602.25pt>
 File: images/Temporal_Study/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Temporal_Study/Difference_rho.jpg>
@@ -1047,7 +1049,7 @@ Package pdftex.def Info: images/Temporal_Study/Difference_rho.jpg used on input
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [26 <./images/Code_Verification/run_00_00/residual/results/Residuals_Plot.png>]
-<images/Spatial_Study/Difference_rho.jpg, id=656, 803.0pt x 602.25pt>
+<images/Spatial_Study/Difference_rho.jpg, id=657, 803.0pt x 602.25pt>
 File: images/Spatial_Study/Difference_rho.jpg Graphic file (type jpg)
 
 <use images/Spatial_Study/Difference_rho.jpg>
@@ -1056,7 +1058,7 @@ line 195.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
  [27 <./images/Temporal_Study/Difference_rho.jpg> <./images/Spatial_Study/Diffe
 rence_rho.jpg>]
-<images/Temporal_Study/Order_Of_Accuracy_Summary.jpg, id=666, 803.0pt x 602.25p
+<images/Temporal_Study/Order_Of_Accuracy_Summary.jpg, id=667, 803.0pt x 602.25p
 t>
 File: images/Temporal_Study/Order_Of_Accuracy_Summary.jpg Graphic file (type jp
 g)
@@ -1065,7 +1067,7 @@ Package pdftex.def Info: images/Temporal_Study/Order_Of_Accuracy_Summary.jpg us
 ed on input line 229.
 (pdftex.def)             Requested size: 251.50227pt x 188.62538pt.
 
-<images/Spatial_Study/Order_Of_Accuracy_Summary.jpg, id=667, 803.0pt x 602.25pt
+<images/Spatial_Study/Order_Of_Accuracy_Summary.jpg, id=668, 803.0pt x 602.25pt
 >
 File: images/Spatial_Study/Order_Of_Accuracy_Summary.jpg Graphic file (type jpg
 )
@@ -1077,7 +1079,7 @@ d on input line 242.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/Error_comparison_rho.png, id=669, 1156.32pt x 578.16pt>
+<images/Error_comparison_rho.png, id=670, 1156.32pt x 578.16pt>
 File: images/Error_comparison_rho.png Graphic file (type png)
 
 <use images/Error_comparison_rho.png>
@@ -1095,10 +1097,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ) (./Chapter-7/Chapter-7.tex [28 <./images/Temporal_Study/Order_Of_Accuracy_Sum
 mary.jpg>] [29 <./images/Spatial_Study/Order_Of_Accuracy_Summary.jpg> <./images
 /Error_comparison_rho.png>]
-Chapter 6.
+Chapter 7.
 [30
 
-] <images/Rod_Profile_Summary.png, id=693, 351.714pt x 184.0476pt>
+] <images/Rod_Profile_Summary.png, id=694, 351.714pt x 184.0476pt>
 File: images/Rod_Profile_Summary.png Graphic file (type png)
 
 <use images/Rod_Profile_Summary.png>
@@ -1109,7 +1111,7 @@ Package pdftex.def Info: images/Rod_Profile_Summary.png used on input line 116.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/Rod_Profile_Errors.png, id=694, 344.0052pt x 188.8656pt>
+<images/Rod_Profile_Errors.png, id=695, 344.0052pt x 188.8656pt>
 File: images/Rod_Profile_Errors.png Graphic file (type png)
 
 <use images/Rod_Profile_Errors.png>
@@ -1120,14 +1122,14 @@ Package pdftex.def Info: images/Rod_Profile_Errors.png used on input line 123.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [31] [32 <./images/Rod_Profile_Summary.png> <./images/Rod_Profile_Errors.png>]
-<images/rod_profile.jpg, id=713, 501.875pt x 501.875pt>
+<images/rod_profile.jpg, id=714, 501.875pt x 501.875pt>
 File: images/rod_profile.jpg Graphic file (type jpg)
 
 <use images/rod_profile.jpg>
 Package pdftex.def Info: images/rod_profile.jpg used on input line 167.
 (pdftex.def)             Requested size: 251.50227pt x 251.50357pt.
 
-<images/trans_rod1_axial10_SI.jpg, id=716, 602.25pt x 401.5pt>
+<images/trans_rod1_axial10_SI.jpg, id=717, 602.25pt x 401.5pt>
 File: images/trans_rod1_axial10_SI.jpg Graphic file (type jpg)
 
 <use images/trans_rod1_axial10_SI.jpg>
@@ -1138,7 +1140,7 @@ Package pdftex.def Info: images/trans_rod1_axial10_SI.jpg used on input line 19
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/trans_rod1_axial10_I.jpg, id=717, 602.25pt x 401.5pt>
+<images/trans_rod1_axial10_I.jpg, id=718, 602.25pt x 401.5pt>
 File: images/trans_rod1_axial10_I.jpg Graphic file (type jpg)
 
 <use images/trans_rod1_axial10_I.jpg>
@@ -1150,7 +1152,7 @@ Package pdftex.def Info: images/trans_rod1_axial10_I.jpg used on input line 204
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [33 <./images/rod_profile.jpg>]
-<images/profile_rod1_level_10_SI.jpg, id=724, 602.25pt x 401.5pt>
+<images/profile_rod1_level_10_SI.jpg, id=725, 602.25pt x 401.5pt>
 File: images/profile_rod1_level_10_SI.jpg Graphic file (type jpg)
 
 <use images/profile_rod1_level_10_SI.jpg>
@@ -1161,7 +1163,7 @@ Package pdftex.def Info: images/profile_rod1_level_10_SI.jpg used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/profile_rod1_level_10_I.jpg, id=725, 602.25pt x 401.5pt>
+<images/profile_rod1_level_10_I.jpg, id=726, 602.25pt x 401.5pt>
 File: images/profile_rod1_level_10_I.jpg Graphic file (type jpg)
 
 <use images/profile_rod1_level_10_I.jpg>
@@ -1175,7 +1177,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ) (./Conclusion/Conclusion.tex [34 <./images/trans_rod1_axial10_SI.jpg> <./imag
 es/trans_rod1_axial10_I.jpg>] [35 <./images/profile_rod1_level_10_SI.jpg> <./im
 ages/profile_rod1_level_10_I.jpg>]
-Chapter 7.
+Chapter 8.
 ) (./CADances-thesis.bbl [36
 
 ]
@@ -1194,28 +1196,28 @@ Package microtype Info: Loading generic settings for font family
 [37
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 521.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 522.
  [38]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 521.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 522.
  (./CADances-thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 521.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 521.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 522.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 522.
 Package rerunfilecheck Info: File `CADances-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8C8CAE29AF82C523AAAFB34E8DF25DAC;2152.
+(rerunfilecheck)             Checksum: F8261900678C4B34D63A6E7CB2058574;2152.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 521.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 522.
  ) 
 Here is how much of TeX's memory you used:
  11604 strings out of 495028
  178208 string characters out of 6181498
- 290639 words of memory out of 5000000
+ 290631 words of memory out of 5000000
  14151 multiletter control sequences out of 15000+600000
  80619 words of font info for 141 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,11n,45p,272b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,11n,45p,272b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1234,10 +1236,10 @@ r/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on CADances-thesis.pdf (50 pages, 2385042 bytes).
+Output written on CADances-thesis.pdf (50 pages, 2385315 bytes).
 PDF statistics:
- 887 PDF objects out of 1000 (max. 8388607)
- 764 compressed objects within 8 object streams
+ 888 PDF objects out of 1000 (max. 8388607)
+ 765 compressed objects within 8 object streams
  211 named destinations out of 1000 (max. 500000)
  20923 words of extra memory for PDF output out of 24883 (max. 10000000)
 
