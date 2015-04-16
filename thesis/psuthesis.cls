@@ -52,7 +52,7 @@
 %                  line lengths that are much too long.
 %
 % Version 2.3.0: * Made substantial changes to the psuthesis.cls file
-%                  since the draft option was not being passed to the book
+%                  since the draft option was not being passed to the mybook
 %                  class. The change we made also prevents users from
 %                  loading options that are not ``recommended''. We
 %                  want to thank Jared Craig Ahern for pointing out this
@@ -173,14 +173,14 @@
 \DeclareOption{honors}{\setboolean{psu@honors}{true}%...
 \setboolean{psu@bs}{false}\setboolean{psu@ba}{false}\setboolean{psu@phd}{false}}
 
-\DeclareOption{draft}{\PassOptionsToClass{\CurrentOption}{book}}
-\DeclareOption{10pt}{\PassOptionsToClass{\CurrentOption}{book}}
-\DeclareOption{11pt}{\PassOptionsToClass{\CurrentOption}{book}}
-\DeclareOption{12pt}{\PassOptionsToClass{\CurrentOption}{book}}
+\DeclareOption{draft}{\PassOptionsToClass{\CurrentOption}{mybook}}
+\DeclareOption{10pt}{\PassOptionsToClass{\CurrentOption}{mybook}}
+\DeclareOption{11pt}{\PassOptionsToClass{\CurrentOption}{mybook}}
+\DeclareOption{12pt}{\PassOptionsToClass{\CurrentOption}{mybook}}
 \DeclareOption*{\PackageWarning{psuthesis}{Unknown option `\CurrentOption'. Ignoring}}
 \ExecuteOptions{phd} % the default option is <phd>
 \ProcessOptions
-\LoadClass[openany,oneside]{book}
+\LoadClass[openany,oneside]{mybook}
 \RequirePackage{calc}
 \RequirePackage{setspace}
 % If you are using the subfigure package, load the tocloft package with
@@ -798,17 +798,16 @@ Approved: \= \rule{2.75in}{0.5pt} \quad Date: \= \rule{1.5in}{0.5pt} \\[-3pt]
 \chapter{#1}
 }
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareRobustCommand{\thesismainmatter}{%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\textheight}{8.5in}
-\mainmatter
-%\pagestyle{empty}
-%\renewcommand{\@oddhead}{\mbox{}\hfill\arabic{page}}
-%\let\ps@plain = \ps@empty
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\DeclareRobustCommand{\thesismainmatter}{%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\textheight}{8.5in}
+%\mainmatter
+%%\pagestyle{empty}
+%%\renewcommand{\@oddhead}{\mbox{}\hfill\arabic{page}}
+%%\let\ps@plain = \ps@empty
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\vita}[1]{%
 \begin{singlespace}
